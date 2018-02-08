@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="FeedCreator 1.7.2-ppt DokuWiki" -->
+<?xml-stylesheet href="http://wiki.jellychen.cn/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="http://wiki.jellychen.cn/feed.php">
+        <title>Jelly Wiki html:browser:window:attr</title>
+        <description></description>
+        <link>http://wiki.jellychen.cn/</link>
+        <image rdf:resource="http://wiki.jellychen.cn/lib/tpl/bootstrap3/images/favicon.ico" />
+       <dc:date>2018-01-03T05:34:02+08:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="http://wiki.jellychen.cn/doku.php/html:browser:window:attr:closed?rev=1507538596&amp;do=diff"/>
+                <rdf:li rdf:resource="http://wiki.jellychen.cn/doku.php/html:browser:window:attr:defaultstatus?rev=1507538596&amp;do=diff"/>
+                <rdf:li rdf:resource="http://wiki.jellychen.cn/doku.php/html:browser:window:attr:document?rev=1507538595&amp;do=diff"/>
+                <rdf:li rdf:resource="http://wiki.jellychen.cn/doku.php/html:browser:window:attr:history?rev=1507538596&amp;do=diff"/>
+                <rdf:li rdf:resource="http://wiki.jellychen.cn/doku.php/html:browser:window:attr:innerheight?rev=1507538596&amp;do=diff"/>
+                <rdf:li rdf:resource="http://wiki.jellychen.cn/doku.php/html:browser:window:attr:start?rev=1507538596&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="http://wiki.jellychen.cn/lib/tpl/bootstrap3/images/favicon.ico">
+        <title>Jelly Wiki</title>
+        <link>http://wiki.jellychen.cn/</link>
+        <url>http://wiki.jellychen.cn/lib/tpl/bootstrap3/images/favicon.ico</url>
+    </image>
+    <item rdf:about="http://wiki.jellychen.cn/doku.php/html:browser:window:attr:closed?rev=1507538596&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-10-09T16:43:16+08:00</dc:date>
+        <title>html:browser:window:attr:closed</title>
+        <link>http://wiki.jellychen.cn/doku.php/html:browser:window:attr:closed?rev=1507538596&amp;do=diff</link>
+        <description>closed
+
+定义和用法
+
+closed 属性可返回一个布尔值，该值声明了窗口是否已经关闭。该属性为只读。
+
+当浏览器窗口关闭时，表示该窗口的 Windows 对象并不会消失，它将继续存在，不过它的 closed 属性将设置为 true。</description>
+    </item>
+    <item rdf:about="http://wiki.jellychen.cn/doku.php/html:browser:window:attr:defaultstatus?rev=1507538596&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-10-09T16:43:16+08:00</dc:date>
+        <title>html:browser:window:attr:defaultstatus</title>
+        <link>http://wiki.jellychen.cn/doku.php/html:browser:window:attr:defaultstatus?rev=1507538596&amp;do=diff</link>
+        <description>defaultStatus
+
+定义和用法
+
+defaultStatus 属性可设置或返回窗口状态栏中的默认文本。该属性可读可写。
+该文本会在页面加载时被显示。
+
+语法
+window.defaultStatus=sometext
+实例
+
+&lt;http://local.jellychentest.cn/test/html/dom/window.defaultstatus.html&gt;</description>
+    </item>
+    <item rdf:about="http://wiki.jellychen.cn/doku.php/html:browser:window:attr:document?rev=1507538595&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-10-09T16:43:15+08:00</dc:date>
+        <title>html:browser:window:attr:document</title>
+        <link>http://wiki.jellychen.cn/doku.php/html:browser:window:attr:document?rev=1507538595&amp;do=diff</link>
+        <description>Document
+
+对 Document 对象的只读引用。请参阅  对象。</description>
+    </item>
+    <item rdf:about="http://wiki.jellychen.cn/doku.php/html:browser:window:attr:history?rev=1507538596&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-10-09T16:43:16+08:00</dc:date>
+        <title>html:browser:window:attr:history</title>
+        <link>http://wiki.jellychen.cn/doku.php/html:browser:window:attr:history?rev=1507538596&amp;do=diff</link>
+        <description>history
+
+对 History 对象的只读引用。请参数  对象。</description>
+    </item>
+    <item rdf:about="http://wiki.jellychen.cn/doku.php/html:browser:window:attr:innerheight?rev=1507538596&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-10-09T16:43:16+08:00</dc:date>
+        <title>html:browser:window:attr:innerheight</title>
+        <link>http://wiki.jellychen.cn/doku.php/html:browser:window:attr:innerheight?rev=1507538596&amp;do=diff</link>
+        <description>innerheight
+
+定义和用法
+
+只读属性，声明了窗口的文档显示区的高度和宽度，以像素计。
+
+这里的宽度和高度不包括菜单栏、工具栏以及滚动条等的高度。
+
+IE 不支持这些属性。它用 document.documentElement 或 document.body （与</description>
+    </item>
+    <item rdf:about="http://wiki.jellychen.cn/doku.php/html:browser:window:attr:start?rev=1507538596&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-10-09T16:43:16+08:00</dc:date>
+        <title>html:browser:window:attr:start</title>
+        <link>http://wiki.jellychen.cn/doku.php/html:browser:window:attr:start?rev=1507538596&amp;do=diff</link>
+        <description>Window 对象属性
+
+&lt;ul class=&quot;catlist-nslist&quot; &gt;&lt;li class=&quot;catlist-ns&quot;&gt;&lt;strong class=&quot;li catlist-nshead&quot;&gt;apache&lt;/strong&gt;&lt;ul class=&quot;catlist-nslist&quot;&gt;&lt;li class=&quot;catlist-page&quot;&gt;APACHE&lt;/li&gt;&lt;li class=&quot;catlist-ns&quot;&gt;&lt;strong class=&quot;li catlist-nshead&quot;&gt;tools&lt;/strong&gt;&lt;ul class=&quot;catlist-nslist&quot;&gt;&lt;li class=&quot;catlist-page&quot;&gt;ab性能测试工具&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li class=&quot;catlist-ns&quot;&gt;&lt;strong class=&quot;li catlist-nshead&quot;&gt;css&lt;/strong&gt;&lt;ul class=&quot;catlist-nslist&quot;&gt;&lt;li class=&quot;catlist-page&quot;&gt;CSS 3.0 参考手册&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li class=&quot;catlist-n…</description>
+    </item>
+</rdf:RDF>

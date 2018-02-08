@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="FeedCreator 1.7.2-ppt DokuWiki" -->
+<?xml-stylesheet href="http://wiki.jellychen.cn/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="http://wiki.jellychen.cn/feed.php">
+        <title>Jelly Wiki drupal:drupal_8_document:creating_custom_modules</title>
+        <description></description>
+        <link>http://wiki.jellychen.cn/</link>
+        <image rdf:resource="http://wiki.jellychen.cn/lib/tpl/bootstrap3/images/favicon.ico" />
+       <dc:date>2018-02-02T16:53:55+08:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="http://wiki.jellychen.cn/doku.php/drupal:drupal_8_document:creating_custom_modules:start?rev=1507538599&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="http://wiki.jellychen.cn/lib/tpl/bootstrap3/images/favicon.ico">
+        <title>Jelly Wiki</title>
+        <link>http://wiki.jellychen.cn/</link>
+        <url>http://wiki.jellychen.cn/lib/tpl/bootstrap3/images/favicon.ico</url>
+    </image>
+    <item rdf:about="http://wiki.jellychen.cn/doku.php/drupal:drupal_8_document:creating_custom_modules:start?rev=1507538599&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-10-09T16:43:19+08:00</dc:date>
+        <title>drupal:drupal_8_document:creating_custom_modules:start</title>
+        <link>http://wiki.jellychen.cn/doku.php/drupal:drupal_8_document:creating_custom_modules:start?rev=1507538599&amp;do=diff</link>
+        <description>创建自定义模块
+
+该指南包含创建Drupal8的教程和其它相关信息。
+
+其它资源：
+
+	*  Drupal8API参考
+	*  Drupal*.x变更记录</description>
+    </item>
+</rdf:RDF>

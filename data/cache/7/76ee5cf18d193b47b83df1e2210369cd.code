@@ -1,0 +1,18 @@
+<span class="co1">// spaghetti 的附加属性。</span>
+spaghetti.<span class="me1">color</span> <span class="sy0">=</span> <span class="st0">&quot;pale straw&quot;</span><span class="sy0">;</span>
+spaghetti.<span class="me1">drycook</span> <span class="sy0">=</span> <span class="nu0">7</span><span class="sy0">;</span>
+spaghetti.<span class="me1">freshcook</span> <span class="sy0">=</span> <span class="nu0">0.5</span><span class="sy0">;</span>
+&nbsp;
+<span class="kw1">var</span> chowFun <span class="sy0">=</span> <span class="kw1">new</span> pasta<span class="br0">&#40;</span><span class="st0">&quot;rice&quot;</span><span class="sy0">,</span> <span class="nu0">3</span><span class="sy0">,</span> <span class="st0">&quot;flat&quot;</span><span class="sy0">,</span> <span class="kw2">false</span><span class="br0">&#41;</span><span class="sy0">;</span> 
+<span class="co1">// chowFun 对象或其他现有的 pasta 对象</span>
+<span class="co1">// 都没有添加到 spaghetti 对象</span>
+<span class="co1">// 的三个新属性。</span>
+&nbsp;
+&nbsp;
+<span class="co1">// 将属性‘foodgroup’加到 pasta 原型对象</span>
+<span class="co1">// 中，这样 pasta 对象的所有实例都可以有该属性，</span>
+<span class="co1">// 包括那些已经生成的实例。</span>
+pasta.<span class="kw1">prototype</span>.<span class="me1">foodgroup</span> <span class="sy0">=</span> <span class="st0">&quot;carbohydrates&quot;</span>
+&nbsp;
+<span class="co1">// 现在 spaghetti.foodgroup、chowFun.foodgroup，等等</span>
+<span class="co1">// 均包含值“carbohydrates”。</span>

@@ -1,0 +1,5 @@
+<span class="kw1">function</span> Circle <span class="br0">&#40;</span>xPoint<span class="sy0">,</span> yPoint<span class="sy0">,</span> radius<span class="br0">&#41;</span> <span class="br0">&#123;</span>
+    <span class="kw1">this</span>.<span class="me1">x</span> <span class="sy0">=</span> xPoint<span class="sy0">;</span>  <span class="co1">// 圆心的 x 坐标。</span>
+    <span class="kw1">this</span>.<span class="me1">y</span> <span class="sy0">=</span> yPoint<span class="sy0">;</span>  <span class="co1">// 圆心的 y 坐标。</span>
+    <span class="kw1">this</span>.<span class="me1">r</span> <span class="sy0">=</span> radius<span class="sy0">;</span>  <span class="co1">// 圆的半径。</span>
+<span class="br0">&#125;</span>

@@ -1,0 +1,2 @@
+<span class="kw1">var</span> bestAge <span class="sy0">=</span> <span class="kw2">null</span><span class="sy0">;</span>
+<span class="kw1">var</span> muchTooOld <span class="sy0">=</span> <span class="nu0">3</span> <span class="sy0">*</span> bestAge<span class="sy0">;</span> <span class="co1">// muchTooOld 的值为 0。</span>

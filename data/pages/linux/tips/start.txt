@@ -1,0 +1,18 @@
+===== 小技巧 =====
+
+====查看文件夹总大小====
+  # du -sh dirname
+**参见**
+
+[[linux:cmd:du|du]]
+
+  
+==== 获取命令帮助 ====
+[[linux:cmd:help|help]]：适用于**内置命令**，如[[linux:cmd:cd|cd]]：
+  # help cd
+Command –help/-h：适用于一般命令，如[[linux:cmd:ls|ls]]：
+  # ls --help
+[[linux:cmd:man|man Command]]： manual 手册查询：
+  # man ? Command
+[[linux:cmd:info|info Command]]：有超链接稳文档，info是信息页，提供作者、版本，什么时候发布等更详细信息，man手册是告诉你怎么用
+  # info cd

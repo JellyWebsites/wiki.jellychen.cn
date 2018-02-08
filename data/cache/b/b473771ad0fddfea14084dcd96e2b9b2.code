@@ -1,0 +1,6 @@
+Circle.<span class="kw1">prototype</span>.<span class="me1">pi</span> <span class="sy0">=</span> <span class="kw4">Math</span>.<span class="me1">PI</span><span class="sy0">;</span>
+<span class="kw1">function</span> ACirclesArea <span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+    <span class="kw1">return</span> <span class="kw1">this</span>.<span class="me1">pi</span> <span class="sy0">*</span> <span class="kw1">this</span>.<span class="me1">r</span> <span class="sy0">*</span> <span class="kw1">this</span>.<span class="me1">r</span><span class="sy0">;</span> <span class="co1">// 计算圆面积的公式为 ?r2。</span>
+<span class="br0">&#125;</span>
+Circle.<span class="kw1">prototype</span>.<span class="me1">area</span> <span class="sy0">=</span> ACirclesArea<span class="sy0">;</span> <span class="co1">// 计算圆面积的函数现在是 Circle Prototype 对象的一个方法。</span>
+<span class="kw1">var</span> a <span class="sy0">=</span> ACircle.<span class="me1">area</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>               <span class="co1">// 此为如何在 Circle 对象上调用面积函数。</span>

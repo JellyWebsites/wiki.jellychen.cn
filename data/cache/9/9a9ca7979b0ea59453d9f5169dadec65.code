@@ -1,0 +1,24 @@
+<span class="coMULTI">/*
+更新表达式 （下例中的 &quot;icount++&quot;）将在循环结束时被执行，即在构成循环主体的语句块被执行后，在测试条件之前。
+*/</span>
+&nbsp;
+<span class="kw1">var</span> howFar <span class="sy0">=</span> <span class="nu0">10</span><span class="sy0">;</span>  <span class="co1">// 将循环次数限制为 10。</span>
+&nbsp;
+<span class="kw1">var</span> sum <span class="sy0">=</span> <span class="kw1">new</span> <span class="kw4">Array</span><span class="br0">&#40;</span>howFar<span class="br0">&#41;</span><span class="sy0">;</span>  <span class="co1">// 创建一个称为 sum 并具有 10 个成员的数组，这 10 个成员从 0 到 9。</span>
+<span class="kw1">var</span> theSum <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span>
+sum<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span> <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span>
+&nbsp;
+<span class="kw1">for</span><span class="br0">&#40;</span><span class="kw1">var</span> icount <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span> icount <span class="sy0">&lt;</span> howFar<span class="sy0">;</span> icount<span class="sy0">++</span><span class="br0">&#41;</span>  <span class="br0">&#123;</span>        <span class="co1">// 在本例中将从 0 到 9 进行计数。</span>
+theSum <span class="sy0">+=</span> icount<span class="sy0">;</span>
+sum<span class="br0">&#91;</span>icount<span class="br0">&#93;</span> <span class="sy0">=</span> theSum<span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&nbsp;
+<span class="kw1">var</span> newSum <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span>
+<span class="kw1">for</span><span class="br0">&#40;</span><span class="kw1">var</span> icount <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span> icount <span class="sy0">&gt;</span> howFar<span class="sy0">;</span> icount<span class="sy0">++</span><span class="br0">&#41;</span>  <span class="br0">&#123;</span>        <span class="co1">// 该循环根本不会被执行，因为 icount 不大于 howFar。</span>
+newSum <span class="sy0">+=</span> icount<span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&nbsp;
+<span class="kw1">var</span> sum <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span>
+<span class="kw1">for</span><span class="br0">&#40;</span><span class="kw1">var</span> icount <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span> icount <span class="sy0">&gt;=</span> <span class="nu0">0</span><span class="sy0">;</span> icount<span class="sy0">++</span><span class="br0">&#41;</span>  <span class="br0">&#123;</span>        <span class="co1">// 这是一个无限循环。</span>
+sum <span class="sy0">+=</span> icount<span class="sy0">;</span>
+<span class="br0">&#125;</span>

@@ -1,0 +1,1 @@
+<span class="kw1">var</span> howLong <span class="sy0">=</span> <span class="st0">&quot;Hello World&quot;</span>.<span class="me1">length</span>  <span class="co1">// 设置变量 howLong 为 11。</span>

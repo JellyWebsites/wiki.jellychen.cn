@@ -1,0 +1,59 @@
+
+<h2 class="sectionedit1" id="chgrp">chgrp</h2>
+<div class="level2">
+
+<p>
+变更文件或目录的所属群组
+</p>
+
+<p>
+<strong>用法</strong>
+</p>
+<pre class="code">chgrp [选项] 组文件... POSIX 选项: [-R] [--]</pre>
+
+<p>
+<strong>参数</strong>
+</p>
+<pre class="code">用法：chgrp [选项]... 用户组 文件...
+　或：chgrp [选项]... --reference=参考文件 文件...
+变更文件或目录的所属群组.
+参数 --reference, 根据指定文件改变文件的群组属性 .
+
+  -c, --changes          当发生改变时输出调试信息
+  -f, --silent, --quiet  不显示错误信息
+  -v, --verbose          运行时显示详细的处理信息
+      --dereference      作用于符号链接的指向，而不是符号链接本身
+  -h, --no-dereference   作用于符号链接本身，而不是它所指向的. 仅可用于 lchown 系统调用被提供时. 
+      --no-preserve-root do not treat &#039;/&#039; specially (the default)
+      --preserve-root    fail to operate recursively on &#039;/&#039;
+      --reference=RFILE  根据指定文件改变文件的群组属性
+  -R, --recursive        处理指定目录以及其子目录下的所有文件
+
+The following options modify how a hierarchy is traversed when the -R option is also specified.  If more than one is specified, only the final one takes effect.
+
+  -H                     if a command line argument is a symbolic link to a directory, traverse it
+  -L                     traverse every symbolic link to a directory encountered
+  -P                     do not traverse any symbolic links (default)
+
+      --help		显示此帮助信息并退出
+      --version		显示版本信息并退出</pre>
+
+<p>
+<strong>实例</strong>
+</p>
+<pre class="code">chgrp staff /u            将 /u 的属组更改为&quot;staff&quot;。
+chgrp -hR staff /u    将 /u 及其子目录下所有文件的属组更改为&quot;staff&quot;。</pre>
+
+<p>
+<strong>参见</strong>
+</p>
+
+<p>
+<a href="/doku.php/linux:cmd:%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86:chown" class="wikilink2" title="linux:cmd:文件管理:chown" rel="nofollow">chown</a>
+</p>
+
+<p>
+<a href="/doku.php/linux:cmd:%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86:chmod" class="wikilink2" title="linux:cmd:文件管理:chmod" rel="nofollow">chmod</a>
+</p>
+
+</div>

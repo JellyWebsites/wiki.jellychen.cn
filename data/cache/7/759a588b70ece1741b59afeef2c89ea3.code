@@ -1,0 +1,12 @@
+<span class="co1">// 这种方法不起作用</span>
+<span class="kw1">if</span> <span class="br0">&#40;</span>x <span class="sy0">==</span> <span class="kw2">undefined</span><span class="br0">&#41;</span>
+    <span class="co1">// 作某些操作</span>
+&nbsp;
+<span class="co1">// 这个方法同样不起作用- 必须检查</span>
+<span class="co1">// 字符串 &quot;undefined&quot;</span>
+<span class="kw1">if</span> <span class="br0">&#40;</span><span class="kw1">typeof</span><span class="br0">&#40;</span>x<span class="br0">&#41;</span> <span class="sy0">==</span> <span class="kw2">undefined</span><span class="br0">&#41;</span>
+    <span class="co1">// 作某些操作</span>
+&nbsp;
+<span class="co1">// 这个方法有效</span>
+<span class="kw1">if</span> <span class="br0">&#40;</span><span class="kw1">typeof</span><span class="br0">&#40;</span>x<span class="br0">&#41;</span> <span class="sy0">==</span> <span class="st0">&quot;undefined&quot;</span><span class="br0">&#41;</span>
+    <span class="co1">// 作某些操作</span>

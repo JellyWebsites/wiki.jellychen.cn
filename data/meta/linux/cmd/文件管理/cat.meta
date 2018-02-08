@@ -1,0 +1,24 @@
+a:2:{s:7:"current";a:7:{s:4:"date";a:2:{s:7:"created";i:1464599670;s:8:"modified";i:1507538589;}s:4:"user";s:0:"";s:7:"creator";s:0:"";s:5:"title";s:3:"cat";s:8:"relation";a:2:{s:10:"references";a:2:{s:26:"linux:cmd:文件管理:rev";b:0;s:26:"linux:cmd:文件管理:tac";b:0;}s:10:"firstimage";s:0:"";}s:8:"internal";a:2:{s:5:"cache";b:1;s:3:"toc";b:1;}s:11:"description";a:1:{s:8:"abstract";s:737:"cat
+
+把档案串连接后传到基本输出
+
+用法
+cat [选项]... [文件]...
+参数
+cat --help
+
+用法：cat [选项]... [文件]...
+将[文件]或标准输入组合输出到标准输出。
+
+  -A, --show-all           等于-vET
+  -b, --number-nonblank    对非空输出行编号
+  -e                       等于-vE
+  -E, --show-ends          在每行结束处显示"$"
+  -n, --number             对输出的所有行编号
+  -s, --squeeze-blank      不输出多行空行
+  -t                       与-vT 等价
+  -T, --show-tabs          将跳格字符显示为^I
+  -u                       (被忽略)
+  -v, --show-nonprinting   使用^ 和M- 引用，除了LFD和 TAB 之外
+      --help		显示此帮助信息并退出
+…";}}s:10:"persistent";a:3:{s:4:"date";a:1:{s:7:"created";i:1464599670;}s:4:"user";s:0:"";s:7:"creator";s:0:"";}}

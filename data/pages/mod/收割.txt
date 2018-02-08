@@ -1,0 +1,25 @@
+=====收割mod=====
+中 文 名：收割MOD
+
+英 文 名：Reap Mod
+
+MOD 版本：1.0.4-1.1.0
+
+适用版本：1.9.0 1.9.4 1.10.0
+
+语言支持：不需要语言
+
+API 需求：Forge API
+
+软件来源：国外（感谢afkavril搬运）
+
+原帖地址：[[http://minecraft.curseforge.com/projects/reap-mod]]
+
+论坛地址：[[http://www.mcbbs.net/forum.php?mod=viewthread&tid=588399&highlight=%E6%94%B6%E5%89%B2|http://www.mcbbs.net/forum.php?mod=viewthread&tid=588399&highlight=收割]]
+
+安装方法：拖入mods文件夹
+
+====MOD介绍====
+这款收割MOD，主要作用是添加了右键收割庄稼，还有砍树的时候可以整颗一键砍倒。这个模组的一个好处是，右键收割的时候不但不会破坏种植的种子，而且同时会获得成熟的庄稼和种子，非常实用！砍树的时候，用斧子从树干的第一格开始砍，整棵树就会直接掉下来！
+====下载地址====
+[[http://pan.baidu.com/s/1nuHY9nj|百度云]]

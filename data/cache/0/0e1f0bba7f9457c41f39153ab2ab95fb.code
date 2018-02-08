@@ -1,0 +1,13 @@
+<span class="coMULTI">/*
+本示例使用前面定义的月份名称数组。
+第一条语句以“Day Month Date 00:00:00 Year”格式
+对 thisIsToday 变量赋值。
+*/</span>
+<span class="kw1">var</span> thisIsToday <span class="sy0">=</span> <span class="kw1">new</span> <span class="kw4">Date</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&nbsp;
+<span class="kw1">var</span> toDay <span class="sy0">=</span> <span class="kw1">new</span> <span class="kw4">Date</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>  <span class="co1">//获取今天的日期。</span>
+&nbsp;
+<span class="co1">// 提取年，月，日。</span>
+<span class="kw1">var</span> thisYear <span class="sy0">=</span> toDay.<span class="me1">getFullYear</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">var</span> thisMonth <span class="sy0">=</span> theMonths<span class="br0">&#91;</span>toDay.<span class="me1">getMonth</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="br0">&#93;</span><span class="sy0">;</span>
+<span class="kw1">var</span> thisDay <span class="sy0">=</span> thisMonth  <span class="sy0">+</span> <span class="st0">&quot; &quot;</span> <span class="sy0">+</span> toDay.<span class="me1">getDate</span><span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="sy0">+</span> <span class="st0">&quot;, &quot;</span> <span class="sy0">+</span> thisYear<span class="sy0">;</span>

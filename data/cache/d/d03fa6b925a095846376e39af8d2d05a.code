@@ -1,0 +1,21 @@
+<span class="co1">// smash() 函数是在该代码的其他地方定义的。</span>
+<span class="co1">// 布尔测试，看 newShip 是否为 true。</span>
+<span class="kw1">if</span> <span class="br0">&#40;</span>newShip<span class="br0">&#41;</span>
+   smash<span class="br0">&#40;</span>champagneBottle<span class="sy0">,</span>bow<span class="br0">&#41;</span><span class="sy0">;</span> 
+&nbsp;
+<span class="co1">// 在本示例中，除非两个条件都为真，否则该测试将不会被满足。</span>
+<span class="kw1">if</span> <span class="br0">&#40;</span>rind.<span class="me1">color</span> <span class="sy0">==</span> <span class="st0">&quot;deep yellow &quot;</span> <span class="sy0">&amp;&amp;</span> rind.<span class="me1">texture</span> <span class="sy0">==</span> <span class="st0">&quot;large and small wrinkles&quot;</span><span class="br0">&#41;</span>
+<span class="br0">&#123;</span>
+   theResponse <span class="sy0">=</span> <span class="br0">&#40;</span><span class="st0">&quot;Is it a Crenshaw melon?&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&nbsp;
+<span class="co1">// 在本示例中，只要任何一个条件为真，则测试即会满足。</span>
+<span class="kw1">var</span> theReaction <span class="sy0">=</span> <span class="st0">&quot;&quot;</span><span class="sy0">;</span>
+<span class="kw1">if</span> <span class="br0">&#40;</span><span class="br0">&#40;</span>dayOfWeek <span class="sy0">==</span> <span class="st0">&quot;Saturday&quot;</span><span class="br0">&#41;</span> <span class="sy0">||</span> <span class="br0">&#40;</span>dayOfWeek <span class="sy0">==</span> <span class="st0">&quot;Sunday&quot;</span><span class="br0">&#41;</span><span class="br0">&#41;</span>
+<span class="br0">&#123;</span>
+   theReaction <span class="sy0">=</span> <span class="br0">&#40;</span><span class="st0">&quot;I'm off to the beach!&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+<span class="kw1">else</span>
+<span class="br0">&#123;</span>
+   theReaction <span class="sy0">=</span> <span class="br0">&#40;</span><span class="st0">&quot;Hi ho, hi ho, it's off to work I go!&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>

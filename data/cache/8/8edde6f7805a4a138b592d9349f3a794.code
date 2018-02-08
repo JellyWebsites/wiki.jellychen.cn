@@ -1,0 +1,10 @@
+<span class="kw1">function</span> convert<span class="br0">&#40;</span>inches<span class="br0">&#41;</span>  <span class="br0">&#123;</span>
+   feet <span class="sy0">=</span> inches <span class="sy0">/</span> <span class="nu0">12</span><span class="sy0">;</span>  <span class="co1">//  这五条语句属于一个语句块。</span>
+   miles <span class="sy0">=</span> feet <span class="sy0">/</span> <span class="nu0">5280</span><span class="sy0">;</span>
+   nauticalMiles <span class="sy0">=</span> feet <span class="sy0">/</span> <span class="nu0">6080</span><span class="sy0">;</span>
+   cm <span class="sy0">=</span> inches <span class="sy0">*</span> <span class="nu0">2.54</span><span class="sy0">;</span>
+   meters <span class="sy0">=</span> inches <span class="sy0">/</span> <span class="nu0">39.37</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+km <span class="sy0">=</span> meters <span class="sy0">/</span> <span class="nu0">1000</span><span class="sy0">;</span>  <span class="co1">//  这三条语句不在语句块内。</span>
+kradius <span class="sy0">=</span> km<span class="sy0">;</span>
+mradius <span class="sy0">=</span> miles<span class="sy0">;</span>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="FeedCreator 1.7.2-ppt DokuWiki" -->
+<?xml-stylesheet href="http://wiki.jellychen.cn/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="http://wiki.jellychen.cn/feed.php">
+        <title>Jelly Wiki linux:cmd:文件管理</title>
+        <description></description>
+        <link>http://wiki.jellychen.cn/</link>
+        <image rdf:resource="http://wiki.jellychen.cn/lib/tpl/bootstrap3/images/favicon.ico" />
+       <dc:date>2018-01-21T10:17:43+08:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="http://wiki.jellychen.cn/doku.php/linux:cmd:%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86:cat?rev=1507538589&amp;do=diff"/>
+                <rdf:li rdf:resource="http://wiki.jellychen.cn/doku.php/linux:cmd:%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86:chgrp?rev=1507538589&amp;do=diff"/>
+                <rdf:li rdf:resource="http://wiki.jellychen.cn/doku.php/linux:cmd:%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86:rm?rev=1507538589&amp;do=diff"/>
+                <rdf:li rdf:resource="http://wiki.jellychen.cn/doku.php/linux:cmd:%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86:start?rev=1507538589&amp;do=diff"/>
+                <rdf:li rdf:resource="http://wiki.jellychen.cn/doku.php/linux:cmd:%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86:touch?rev=1507538589&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="http://wiki.jellychen.cn/lib/tpl/bootstrap3/images/favicon.ico">
+        <title>Jelly Wiki</title>
+        <link>http://wiki.jellychen.cn/</link>
+        <url>http://wiki.jellychen.cn/lib/tpl/bootstrap3/images/favicon.ico</url>
+    </image>
+    <item rdf:about="http://wiki.jellychen.cn/doku.php/linux:cmd:%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86:cat?rev=1507538589&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-10-09T16:43:09+08:00</dc:date>
+        <title>linux:cmd:文件管理:cat</title>
+        <link>http://wiki.jellychen.cn/doku.php/linux:cmd:%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86:cat?rev=1507538589&amp;do=diff</link>
+        <description>cat
+
+把档案串连接后传到基本输出
+
+用法
+cat [选项]... [文件]...
+参数
+cat --help
+
+用法：cat [选项]... [文件]...
+将[文件]或标准输入组合输出到标准输出。
+
+  -A, --show-all           等于-vET
+  -b, --number-nonblank    对非空输出行编号
+  -e                       等于-vE
+  -E, --show-ends          在每行结束处显示&quot;$&quot;
+  -n, --number             对输出的所有行编号
+  -s, --squeeze-blank      不输出多行空行
+  -t                       与-vT 等价
+  -T, --show-tabs          将跳格字符显示为^I
+  -u                       (被忽略)
+  -v, --show-nonprinting   使用^ 和M- 引用，除了LFD和 TAB 之外
+      --help		显示此帮助信息并退出
+…</description>
+    </item>
+    <item rdf:about="http://wiki.jellychen.cn/doku.php/linux:cmd:%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86:chgrp?rev=1507538589&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-10-09T16:43:09+08:00</dc:date>
+        <title>linux:cmd:文件管理:chgrp</title>
+        <link>http://wiki.jellychen.cn/doku.php/linux:cmd:%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86:chgrp?rev=1507538589&amp;do=diff</link>
+        <description>chgrp
+
+变更文件或目录的所属群组
+
+用法
+chgrp [选项] 组文件... POSIX 选项: [-R] [--]
+参数
+
+
+用法：chgrp [选项]... 用户组 文件...
+　或：chgrp [选项]... --reference=参考文件 文件...
+变更文件或目录的所属群组.
+参数 --reference, 根据指定文件改变文件的群组属性 .
+
+  -c, --changes          当发生改变时输出调试信息
+  -f, --silent, --quiet  不显示错误信息
+  -v, --verbose          运行时显示详细的处理信息
+      --dereference      作用于符号链接的指向，而不是符号链接本身
+  -h, --no-dereference   作用于符号链接本身，而不是它所指向的. 仅可用于 lchown 系统调用被提供时. 
+      --no-preserve-root do not treat '/' specially (the default)
+      --preserve-root    fai…</description>
+    </item>
+    <item rdf:about="http://wiki.jellychen.cn/doku.php/linux:cmd:%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86:rm?rev=1507538589&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-10-09T16:43:09+08:00</dc:date>
+        <title>linux:cmd:文件管理:rm</title>
+        <link>http://wiki.jellychen.cn/doku.php/linux:cmd:%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86:rm?rev=1507538589&amp;do=diff</link>
+        <description>rm
+
+删除文件或目录。
+
+用法
+rm [选项]... 文件...
+参数
+
+
+  -f, --force           强制删除文件或目录。 
+  -i                    强制删除文件或目录。 
+  -I			在删除超过三个文件或者递归删除前要求确认。此选项比-i 提
+			示内容更少，但同样可以阻止大多数错误发生
+      --interactive[=WHEN]	根据指定的WHEN 进行确认提示：never，once (-I)，
+				或者always (-i)。如果此参数不加WHEN 则总是提示
+      --one-file-system		递归删除一个层级时，跳过所有不符合命令行参
+				数的文件系统上的文件
+      --no-preserve-root  不对根目录'/'特殊对待
+      --preserve-root   不删除根目录'/'(默认) 
+  -r, -R, --recursive   递归处理，将指定目录下的所有文件及子目录一并处理。
+  -d, --dir             直接把欲删除的目录的硬连接数据删成…</description>
+    </item>
+    <item rdf:about="http://wiki.jellychen.cn/doku.php/linux:cmd:%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86:start?rev=1507538589&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-10-09T16:43:09+08:00</dc:date>
+        <title>linux:cmd:文件管理:start</title>
+        <link>http://wiki.jellychen.cn/doku.php/linux:cmd:%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86:start?rev=1507538589&amp;do=diff</link>
+        <description>文件管理
+
+&lt;ul class=&quot;catlist-nslist&quot; &gt;&lt;li class=&quot;catlist-ns&quot;&gt;&lt;strong class=&quot;li catlist-nshead&quot;&gt;apache&lt;/strong&gt;&lt;ul class=&quot;catlist-nslist&quot;&gt;&lt;li class=&quot;catlist-page&quot;&gt;APACHE&lt;/li&gt;&lt;li class=&quot;catlist-ns&quot;&gt;&lt;strong class=&quot;li catlist-nshead&quot;&gt;tools&lt;/strong&gt;&lt;ul class=&quot;catlist-nslist&quot;&gt;&lt;li class=&quot;catlist-page&quot;&gt;ab性能测试工具&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li class=&quot;catlist-ns&quot;&gt;&lt;strong class=&quot;li catlist-nshead&quot;&gt;css&lt;/strong&gt;&lt;ul class=&quot;catlist-nslist&quot;&gt;&lt;li class=&quot;catlist-page&quot;&gt;CSS 3.0 参考手册&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li class=&quot;catlist-ns&quot;&gt;&lt;str…</description>
+    </item>
+    <item rdf:about="http://wiki.jellychen.cn/doku.php/linux:cmd:%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86:touch?rev=1507538589&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-10-09T16:43:09+08:00</dc:date>
+        <title>linux:cmd:文件管理:touch</title>
+        <link>http://wiki.jellychen.cn/doku.php/linux:cmd:%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86:touch?rev=1507538589&amp;do=diff</link>
+        <description>touch
+
+改变文件或目录时间。
+
+touch 修改每个指定文件 file 的存取(access)和／或修改(modification)时间戳记．除非使用-r或-t选项，这些时间戳记都将修改为当前的时间．使用-r选项时，这些戳记将按照文件</description>
+    </item>
+</rdf:RDF>

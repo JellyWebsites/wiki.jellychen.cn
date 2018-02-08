@@ -1,0 +1,3 @@
+====== Window 对象方法 ======
+
+<catlist -sortAscending -forceLinks -noAddPageButton -addPageButtonEach -noHead>

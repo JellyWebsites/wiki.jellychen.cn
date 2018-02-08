@@ -1,0 +1,20 @@
+tweak<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">var</span> aNumber <span class="sy0">=</span> <span class="nu0">100</span><span class="sy0">;</span>
+<span class="kw1">function</span> tweak<span class="br0">&#40;</span><span class="br0">&#41;</span>  <span class="br0">&#123;</span>
+<span class="kw1">var</span> newThing <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span>  <span class="co1">// 显式声明 newThing 变量。</span>
+&nbsp;
+    <span class="co1">// 本语句将未定义的变量赋给 newThing，因为已有名为 aNumber 的局部变量。</span>
+    newThing <span class="sy0">=</span> aNumber<span class="sy0">;</span>
+&nbsp;
+    <span class="co1">//下一条语句将值 42 赋给局部的 aNumber。aNumber = 42;</span>
+<span class="kw1">if</span> <span class="br0">&#40;</span><span class="kw2">false</span><span class="br0">&#41;</span>  <span class="br0">&#123;</span>
+    <span class="kw1">var</span> aNumber<span class="sy0">;</span>  <span class="co1">// 该语句永远不会执行。</span>
+    aNumber <span class="sy0">=</span> <span class="nu0">123</span><span class="sy0">;</span>  <span class="co1">//  该语句永远不会执行。</span>
+    <span class="br0">&#125;</span>  <span class="co1">// 条件语句结束。</span>
+&nbsp;
+<span class="br0">&#125;</span>  <span class="co1">// 该函数定义结束。</span>
+<span class="sy0">&lt;/</span>code<span class="sy0">&lt;</span>
+当 JScript 运行函数时，首先查找所有的变量声明，
+&nbsp;
+<span class="sy0">&lt;</span>code javascript<span class="sy0">&gt;</span>
+<span class="kw1">var</span> someVariable<span class="sy0">;</span>

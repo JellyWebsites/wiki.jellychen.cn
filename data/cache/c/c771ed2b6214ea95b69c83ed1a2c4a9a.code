@@ -1,0 +1,4 @@
+<span class="kw1">var</span> x <span class="sy0">=</span> <span class="nu0">2000</span><span class="sy0">;</span>      <span class="co1">// 一个数字。</span>
+<span class="kw1">var</span> y <span class="sy0">=</span> <span class="st0">&quot;Hello&quot;</span><span class="sy0">;</span>   <span class="co1">// 一个字符串。</span>
+x <span class="sy0">=</span> x <span class="sy0">+</span> y<span class="sy0">;</span>         <span class="co1">// 将数字强制转换为字符串。</span>
+document.<span class="me1">write</span><span class="br0">&#40;</span>x<span class="br0">&#41;</span><span class="sy0">;</span> <span class="co1">// 输出 2000Hello。</span>

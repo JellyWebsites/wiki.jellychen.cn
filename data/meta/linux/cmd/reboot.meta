@@ -1,0 +1,27 @@
+a:2:{s:7:"current";a:9:{s:4:"date";a:2:{s:7:"created";i:1463726712;s:8:"modified";i:1463984638;}s:4:"user";s:0:"";s:7:"creator";s:0:"";s:11:"last_change";b:0;s:11:"contributor";a:1:{s:5:"admin";s:9:"JellyChen";}s:8:"relation";a:2:{s:10:"references";a:6:{s:15:"linux:cmd:start";b:1;s:14:"linux:cmd:halt";b:1;s:18:"linux:cmd:poweroff";b:1;s:18:"linux:cmd:shutdown";b:1;s:17:"linux:cmd:telinit";b:0;s:18:"linux:cmd:runlevel";b:0;}s:10:"firstimage";s:0:"";}s:5:"title";s:6:"reboot";s:8:"internal";a:2:{s:5:"cache";b:1;s:3:"toc";b:1;}s:11:"description";a:1:{s:8:"abstract";s:807:"linux命令
+
+reboot
+
+重启系统，该操作执行需要root权限。
+
+用法
+
+
+~# sudo reboot
+
+
+详解
+用法: reboot [OPTION]...
+重新启动
+
+Options:
+  -n, --no-sync               重开机之前不检查是否有未结束的程序
+  -f, --force                 强制重新开机，不调用shutdown指令的功能
+  -p, --poweroff              类似于调用halt，关闭系统
+  -w, --wtmp-only             仅做测试，并不真正将系统重新开机，只会把重开机的数据写入/var/log目录下的wtmp日志文件
+  -q, --quiet                 仅输出错误信息
+  -v, --verbose               输出更多的注释信息
+      --help                  显示帮助信息
+      --version               显示版本信息
+
+此命令将指示内核重启或关闭系统；在没有 …";}}s:10:"persistent";a:5:{s:4:"date";a:2:{s:7:"created";i:1463726712;s:8:"modified";i:1463984638;}s:4:"user";s:0:"";s:7:"creator";s:0:"";s:11:"last_change";b:0;s:11:"contributor";a:1:{s:5:"admin";s:9:"JellyChen";}}}

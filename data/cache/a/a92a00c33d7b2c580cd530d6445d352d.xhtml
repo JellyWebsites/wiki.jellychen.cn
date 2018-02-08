@@ -1,0 +1,58 @@
+
+<h1 class="sectionedit1" id="open">open</h1>
+<div class="level1">
+
+<p>
+<strong>定义和用法</strong>
+</p>
+
+<p>
+open() 方法可打开一个新文档，并擦除当前文档的内容。
+</p>
+
+<p>
+<strong>语法</strong>
+</p>
+<pre class="code">document.open(mimetype,replace)</pre>
+<div class="table sectionedit2"><table class="inline">
+	<thead>
+	<tr class="row0">
+		<th class="col0">参数</th><th class="col1">描述</th>
+	</tr>
+	</thead>
+	<tr class="row1">
+		<td class="col0">mimetype</td><td class="col1">可选。规定正在写的文档的类型。默认值是 “text/html”。</td>
+	</tr>
+	<tr class="row2">
+		<td class="col0">replace</td><td class="col1">可选。当此参数设置后，可引起新文档从父文档继承历史条目。</td>
+	</tr>
+</table></div>
+<!-- EDIT2 TABLE [165-359] -->
+<p>
+<strong>说明</strong>
+</p>
+
+<p>
+该方法将擦除当前 <abbr title="HyperText Markup Language">HTML</abbr> 文档的内容，开始一个新的文档，新文档用
+<a href="/doku.php/html:dom:document:function:write" class="wikilink2" title="html:dom:document:function:write" rel="nofollow">write</a>
+() 方法或
+<a href="/doku.php/html:dom:document:function:writeln" class="wikilink2" title="html:dom:document:function:writeln" rel="nofollow">writeln</a>
+方法编写。
+</p>
+
+<p>
+<strong>提示和注释</strong>
+</p>
+
+<p>
+重要事项：调用
+<span class="curid"><a href="/doku.php/html:dom:document:function:open" class="wikilink1" title="html:dom:document:function:open">open</a></span>
+() 方法打开一个新文档并且用
+<a href="/doku.php/html:dom:document:function:write" class="wikilink2" title="html:dom:document:function:write" rel="nofollow">write</a>
+() 方法设置文档内容后，必须记住用
+<a href="/doku.php/html:dom:document:function:close" class="wikilink2" title="html:dom:document:function:close" rel="nofollow">close</a>
+方法关闭文档，并迫使其内容显示出来。
+<strong>注释</strong>：属于被覆盖的文档的一部分的脚本或事件句柄不能调用该方法，因为脚本或事件句柄自身也会被覆盖。
+</p>
+
+</div>

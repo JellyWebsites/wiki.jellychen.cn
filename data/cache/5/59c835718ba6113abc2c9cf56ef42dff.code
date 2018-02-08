@@ -1,0 +1,73 @@
+<span class="kw1">var</span> epsilon <span class="sy0">=</span> <span class="nu0">0.00000000001</span><span class="sy0">;</span> <span class="co1">// 一些需要测试的极小数字。</span>
+&nbsp;
+<span class="co1">// 测试整数的函数。</span>
+<span class="kw1">function</span> integerCheck<span class="br0">&#40;</span>a<span class="sy0">,</span> b<span class="sy0">,</span> c<span class="br0">&#41;</span> 
+<span class="br0">&#123;</span>
+   <span class="co1">// 测试。</span>
+   <span class="kw1">if</span> <span class="br0">&#40;</span> <span class="br0">&#40;</span>a<span class="sy0">*</span>a<span class="br0">&#41;</span> <span class="sy0">==</span> <span class="br0">&#40;</span><span class="br0">&#40;</span>b<span class="sy0">*</span>b<span class="br0">&#41;</span> <span class="sy0">+</span> <span class="br0">&#40;</span>c<span class="sy0">*</span>c<span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="br0">&#41;</span>   
+      <span class="kw1">return</span> <span class="kw2">true</span><span class="sy0">;</span>
+&nbsp;
+   <span class="kw1">return</span> <span class="kw2">false</span><span class="sy0">;</span>
+<span class="br0">&#125;</span> <span class="co1">// 整数检查函数的结尾。</span>
+&nbsp;
+<span class="co1">// 测试浮点数的函数。</span>
+<span class="kw1">function</span> floatCheck<span class="br0">&#40;</span>a<span class="sy0">,</span> b<span class="sy0">,</span> c<span class="br0">&#41;</span>   
+<span class="br0">&#123;</span>
+   <span class="co1">// 得到测试数值。</span>
+   <span class="kw1">var</span> delta <span class="sy0">=</span> <span class="br0">&#40;</span><span class="br0">&#40;</span>a<span class="sy0">*</span>a<span class="br0">&#41;</span> <span class="sy0">-</span> <span class="br0">&#40;</span><span class="br0">&#40;</span>b<span class="sy0">*</span>b<span class="br0">&#41;</span> <span class="sy0">+</span> <span class="br0">&#40;</span>c<span class="sy0">*</span>c<span class="br0">&#41;</span><span class="br0">&#41;</span><span class="br0">&#41;</span>
+&nbsp;
+   <span class="co1">// 测试需要绝对值</span>
+   delta <span class="sy0">=</span> <span class="kw4">Math</span>.<span class="me1">abs</span><span class="br0">&#40;</span>delta<span class="br0">&#41;</span><span class="sy0">;</span>
+&nbsp;
+   <span class="co1">// 如果差小于 epsilon，那么它相当接近。</span>
+   <span class="kw1">if</span> <span class="br0">&#40;</span>delta <span class="sy0">&lt;</span> epsilon<span class="br0">&#41;</span>   
+      <span class="kw1">return</span> <span class="kw2">true</span><span class="sy0">;</span>
+&nbsp;
+   <span class="kw1">return</span> <span class="kw2">false</span><span class="sy0">;</span>
+<span class="br0">&#125;</span> <span class="co1">// 浮点检查函数的末尾。</span>
+&nbsp;
+&nbsp;
+<span class="co1">// 三元检查。</span>
+<span class="kw1">function</span> checkTriplet<span class="br0">&#40;</span>a<span class="sy0">,</span> b<span class="sy0">,</span> c<span class="br0">&#41;</span>
+<span class="br0">&#123;</span> 
+   <span class="co1">// 创建临时变量，用于交换值</span>
+   <span class="kw1">var</span> d <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span> 
+&nbsp;
+   <span class="co1">// 先将最长的移动到位置“a”。</span>
+&nbsp;
+   <span class="co1">// 需要的话交换 a 和 b</span>
+   <span class="kw1">if</span> <span class="br0">&#40;</span>b <span class="sy0">&gt;</span> a<span class="br0">&#41;</span>
+   <span class="br0">&#123;</span>
+      d <span class="sy0">=</span> a<span class="sy0">;</span>
+      a <span class="sy0">=</span> b<span class="sy0">;</span>
+      b <span class="sy0">=</span> d<span class="sy0">;</span>
+   <span class="br0">&#125;</span>
+&nbsp;
+   <span class="co1">// 需要的话交换 a 和 c</span>
+   <span class="kw1">if</span> <span class="br0">&#40;</span>c <span class="sy0">&gt;</span> a<span class="br0">&#41;</span>
+   <span class="br0">&#123;</span>
+      d <span class="sy0">=</span> a<span class="sy0">;</span>
+      a <span class="sy0">=</span> c<span class="sy0">;</span>
+      c <span class="sy0">=</span> d<span class="sy0">;</span>
+   <span class="br0">&#125;</span>
+&nbsp;
+   <span class="co1">// 测试全部的 3 个值，看其是否为整数？</span>
+   <span class="kw1">if</span> <span class="br0">&#40;</span><span class="br0">&#40;</span><span class="br0">&#40;</span>a <span class="sy0">%</span> <span class="nu0">1</span><span class="br0">&#41;</span> <span class="sy0">==</span> <span class="nu0">0</span><span class="br0">&#41;</span> <span class="sy0">&amp;&amp;</span> <span class="br0">&#40;</span><span class="br0">&#40;</span>b <span class="sy0">%</span> <span class="nu0">1</span><span class="br0">&#41;</span> <span class="sy0">==</span> <span class="nu0">0</span><span class="br0">&#41;</span> <span class="sy0">&amp;&amp;</span> <span class="br0">&#40;</span><span class="br0">&#40;</span>c <span class="sy0">%</span> <span class="nu0">1</span><span class="br0">&#41;</span> <span class="sy0">==</span> <span class="nu0">0</span><span class="br0">&#41;</span><span class="br0">&#41;</span>
+   <span class="br0">&#123;</span> 
+      <span class="co1">// 如果成立，使用精确检查。</span>
+      <span class="kw1">return</span> integerCheck<span class="br0">&#40;</span>a<span class="sy0">,</span> b<span class="sy0">,</span> c<span class="br0">&#41;</span><span class="sy0">;</span> 
+   <span class="br0">&#125;</span>
+   <span class="kw1">else</span>
+   <span class="br0">&#123;</span>
+      <span class="co1">// 如果不成立，取尽可能相近的。</span>
+      <span class="kw1">return</span> floatCheck<span class="br0">&#40;</span>a<span class="sy0">,</span> b<span class="sy0">,</span> c<span class="br0">&#41;</span><span class="sy0">;</span> 
+   <span class="br0">&#125;</span>
+<span class="br0">&#125;</span> <span class="co1">// 三元检查函数的末尾。</span>
+&nbsp;
+<span class="co1">// 下面的三个语句赋给范例值，用于测试。</span>
+<span class="kw1">var</span> sideA <span class="sy0">=</span> <span class="nu0">5</span><span class="sy0">;</span>
+<span class="kw1">var</span> sideB <span class="sy0">=</span> <span class="nu0">5</span><span class="sy0">;</span>
+<span class="kw1">var</span> sideC <span class="sy0">=</span> <span class="kw4">Math</span>.<span class="me1">sqrt</span><span class="br0">&#40;</span><span class="nu0">50.001</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&nbsp;
+<span class="co1">// 调用函数。调用后，'result' 中包含了结果。</span>
+<span class="kw1">var</span> result <span class="sy0">=</span> checkTriplet<span class="br0">&#40;</span>sideA<span class="sy0">,</span> sideB<span class="sy0">,</span> sideC<span class="br0">&#41;</span><span class="sy0">;</span>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="FeedCreator 1.7.2-ppt DokuWiki" -->
+<?xml-stylesheet href="http://wiki.jellychen.cn/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="http://wiki.jellychen.cn/feed.php">
+        <title>Jelly Wiki html:dom:document:function</title>
+        <description></description>
+        <link>http://wiki.jellychen.cn/</link>
+        <image rdf:resource="http://wiki.jellychen.cn/lib/tpl/bootstrap3/images/favicon.ico" />
+       <dc:date>2018-01-09T06:24:32+08:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="http://wiki.jellychen.cn/doku.php/html:dom:document:function:open?rev=1507538593&amp;do=diff"/>
+                <rdf:li rdf:resource="http://wiki.jellychen.cn/doku.php/html:dom:document:function:start?rev=1507538593&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="http://wiki.jellychen.cn/lib/tpl/bootstrap3/images/favicon.ico">
+        <title>Jelly Wiki</title>
+        <link>http://wiki.jellychen.cn/</link>
+        <url>http://wiki.jellychen.cn/lib/tpl/bootstrap3/images/favicon.ico</url>
+    </image>
+    <item rdf:about="http://wiki.jellychen.cn/doku.php/html:dom:document:function:open?rev=1507538593&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-10-09T16:43:13+08:00</dc:date>
+        <title>html:dom:document:function:open</title>
+        <link>http://wiki.jellychen.cn/doku.php/html:dom:document:function:open?rev=1507538593&amp;do=diff</link>
+        <description>open
+
+定义和用法
+
+open() 方法可打开一个新文档，并擦除当前文档的内容。
+
+语法
+document.open(mimetype,replace)参数描述mimetype可选。规定正在写的文档的类型。默认值是 “text/html”。replace可选。当此参数设置后，可引起新文档从父文档继承历史条目。</description>
+    </item>
+    <item rdf:about="http://wiki.jellychen.cn/doku.php/html:dom:document:function:start?rev=1507538593&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-10-09T16:43:13+08:00</dc:date>
+        <title>html:dom:document:function:start</title>
+        <link>http://wiki.jellychen.cn/doku.php/html:dom:document:function:start?rev=1507538593&amp;do=diff</link>
+        <description>Document 对象方法
+
+&lt;ul class=&quot;catlist-nslist&quot; &gt;&lt;li class=&quot;catlist-ns&quot;&gt;&lt;strong class=&quot;li catlist-nshead&quot;&gt;apache&lt;/strong&gt;&lt;ul class=&quot;catlist-nslist&quot;&gt;&lt;li class=&quot;catlist-page&quot;&gt;APACHE&lt;/li&gt;&lt;li class=&quot;catlist-ns&quot;&gt;&lt;strong class=&quot;li catlist-nshead&quot;&gt;tools&lt;/strong&gt;&lt;ul class=&quot;catlist-nslist&quot;&gt;&lt;li class=&quot;catlist-page&quot;&gt;ab性能测试工具&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li class=&quot;catlist-ns&quot;&gt;&lt;strong class=&quot;li catlist-nshead&quot;&gt;css&lt;/strong&gt;&lt;ul class=&quot;catlist-nslist&quot;&gt;&lt;li class=&quot;catlist-page&quot;&gt;CSS 3.0 参考手册&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li class=&quot;catlist…</description>
+    </item>
+</rdf:RDF>

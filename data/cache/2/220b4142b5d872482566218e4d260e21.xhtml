@@ -1,0 +1,50 @@
+
+<h2 class="sectionedit1" id="globals">$GLOBALS</h2>
+<div class="level2">
+
+<p>
+$GLOBALS — 引用全局作用域中可用的全部变量
+</p>
+
+</div>
+<!-- EDIT1 SECTION "$GLOBALS" [1-80] -->
+<h3 class="sectionedit2" id="说明">说明</h3>
+<div class="level3">
+
+<p>
+一个包含了全部变量的全局组合数组。变量的名字就是数组的键。
+</p>
+
+</div>
+<!-- EDIT2 SECTION "说明" [81-184] -->
+<h3 class="sectionedit3" id="范例">范例</h3>
+<div class="level3">
+<pre class="code php"><span class="kw2">&lt;?php</span>
+<span class="kw2">function</span> test<span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+    <span class="re0">$foo</span> <span class="sy0">=</span> <span class="st0">&quot;local variable&quot;</span><span class="sy0">;</span>
+&nbsp;
+    <span class="kw1">echo</span> <span class="st_h">'$foo in global scope: '</span> <span class="sy0">.</span> <span class="re0">$GLOBALS</span><span class="br0">&#91;</span><span class="st0">&quot;foo&quot;</span><span class="br0">&#93;</span> <span class="sy0">.</span> <span class="st0">&quot;<span class="es1">\n</span>&quot;</span><span class="sy0">;</span>
+    <span class="kw1">echo</span> <span class="st_h">'$foo in current scope: '</span> <span class="sy0">.</span> <span class="re0">$foo</span> <span class="sy0">.</span> <span class="st0">&quot;<span class="es1">\n</span>&quot;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&nbsp;
+<span class="re0">$foo</span> <span class="sy0">=</span> <span class="st0">&quot;Example content&quot;</span><span class="sy0">;</span>
+test<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="sy1">?&gt;</span></pre>
+
+<p>
+上例输出：
+</p>
+<pre class="code">$foo in global scope: Example content
+$foo in current scope: local variable</pre>
+
+</div>
+<!-- EDIT3 SECTION "范例" [185-531] -->
+<h3 class="sectionedit4" id="参_见">参 见</h3>
+<div class="level3">
+
+<p>
+<a href="/doku.php/php:%E8%AF%AD%E8%A8%80%E5%8F%82%E8%80%83:%E5%8F%98%E9%87%8F:%E5%8F%98%E9%87%8F%E8%8C%83%E5%9B%B4#global_关键字" class="wikilink2" title="php:语言参考:变量:变量范围" rel="nofollow">global 关键字</a>
+</p>
+
+</div>
+<!-- EDIT4 SECTION "参 见" [532-] -->

@@ -1,0 +1,15 @@
+<span class="co1">// 计算阶乘的函数。如果传递了</span>
+<span class="co1">// 无效的数值（例如小于零），</span>
+<span class="co1">// 将返回 -1，表明发生了错误。若数值有效，</span>
+<span class="co1">// 把数值转换为最相近的整数，并</span>
+<span class="co1">// 返回阶乘。</span>
+<span class="kw1">function</span> factorial<span class="br0">&#40;</span>aNumber<span class="br0">&#41;</span>  <span class="br0">&#123;</span>
+aNumber <span class="sy0">=</span> <span class="kw4">Math</span>.<span class="me1">floor</span><span class="br0">&#40;</span>aNumber<span class="br0">&#41;</span><span class="sy0">;</span>  <span class="co1">// 如果这个数不是一个整数，则向下舍入。</span>
+<span class="kw1">if</span> <span class="br0">&#40;</span>aNumber <span class="sy0">&lt;</span> <span class="nu0">0</span><span class="br0">&#41;</span>  <span class="br0">&#123;</span>  <span class="co1">// 如果这个数小于 0，拒绝接收。</span>
+    <span class="kw1">return</span> <span class="sy0">-</span><span class="nu0">1</span><span class="sy0">;</span>
+    <span class="br0">&#125;</span>
+      <span class="kw1">if</span> <span class="br0">&#40;</span>aNumber <span class="sy0">==</span> <span class="nu0">0</span><span class="br0">&#41;</span>  <span class="br0">&#123;</span>  <span class="co1">// 如果为 0，则其阶乘为 1。</span>
+      <span class="kw1">return</span> <span class="nu0">1</span><span class="sy0">;</span>
+      <span class="br0">&#125;</span>
+        <span class="kw1">else</span> <span class="kw1">return</span> <span class="br0">&#40;</span>aNumber <span class="sy0">*</span> factorial<span class="br0">&#40;</span>aNumber <span class="sy0">-</span> <span class="nu0">1</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">;</span>  <span class="co1">// 否则，递归直至完成。</span>
+<span class="br0">&#125;</span>

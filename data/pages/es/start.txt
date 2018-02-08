@@ -1,0 +1,7 @@
+====== ElasticSearch ======
+
+参考资料
+
+[[http://es.xiaoleilu.com/|Elasticsearch 权威指南（中文版）（路小磊整合翻译版）]]
+
+[[http://kibana.logstash.es/content/|ELKstack 中文指南（饶琛琳）]]

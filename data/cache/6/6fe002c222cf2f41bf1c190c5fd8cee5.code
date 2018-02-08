@@ -1,0 +1,2 @@
+<span class="kw1">if</span> <span class="br0">&#40;</span><span class="st0">&quot;prop&quot;</span> <span class="kw1">in</span> someObject<span class="br0">&#41;</span>
+<span class="co1">// someObject 有属性 'prop'</span>

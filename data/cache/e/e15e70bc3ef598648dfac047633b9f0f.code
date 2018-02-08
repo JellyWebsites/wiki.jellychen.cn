@@ -1,0 +1,4 @@
+<span class="kw2">&lt;?php</span>
+<a target="_blank" href="http://www.php.net/var_dump"><span class="kw3">var_dump</span></a><span class="br0">&#40;</span><a target="_blank" href="http://www.php.net/microtime"><span class="kw3">microtime</span></a><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<a target="_blank" href="http://www.php.net/var_dump"><span class="kw3">var_dump</span></a><span class="br0">&#40;</span><a target="_blank" href="http://www.php.net/microtime"><span class="kw3">microtime</span></a><span class="br0">&#40;</span><span class="kw4">TRUE</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="sy1">?&gt;</span>

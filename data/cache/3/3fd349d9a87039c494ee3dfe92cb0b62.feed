@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="FeedCreator 1.7.2-ppt DokuWiki" -->
+<?xml-stylesheet href="http://wiki.jellychen.cn/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="http://wiki.jellychen.cn/feed.php">
+        <title>Jelly Wiki javascript:正则表达式</title>
+        <description></description>
+        <link>http://wiki.jellychen.cn/</link>
+        <image rdf:resource="http://wiki.jellychen.cn/lib/tpl/bootstrap3/images/favicon.ico" />
+       <dc:date>2018-01-21T21:08:38+08:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="http://wiki.jellychen.cn/doku.php/javascript:%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F:start?rev=1507538598&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="http://wiki.jellychen.cn/lib/tpl/bootstrap3/images/favicon.ico">
+        <title>Jelly Wiki</title>
+        <link>http://wiki.jellychen.cn/</link>
+        <url>http://wiki.jellychen.cn/lib/tpl/bootstrap3/images/favicon.ico</url>
+    </image>
+    <item rdf:about="http://wiki.jellychen.cn/doku.php/javascript:%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F:start?rev=1507538598&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-10-09T16:43:18+08:00</dc:date>
+        <title>javascript:正则表达式:start</title>
+        <link>http://wiki.jellychen.cn/doku.php/javascript:%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F:start?rev=1507538598&amp;do=diff</link>
+        <description>正则表达式
+
+这些页包含的信息其目的是提供一个关于正则表达式的通用介绍。
+
+ 尽管试图让每个主题的内容都比较独立，但这些主题所包含的大部分信息都依赖于对前面所介绍的特性或概念的理解。因此，建议您顺序地仔细阅读这些主题，以便最全面地了解这些材料。</description>
+    </item>
+</rdf:RDF>

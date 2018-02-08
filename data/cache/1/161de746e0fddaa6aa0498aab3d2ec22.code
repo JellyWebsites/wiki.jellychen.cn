@@ -1,0 +1,1 @@
+NumberOfDaysLeft <span class="sy0">=</span> EndDate – TodaysDate<span class="sy0">;</span>

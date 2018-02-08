@@ -1,0 +1,3 @@
+<span class="kw1">if</span> <span class="br0">&#40;</span><span class="br0">&#40;</span>runfirst<span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="sy0">==</span> <span class="nu0">0</span><span class="br0">&#41;</span> <span class="sy0">||</span> <span class="br0">&#40;</span>runsecond<span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="sy0">==</span> <span class="nu0">0</span><span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+    <span class="co1">// 若干代码。</span>
+<span class="br0">&#125;</span>

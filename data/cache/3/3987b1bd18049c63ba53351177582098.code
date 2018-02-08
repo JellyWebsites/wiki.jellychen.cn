@@ -1,0 +1,6 @@
+<span class="kw1">var</span> anExpression <span class="sy0">=</span> <span class="st0">&quot;6 * 9 % 7&quot;</span><span class="sy0">;</span>
+<span class="kw1">var</span> total <span class="sy0">=</span> eval<span class="br0">&#40;</span>anExpression<span class="br0">&#41;</span><span class="sy0">;</span> <span class="co1">// 将变量 total 赋值为 5。</span>
+<span class="kw1">var</span> yetAnotherExpression <span class="sy0">=</span> <span class="st0">&quot;6 * (9 % 7)&quot;</span><span class="sy0">;</span>
+total <span class="sy0">=</span> eval<span class="br0">&#40;</span>yetAnotherExpression<span class="br0">&#41;</span> <span class="co1">// 将变量 total 赋值为 12。</span>
+<span class="co1">// 将一个字符串赋给 totality （注意嵌套引用）</span>
+<span class="kw1">var</span> totality <span class="sy0">=</span> eval<span class="br0">&#40;</span><span class="st0">&quot;’...surrounded by acres of clams.’&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>

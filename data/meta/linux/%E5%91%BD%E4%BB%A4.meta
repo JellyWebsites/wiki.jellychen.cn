@@ -1,0 +1,21 @@
+a:2:{s:7:"current";a:9:{s:4:"date";a:2:{s:7:"created";i:1463722138;s:8:"modified";i:1463727642;}s:7:"creator";s:9:"JellyChen";s:4:"user";s:5:"admin";s:11:"last_change";a:7:{s:4:"date";i:1463727642;s:2:"ip";s:9:"127.0.0.1";s:4:"type";s:1:"E";s:2:"id";s:12:"linux:命令";s:4:"user";s:5:"admin";s:3:"sum";s:0:"";s:5:"extra";s:0:"";}s:11:"contributor";a:1:{s:5:"admin";s:9:"JellyChen";}s:8:"relation";a:2:{s:10:"references";a:5:{s:11:"linux:start";b:1;s:19:"linux:命令:reboot";b:1;s:15:"linux:命令:du";b:1;s:15:"linux:命令:ls";b:1;s:17:"linux:命令:type";b:0;}s:10:"firstimage";s:0:"";}s:5:"title";s:6:"命令";s:11:"description";a:2:{s:15:"tableofcontents";a:1:{i:0;a:4:{s:3:"hid";s:6:"命令";s:5:"title";s:6:"命令";s:4:"type";s:2:"ul";s:5:"level";i:2;}}s:8:"abstract";s:227:"LINUX
+
+命令
+
+ reboot 
+命令详解
+用途：重启系统
+du
+
+命令详解
+用途：报告磁盘空间使用情况
+
+ls
+
+命令详解
+用途：显示当前目录的内容
+
+type
+
+命令详解
+用途：显示指定命令的类型";}s:8:"internal";a:2:{s:5:"cache";b:1;s:3:"toc";b:1;}}s:10:"persistent";a:5:{s:4:"date";a:2:{s:7:"created";i:1463722138;s:8:"modified";i:1463727642;}s:7:"creator";s:9:"JellyChen";s:4:"user";s:5:"admin";s:11:"last_change";a:7:{s:4:"date";i:1463727642;s:2:"ip";s:9:"127.0.0.1";s:4:"type";s:1:"E";s:2:"id";s:12:"linux:命令";s:4:"user";s:5:"admin";s:3:"sum";s:0:"";s:5:"extra";s:0:"";}s:11:"contributor";a:1:{s:5:"admin";s:9:"JellyChen";}}}

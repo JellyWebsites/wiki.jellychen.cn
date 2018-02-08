@@ -1,0 +1,12 @@
+<span class="co1">// 创建具有某些属性的对象</span>
+<span class="kw1">var</span> myObject <span class="sy0">=</span> <span class="kw1">new</span> <span class="kw4">Object</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+myObject.<span class="me1">name</span> <span class="sy0">=</span> <span class="st0">&quot;James&quot;</span><span class="sy0">;</span>
+myObject.<span class="me1">age</span> <span class="sy0">=</span> <span class="st0">&quot;22&quot;</span><span class="sy0">;</span>
+myObject.<span class="me1">phone</span> <span class="sy0">=</span> <span class="st0">&quot;555 1234&quot;</span><span class="sy0">;</span>
+&nbsp;
+<span class="co1">// 枚举（循环）对象的所有属性</span>
+<span class="kw1">for</span> <span class="br0">&#40;</span>prop <span class="kw1">in</span> myObject<span class="br0">&#41;</span>
+<span class="br0">&#123;</span>
+    <span class="co1">// 显示 &quot;The property 'name' is James&quot;，等等。</span>
+    window.<span class="me1">alert</span><span class="br0">&#40;</span><span class="st0">&quot;The property '&quot;</span> <span class="sy0">+</span> prop <span class="sy0">+</span> <span class="st0">&quot;' is &quot;</span> <span class="sy0">+</span> myObject<span class="br0">&#91;</span>prop<span class="br0">&#93;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>

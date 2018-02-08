@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="FeedCreator 1.7.2-ppt DokuWiki" -->
+<?xml-stylesheet href="http://wiki.jellychen.cn/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="http://wiki.jellychen.cn/feed.php">
+        <title>Jelly Wiki linux:tips</title>
+        <description></description>
+        <link>http://wiki.jellychen.cn/</link>
+        <image rdf:resource="http://wiki.jellychen.cn/lib/tpl/bootstrap3/images/favicon.ico" />
+       <dc:date>2018-02-03T04:58:27+08:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="http://wiki.jellychen.cn/doku.php/linux:tips:start?rev=1507538588&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="http://wiki.jellychen.cn/lib/tpl/bootstrap3/images/favicon.ico">
+        <title>Jelly Wiki</title>
+        <link>http://wiki.jellychen.cn/</link>
+        <url>http://wiki.jellychen.cn/lib/tpl/bootstrap3/images/favicon.ico</url>
+    </image>
+    <item rdf:about="http://wiki.jellychen.cn/doku.php/linux:tips:start?rev=1507538588&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-10-09T16:43:08+08:00</dc:date>
+        <title>linux:tips:start</title>
+        <link>http://wiki.jellychen.cn/doku.php/linux:tips:start?rev=1507538588&amp;do=diff</link>
+        <description>小技巧
+
+查看文件夹总大小
+# du -sh dirname
+参见
+
+du
+
+获取命令帮助
+
+help：适用于内置命令，如cd：
+# help cd
+Command –help/-h：适用于一般命令，如ls：
+# ls --help
+man Command： manual 手册查询：
+# man ? Command
+info Command：有超链接稳文档，info是信息页，提供作者、版本，什么时候发布等更详细信息，man手册是告诉你怎么用</description>
+    </item>
+</rdf:RDF>

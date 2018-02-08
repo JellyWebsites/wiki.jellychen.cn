@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="FeedCreator 1.7.2-ppt DokuWiki" -->
+<?xml-stylesheet href="http://wiki.jellychen.cn/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="http://wiki.jellychen.cn/feed.php">
+        <title>Jelly Wiki</title>
+        <description></description>
+        <link>http://wiki.jellychen.cn/</link>
+        <image rdf:resource="http://wiki.jellychen.cn/lib/tpl/bootstrap3/images/favicon.ico" />
+       <dc:date>2017-12-24T03:19:14+08:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="http://wiki.jellychen.cn/doku.php/sidebar?rev=1503910703&amp;do=diff"/>
+                <rdf:li rdf:resource="http://wiki.jellychen.cn/doku.php/drupal:drupal_8_document:start?rev=1503910367&amp;do=diff"/>
+                <rdf:li rdf:resource="http://wiki.jellychen.cn/doku.php/drupal:drupal_8_document:extending_drupal_8:overview?rev=1503908680&amp;do=diff"/>
+                <rdf:li rdf:resource="http://wiki.jellychen.cn/doku.php/?image=drupal%3Awx20170828-161440_2x.png&amp;ns=drupal&amp;rev=1503908671&amp;tab_details=history&amp;mediado=diff&amp;do=media"/>
+                <rdf:li rdf:resource="http://wiki.jellychen.cn/doku.php/drupal:drupal_8_document:extending_drupal_8:start?rev=1503907617&amp;do=diff"/>
+                <rdf:li rdf:resource="http://wiki.jellychen.cn/doku.php/drupal:start?rev=1503906417&amp;do=diff"/>
+                <rdf:li rdf:resource="http://wiki.jellychen.cn/doku.php/drupal:drupal_8_document:understanding_drupal_8:start?rev=1503905123&amp;do=diff"/>
+                <rdf:li rdf:resource="http://wiki.jellychen.cn/doku.php/?image=wiki%3Alogo.png&amp;ns=wiki&amp;rev=1454049661&amp;tab_details=history&amp;mediado=diff&amp;do=media"/>
+                <rdf:li rdf:resource="http://wiki.jellychen.cn/doku.php/?image=logo.png&amp;ns=&amp;rev=1454049259&amp;tab_details=history&amp;mediado=diff&amp;do=media"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="http://wiki.jellychen.cn/lib/tpl/bootstrap3/images/favicon.ico">
+        <title>Jelly Wiki</title>
+        <link>http://wiki.jellychen.cn/</link>
+        <url>http://wiki.jellychen.cn/lib/tpl/bootstrap3/images/favicon.ico</url>
+    </image>
+    <item rdf:about="http://wiki.jellychen.cn/doku.php/sidebar?rev=1503910703&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-08-28T16:58:23+08:00</dc:date>
+        <dc:creator>JellyChen</dc:creator>
+        <title>sidebar</title>
+        <link>http://wiki.jellychen.cn/doku.php/sidebar?rev=1503910703&amp;do=diff</link>
+        <description>导航
+
+首页
+
+导航
+
+网站地图
+
+----------
+
+Linux
+
+Apache
+
+PHP
+
+ElasticSearch
+
+HTML
+
+CSS 3.0 参考手册
+
+JavaScript
+
+dokuwiki
+
+Drupal
+
+----------
+
+Minecraft
+
+PhpStrom中文翻译</description>
+    </item>
+    <item rdf:about="http://wiki.jellychen.cn/doku.php/drupal:drupal_8_document:start?rev=1503910367&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-08-28T16:52:47+08:00</dc:date>
+        <dc:creator>JellyChen</dc:creator>
+        <title>drupal:drupal_8_document:start</title>
+        <link>http://wiki.jellychen.cn/doku.php/drupal:drupal_8_document:start?rev=1503910367&amp;do=diff</link>
+        <description>Drupal 8 文档
+
+了解Drupal 8 ：本指南为您提供Drupal 8的概念图，帮助您了解Drupal 8背后的框架。
+
+了解Drupal版本号 ：了解Drupal核心、模块和主题的Drupal版本编号方案，以便选择要使用的版本。
+
+系统要求 ：该指南介绍了安装Drupal 8所需的系统详细要求。</description>
+    </item>
+    <item rdf:about="http://wiki.jellychen.cn/doku.php/drupal:drupal_8_document:extending_drupal_8:overview?rev=1503908680&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-08-28T16:24:40+08:00</dc:date>
+        <dc:creator>JellyChen</dc:creator>
+        <title>drupal:drupal_8_document:extending_drupal_8:overview</title>
+        <link>http://wiki.jellychen.cn/doku.php/drupal:drupal_8_document:extending_drupal_8:overview?rev=1503908680&amp;do=diff</link>
+        <description>[qcd]
+[1f3evw]
+[asd]</description>
+    </item>
+    <item rdf:about="http://wiki.jellychen.cn/doku.php/?image=drupal%3Awx20170828-161440_2x.png&amp;ns=drupal&amp;rev=1503908671&amp;tab_details=history&amp;mediado=diff&amp;do=media">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-08-28T16:24:31+08:00</dc:date>
+        <dc:creator>JellyChen</dc:creator>
+        <title>drupal:wx20170828-161440_2x.png - 创建</title>
+        <link>http://wiki.jellychen.cn/doku.php/?image=drupal%3Awx20170828-161440_2x.png&amp;ns=drupal&amp;rev=1503908671&amp;tab_details=history&amp;mediado=diff&amp;do=media</link>
+        <description>&lt;img src=&quot;http://wiki.jellychen.cn/lib/exe/fetch.php/drupal:wx20170828-161440_2x.png?w=500&amp;h=358&amp;t=1507538655&amp;amp;tok=c55f4d&quot; alt=&quot;drupal:wx20170828-161440_2x.png&quot; /&gt;</description>
+    </item>
+    <item rdf:about="http://wiki.jellychen.cn/doku.php/drupal:drupal_8_document:extending_drupal_8:start?rev=1503907617&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-08-28T16:06:57+08:00</dc:date>
+        <dc:creator>JellyChen</dc:creator>
+        <title>drupal:drupal_8_document:extending_drupal_8:start</title>
+        <link>http://wiki.jellychen.cn/doku.php/drupal:drupal_8_document:extending_drupal_8:start?rev=1503907617&amp;do=diff</link>
+        <description>扩展Drupal8
+
+该指南描述了如何为你的Drupal8网站“扩展”Drupal核心模块之外的功能。
+
+你可以从各种贡献模块中选择和挑选功能到自己的站点，并且从各种贡献的主题中选择来改变网站的外观。这些插件和主题也被称为“contrib”，应为它们是由Drupal社区的成员贡献的，并在drupal.org上免费可用。</description>
+    </item>
+    <item rdf:about="http://wiki.jellychen.cn/doku.php/drupal:start?rev=1503906417&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-08-28T15:46:57+08:00</dc:date>
+        <dc:creator>JellyChen</dc:creator>
+        <title>drupal:start</title>
+        <link>http://wiki.jellychen.cn/doku.php/drupal:start?rev=1503906417&amp;do=diff</link>
+        <description>Drupal 8
+
+Drupal 8 文档
+
+Drupal 8 用户指南</description>
+    </item>
+    <item rdf:about="http://wiki.jellychen.cn/doku.php/drupal:drupal_8_document:understanding_drupal_8:start?rev=1503905123&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-08-28T15:25:23+08:00</dc:date>
+        <dc:creator>JellyChen</dc:creator>
+        <title>drupal:drupal_8_document:understanding_drupal_8:start - 创建</title>
+        <link>http://wiki.jellychen.cn/doku.php/drupal:drupal_8_document:understanding_drupal_8:start?rev=1503905123&amp;do=diff</link>
+        <description>了解Drupal 8</description>
+    </item>
+    <item rdf:about="http://wiki.jellychen.cn/doku.php/?image=wiki%3Alogo.png&amp;ns=wiki&amp;rev=1454049661&amp;tab_details=history&amp;mediado=diff&amp;do=media">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-01-29T14:41:01+08:00</dc:date>
+        <dc:creator>JellyChen</dc:creator>
+        <title>wiki:logo.png</title>
+        <link>http://wiki.jellychen.cn/doku.php/?image=wiki%3Alogo.png&amp;ns=wiki&amp;rev=1454049661&amp;tab_details=history&amp;mediado=diff&amp;do=media</link>
+        <description>&lt;img src=&quot;http://wiki.jellychen.cn/lib/exe/fetch.php/wiki:logo.png?w=267&amp;h=156&amp;t=1507538654&amp;amp;tok=ca0e39&quot; alt=&quot;wiki:logo.png&quot; /&gt;</description>
+    </item>
+    <item rdf:about="http://wiki.jellychen.cn/doku.php/?image=logo.png&amp;ns=&amp;rev=1454049259&amp;tab_details=history&amp;mediado=diff&amp;do=media">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-01-29T14:34:19+08:00</dc:date>
+        <dc:creator>JellyChen</dc:creator>
+        <title>logo.png - 创建</title>
+        <link>http://wiki.jellychen.cn/doku.php/?image=logo.png&amp;ns=&amp;rev=1454049259&amp;tab_details=history&amp;mediado=diff&amp;do=media</link>
+        <description>&lt;img src=&quot;http://wiki.jellychen.cn/lib/exe/fetch.php/logo.png?w=283&amp;h=90&amp;t=1507538654&amp;amp;tok=6e43bd&quot; alt=&quot;logo.png&quot; /&gt;</description>
+    </item>
+</rdf:RDF>

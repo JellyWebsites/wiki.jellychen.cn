@@ -1,0 +1,23 @@
+<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/html.html"><span class="kw2">HTML</span></a>&gt;</span>
+<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/head.html"><span class="kw2">HEAD</span></a>&gt;</span>
+<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/script.html"><span class="kw2">SCRIPT</span></a> <span class="kw3">LANGUAGE</span><span class="sy0">=</span><span class="st0">&quot;JScript&quot;</span>&gt;</span>
+function singOut()  {
+var theMoment = new Date();
+var theHour = theMoment.getHours();
+var theMinute = theMoment.getMinutes();
+var theDisplacement = (theMoment.getTimezoneOffset() / 60);
+theHour -= theDisplacement;
+if (theHour &gt; 23)  {
+theHour -= 24
+}
+document.write(theHour + &quot; hours, &quot; + theMinute + &quot; minutes, Coordinated Universal Time.&quot;);
+window.setTimeout(&quot;singOut();&quot;, 60000);
+}
+<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/script.html"><span class="kw2">SCRIPT</span></a>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/head.html"><span class="kw2">HEAD</span></a>&gt;</span>
+<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/body.html"><span class="kw2">BODY</span></a>&gt;</span>
+<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/script.html"><span class="kw2">SCRIPT</span></a>&gt;</span>
+singOut();
+<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/script.html"><span class="kw2">SCRIPT</span></a>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/body.html"><span class="kw2">BODY</span></a>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/html.html"><span class="kw2">HTML</span></a>&gt;</span>

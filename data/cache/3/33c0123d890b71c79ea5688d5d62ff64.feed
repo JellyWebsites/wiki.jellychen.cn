@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="FeedCreator 1.7.2-ppt DokuWiki" -->
+<?xml-stylesheet href="http://wiki.jellychen.cn/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="http://wiki.jellychen.cn/feed.php">
+        <title>Jelly Wiki html:browser</title>
+        <description></description>
+        <link>http://wiki.jellychen.cn/</link>
+        <image rdf:resource="http://wiki.jellychen.cn/lib/tpl/bootstrap3/images/favicon.ico" />
+       <dc:date>2018-01-06T05:32:22+08:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="http://wiki.jellychen.cn/doku.php/html:browser:start?rev=1507538594&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="http://wiki.jellychen.cn/lib/tpl/bootstrap3/images/favicon.ico">
+        <title>Jelly Wiki</title>
+        <link>http://wiki.jellychen.cn/</link>
+        <url>http://wiki.jellychen.cn/lib/tpl/bootstrap3/images/favicon.ico</url>
+    </image>
+    <item rdf:about="http://wiki.jellychen.cn/doku.php/html:browser:start?rev=1507538594&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-10-09T16:43:14+08:00</dc:date>
+        <title>html:browser:start</title>
+        <link>http://wiki.jellychen.cn/doku.php/html:browser:start?rev=1507538594&amp;do=diff</link>
+        <description>Browser 对象
+
+&lt;ul class=&quot;catlist-nslist&quot; &gt;&lt;li class=&quot;catlist-ns&quot;&gt;&lt;strong class=&quot;li catlist-nshead&quot;&gt;apache&lt;/strong&gt;&lt;ul class=&quot;catlist-nslist&quot;&gt;&lt;li class=&quot;catlist-page&quot;&gt;APACHE&lt;/li&gt;&lt;li class=&quot;catlist-ns&quot;&gt;&lt;strong class=&quot;li catlist-nshead&quot;&gt;tools&lt;/strong&gt;&lt;ul class=&quot;catlist-nslist&quot;&gt;&lt;li class=&quot;catlist-page&quot;&gt;ab性能测试工具&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li class=&quot;catlist-ns&quot;&gt;&lt;strong class=&quot;li catlist-nshead&quot;&gt;css&lt;/strong&gt;&lt;ul class=&quot;catlist-nslist&quot;&gt;&lt;li class=&quot;catlist-page&quot;&gt;CSS 3.0 参考手册&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li class=&quot;catlist-ns…</description>
+    </item>
+</rdf:RDF>

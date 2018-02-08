@@ -1,0 +1,8 @@
+====== 创建自定义模块 ======
+
+该指南包含创建Drupal8的教程和其它相关信息。
+
+其它资源：
+  * [[Drupal8_API_reference|Drupal8API参考]]
+  * [[change_records_for_drupal_8.x|Drupal*.x变更记录]]
+

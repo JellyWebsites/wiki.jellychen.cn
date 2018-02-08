@@ -1,0 +1,6 @@
+<span class="kw1">var</span> hours <span class="sy0">=</span> <span class="st0">&quot;&quot;</span><span class="sy0">;</span>
+&nbsp;
+<span class="co1">// 下面的代码指定 hours 是包含 theHour 的内容，</span>
+<span class="co1">// 还是包含 theHour - 12 的内容。</span>
+&nbsp;
+hours <span class="sy0">+=</span> <span class="br0">&#40;</span>theHour <span class="sy0">&gt;=</span> <span class="nu0">12</span><span class="br0">&#41;</span> <span class="sy0">?</span> <span class="st0">&quot; PM&quot;</span> <span class="sy0">:</span> <span class="st0">&quot; AM&quot;</span><span class="sy0">;</span>

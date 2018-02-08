@@ -1,0 +1,23 @@
+<span class="kw1">var</span> aCentaur <span class="sy0">=</span> <span class="st0">&quot;a horse with rider,&quot;</span><span class="sy0">;</span>  <span class="co1">// aCentaur 的全局定义。</span>
+&nbsp;
+<span class="co1">// JScript 代码，为简洁起见有省略。</span>
+<span class="kw1">function</span> antiquities<span class="br0">&#40;</span><span class="br0">&#41;</span>  <span class="co1">// 在这个函数中声明了一个局部 aCentaur 变量。</span>
+<span class="br0">&#123;</span>
+&nbsp;
+<span class="co1">// JScript 代码，为简洁起见有省略。</span>
+<span class="kw1">var</span> aCentaur <span class="sy0">=</span> <span class="st0">&quot;A centaur is probably a mounted Scythian warrior&quot;</span><span class="sy0">;</span>
+&nbsp;
+<span class="co1">// JScript 代码，为简洁起见有省略。</span>
+   aCentaur <span class="sy0">+=</span> <span class="st0">&quot;, misreported; that is, &quot;</span><span class="sy0">;</span>  <span class="co1">// 添加到局部变量。</span>
+&nbsp;
+<span class="co1">// JScript 代码，为简洁起见有省略。</span>
+<span class="br0">&#125;</span>  <span class="co1">// 函数结束。</span>
+&nbsp;
+<span class="kw1">var</span> nothinginparticular <span class="sy0">=</span> antiquities<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+aCentaur <span class="sy0">+=</span> <span class="st0">&quot; as seen from a distance by a naive innocent.&quot;</span><span class="sy0">;</span>
+&nbsp;
+<span class="coMULTI">/*
+在函数内，该变量的值为 &quot;A centaur is probably a mounted Scythian warrior,
+misreported; that is, &quot;；在函数外，该变量的值为这句话的其余部分：
+&quot;a horse with rider, as seen from a distance by a naive innocent.&quot;
+*/</span>  

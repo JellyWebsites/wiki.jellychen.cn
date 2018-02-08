@@ -1,0 +1,12 @@
+1.  <span class="kw2">&lt;?php</span>  <span class="kw1">echo</span>  <span class="st_h">'if you want to serve XHTML or XML documents, do it like this'</span> <span class="sy0">;</span>  <span class="sy1">?&gt;</span>
+&nbsp;
+2.  <span class="kw2">&lt;script language</span><span class="sy0">=</span><span class="st0">&quot;php&quot;</span><span class="sy0">&gt;</span>
+         <span class="kw1">echo</span>  <span class="st_h">'some editors (like FrontPage) don\'t
+              like processing instructions'</span> <span class="sy0">;</span>
+     <span class="kw2">&lt;/script&gt;</span>
+&nbsp;
+3.  <span class="sy1">&lt;?</span>  <span class="kw1">echo</span>  <span class="st_h">'this is the simplest, an SGML processing instruction'</span> <span class="sy0">;</span>  <span class="sy1">?&gt;</span>
+    <span class="sy1">&lt;?=</span> expression <span class="sy1">?&gt;</span> This is a shortcut for &quot;<span class="sy1">&lt;?</span>  <span class="kw1">echo</span>  expression <span class="sy1">?&gt;</span>&quot;
+&nbsp;
+4.  <span class="sy1">&lt;%</span> <span class="kw1">echo</span> <span class="st_h">'You may optionally use ASP-style tags'</span><span class="sy0">;</span> <span class="sy1">%&gt;</span>
+    <span class="sy1">&lt;%=</span> <span class="re0">$variable</span><span class="sy0">;</span> <span class="co2"># This is a shortcut for &quot;&lt;% echo . . .&quot; %&gt;</span>  

@@ -1,0 +1,14 @@
+======JavaScript======
+
+该部分内容几乎完全收集自《JavaScript核心参考手册.chm》。仅在排版和极少之处进行改动。
+
+[[javascript:jscript_用户指南|Jscript 用户指南]]
+
+[[javascript:jscript_语言参考:|JScript 语言参考]]
+
+[[javascript:FlieSystemObject_基础|FlieSystemObject 基础]]
+
+[[javascript:Script_运行时参考|Script 运行时参考]]
+
+[[javascript:正则表达式:|正则表达式]]
+

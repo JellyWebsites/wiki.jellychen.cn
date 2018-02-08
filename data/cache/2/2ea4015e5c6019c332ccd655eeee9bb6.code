@@ -1,0 +1,1 @@
+<span class="kw1">var</span> volume <span class="sy0">=</span> length <span class="sy0">*</span> width<span class="sy0">;</span> <span class="co1">// 错误 — length 和 width 并不存在。</span>

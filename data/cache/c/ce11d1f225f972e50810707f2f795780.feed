@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="FeedCreator 1.7.2-ppt DokuWiki" -->
+<?xml-stylesheet href="http://wiki.jellychen.cn/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="http://wiki.jellychen.cn/feed.php">
+        <title>Jelly Wiki mod</title>
+        <description></description>
+        <link>http://wiki.jellychen.cn/</link>
+        <image rdf:resource="http://wiki.jellychen.cn/lib/tpl/bootstrap3/images/favicon.ico" />
+       <dc:date>2018-01-26T22:11:50+08:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="http://wiki.jellychen.cn/doku.php/mod:start?rev=1507538597&amp;do=diff"/>
+                <rdf:li rdf:resource="http://wiki.jellychen.cn/doku.php/mod:%E6%94%B6%E5%89%B2?rev=1507538597&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="http://wiki.jellychen.cn/lib/tpl/bootstrap3/images/favicon.ico">
+        <title>Jelly Wiki</title>
+        <link>http://wiki.jellychen.cn/</link>
+        <url>http://wiki.jellychen.cn/lib/tpl/bootstrap3/images/favicon.ico</url>
+    </image>
+    <item rdf:about="http://wiki.jellychen.cn/doku.php/mod:start?rev=1507538597&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-10-09T16:43:17+08:00</dc:date>
+        <title>mod:start</title>
+        <link>http://wiki.jellychen.cn/doku.php/mod:start?rev=1507538597&amp;do=diff</link>
+        <description>MOD
+
+&lt;ul class=&quot;catlist-nslist&quot; &gt;&lt;li class=&quot;catlist-page&quot;&gt;首页&lt;/li&gt;&lt;li class=&quot;catlist-ns&quot;&gt;&lt;strong class=&quot;li catlist-nshead&quot;&gt;mod&lt;/strong&gt;&lt;ul class=&quot;catlist-nslist&quot;&gt;&lt;li class=&quot;catlist-page&quot;&gt;MOD&lt;/li&gt;&lt;li class=&quot;catlist-page&quot;&gt;收割mod&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li class=&quot;catlist-ns&quot;&gt;&lt;strong class=&quot;li catlist-nshead&quot;&gt;wiki&lt;/strong&gt;&lt;ul class=&quot;catlist-nslist&quot;&gt;&lt;li class=&quot;catlist-page&quot;&gt;Formatting Syntax&lt;/li&gt;&lt;li class=&quot;catlist-page&quot;&gt;DokuWiki&lt;/li&gt;&lt;li class=&quot;catlist-page&quot;&gt;Welcome to your new DokuWiki&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li class=&quot;…</description>
+    </item>
+    <item rdf:about="http://wiki.jellychen.cn/doku.php/mod:%E6%94%B6%E5%89%B2?rev=1507538597&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-10-09T16:43:17+08:00</dc:date>
+        <title>mod:收割</title>
+        <link>http://wiki.jellychen.cn/doku.php/mod:%E6%94%B6%E5%89%B2?rev=1507538597&amp;do=diff</link>
+        <description>收割mod
+
+中 文 名：收割MOD
+
+英 文 名：Reap Mod
+
+MOD 版本：1.0.4-1.1.0
+
+适用版本：1.9.0 1.9.4 1.10.0
+
+语言支持：不需要语言
+
+API 需求：Forge API
+
+软件来源：国外（感谢afkavril搬运）
+
+原帖地址：&lt;http://minecraft.curseforge.com/projects/reap-mod&gt;
+
+论坛地址：</description>
+    </item>
+</rdf:RDF>

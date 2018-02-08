@@ -1,0 +1,2 @@
+<span class="co1">// 声明一个半径变量并赋数值。</span>
+<span class="kw1">var</span> circleArea <span class="sy0">=</span> <span class="kw4">Math</span>.<span class="me1">PI</span> <span class="sy0">*</span> radius <span class="sy0">*</span> radius<span class="sy0">;</span>  <span class="co1">// 注意 Math 和 PI 大写。</span>

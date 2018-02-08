@@ -1,0 +1,77 @@
+
+<h1 class="sectionedit1" id="从_html_中分离">从 HTML 中分离</h1>
+<div class="level1">
+
+<p>
+凡是在一对开始和结束标记之外的内容都会被 PHP 解析器忽略，这使得 PHP 文件可以具备混合内容。 可以使 PHP 嵌入到 <abbr title="HyperText Markup Language">HTML</abbr> 文档中去，如下例所示。 
+</p>
+<pre class="code php">&lt;p&gt;This is going to be ignored by PHP and displayed by the browser.&lt;/p&gt;
+<span class="kw2">&lt;?php</span>  <span class="kw1">echo</span>  <span class="st_h">'While this is going to be parsed.'</span> <span class="sy0">;</span>  <span class="sy1">?&gt;</span>
+&lt;p&gt;This will also be ignored by PHP and displayed by the browser.&lt;/p&gt;  </pre>
+
+<p>
+这将如预期中的运行，因为当 PHP 解释器碰到 ?&gt; 结束标记时就简单地将其后内容原样输出（除非马上紧接换行 - 见指令分隔符）直到碰到下一个开始标记；例外是处于条件语句中间时，此时 PHP 解释器会根据条件判断来决定哪些输出，哪些跳过。见下例。 
+</p>
+
+<p>
+使用条件结构： 
+</p>
+
+<p>
+<strong>Example #1 使用条件的高级分离术</strong>
+</p>
+<pre class="code php"><span class="kw2">&lt;?php</span>  <span class="kw1">if</span> <span class="br0">&#40;</span> <span class="re0">$expression</span>  <span class="sy0">==</span>  <span class="kw4">true</span> <span class="br0">&#41;</span><span class="sy0">:</span>  <span class="sy1">?&gt;</span>
+  This will show if the expression is true.
+<span class="kw2">&lt;?php</span>  <span class="kw1">else</span><span class="sy0">:</span>  <span class="sy1">?&gt;</span>
+  Otherwise this will show.
+<span class="kw2">&lt;?php</span>  <span class="kw1">endif</span><span class="sy0">;</span>  <span class="sy1">?&gt;</span>   </pre>
+
+<p>
+上例中 PHP 将跳过条件语句未达成的段落，即使该段落位于 PHP 开始和结束标记之外。由于 PHP 解释器会在条件未达成时直接跳过该段条件语句块，因此 PHP 会根据条件来忽略之。 
+</p>
+
+<p>
+要输出大段文本时，跳出 PHP 解析模式通常比将文本通过 echo  或 print  输出更有效率。 
+</p>
+
+<p>
+可以在 PHP 中使用四对不同的开始和结束标记。其中两种，&lt;?php ?&gt; 和 &lt;script language=&quot;php&quot;&gt; &lt;/script&gt; 总是可用的。另两种是短标记和 ASP 风格标记，可以在 <em>php.ini</em> 配置文件中打开或关闭。尽管有些人觉得短标记和 ASP 风格标记很方便，但移植性较差，通常不推荐使用。 
+</p>
+<pre class="code">Note: 
+此外注意如果将 PHP 嵌入到 XML 或 XHTML 中则需要使用 &lt;?php ?&gt; 标记以保持符合标准。 </pre>
+
+<p>
+<strong>Example #2 PHP 开始和结束标记</strong>
+</p>
+<pre class="code php">1.  <span class="kw2">&lt;?php</span>  <span class="kw1">echo</span>  <span class="st_h">'if you want to serve XHTML or XML documents, do it like this'</span> <span class="sy0">;</span>  <span class="sy1">?&gt;</span>
+&nbsp;
+2.  <span class="kw2">&lt;script language</span><span class="sy0">=</span><span class="st0">&quot;php&quot;</span><span class="sy0">&gt;</span>
+         <span class="kw1">echo</span>  <span class="st_h">'some editors (like FrontPage) don\'t
+              like processing instructions'</span> <span class="sy0">;</span>
+     <span class="kw2">&lt;/script&gt;</span>
+&nbsp;
+3.  <span class="sy1">&lt;?</span>  <span class="kw1">echo</span>  <span class="st_h">'this is the simplest, an SGML processing instruction'</span> <span class="sy0">;</span>  <span class="sy1">?&gt;</span>
+    <span class="sy1">&lt;?=</span> expression <span class="sy1">?&gt;</span> This is a shortcut for &quot;<span class="sy1">&lt;?</span>  <span class="kw1">echo</span>  expression <span class="sy1">?&gt;</span>&quot;
+&nbsp;
+4.  <span class="sy1">&lt;%</span> <span class="kw1">echo</span> <span class="st_h">'You may optionally use ASP-style tags'</span><span class="sy0">;</span> <span class="sy1">%&gt;</span>
+    <span class="sy1">&lt;%=</span> <span class="re0">$variable</span><span class="sy0">;</span> <span class="co2"># This is a shortcut for &quot;&lt;% echo . . .&quot; %&gt;</span>  </pre>
+
+<p>
+上例中的 1 和 2 中使用的标记总是可用的，其中示例 1 中是最常用，并建议使用的。 
+</p>
+
+<p>
+短标记（上例 3）仅在通过 <em>php.ini</em> 配置文件中的指令 short<em>open</em>tag 打开后才可用，或者在 PHP 编译时加入了 <strong>–enable-short-tags</strong> 选项。 
+</p>
+
+<p>
+ASP 风格标记（上例 4）仅在通过 <em>php.ini</em> 配置文件中的指令 asp_tags 打开后才可用。 
+</p>
+<pre class="code">Note: 
+在以下情况应避免使用短标记：开发需要再次发布的程序或者库，或者在用户不能控制的服务器上开发。因为目标服务器可能不支持短标记。为了代码的移植及发行，确保不要使用短标记。 </pre>
+<pre class="code">Note: 
+在 PHP 5.2 和之前的版本中，解释器不允许一个文件的全部内容就是一个开始标记 &lt;?php。自 PHP 5.3 起则允许此种文件，但要开始标记后有一个或更多白空格符。 </pre>
+<pre class="code">Note: 
+自 PHP 5.4 起，短格式的 echo 标记 &lt;?= 总会被识别并且合法，而不管 short_open_tag 的设置是什么。 </pre>
+
+</div>

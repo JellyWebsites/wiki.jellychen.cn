@@ -1,0 +1,119 @@
+
+<h2 class="sectionedit1" id="catlist">catlist</h2>
+<div class="level2">
+
+<p>
+列出名字空间下的所有页面，参数可调。
+</p>
+
+<p>
+<strong>语法</strong>
+</p>
+<pre class="code">&lt;catlist (namespace:) -option1 -option2...&gt;</pre>
+
+<p>
+如果未写namespace参数，则显示当前页面所属名字空间下的所有文件。
+</p>
+
+<p>
+<strong>Options</strong>
+</p>
+<div class="table sectionedit2"><table class="inline">
+	<thead>
+	<tr class="row0">
+		<th class="col0 centeralign" colspan="2">  显示参数                       </th>
+	</tr>
+	</thead>
+	<tr class="row1">
+		<td class="col0 leftalign"><strong>[Default]</strong>  <code>-displayList</code>   </td><td class="col1">使用<code>&lt;ul&gt;</code>和<code>&lt;li&gt;</code>标签显示列表.</td>
+	</tr>
+	<tr class="row2">
+		<td class="col0 leftalign"><code>-displayLine</code>                  </td><td class="col1">将命名空间和页面显示在单行之中，命名空间用<code>[</code>和<code>]</code>包围 <strong>警告</strong>该功能有BUG </td>
+	</tr>
+	<tr class="row3">
+		<td class="col0 leftalign"><code>-noNSInBold</code>                   </td><td class="col1">命名空间和文件名不加粗</td>
+	</tr>
+	<tr class="row4">
+		<td class="col0 leftalign"><code>-columns:[0-∞]</code>                </td><td class="col1 leftalign">将列表划分为指定数目的列，使用css的<code>column-count</code>属性.<strong>[Default 0]</strong>  </td>
+	</tr>
+	<tr class="row5">
+		<th class="col0 centeralign" colspan="2">  排除参数                       </th>
+	</tr>
+	<tr class="row6">
+		<td class="col0 leftalign"><code>-exclupage(:“<em>regex</em>”)</code>      </td><td class="col1">如果正则表达式 <em>regex</em> 存在，则排除所匹配的页面，否则，排除所有页面 </td>
+	</tr>
+	<tr class="row7">
+		<td class="col0 leftalign"><code>-excluns(:“<em>regex</em>”)</code>        </td><td class="col1">如果正则表达式 <em>regex</em> 存在，则排除所匹配的命名空间，否则，排除所有命名空间 </td>
+	</tr>
+	<tr class="row8">
+		<td class="col0 leftalign"><code>-exclunsall(:“<em>regex</em>”)</code>     </td><td class="col1">如果正则表达式 <em>regex</em> 存在，则排除所匹配的子命名空间，否则，排除所有子命名空间 </td>
+	</tr>
+	<tr class="row9">
+		<td class="col0 leftalign"><code>-exclunspages(:“<em>regex</em>”)</code>   </td><td class="col1">如果正则表达式 <em>regex</em> 存在，则排除子命名空间中所匹配的页面，否则，排除子命名空间中的所有页面 </td>
+	</tr>
+	<tr class="row10">
+		<td class="col0 leftalign"><code>-exclunsns(:“<em>regex</em>”)</code>      </td><td class="col1">如果正则表达式 <em>regex</em> 存在，则排除子命名空间中所匹配的子命名空间，否则，排除子命名空间中的所有子命名空间 </td>
+	</tr>
+	<tr class="row11">
+		<td class="col0" colspan="2"><strong>注意:</strong> 不要在正则表达式<em>regex</em>中添加分隔符<code>/</code> </td>
+	</tr>
+	<tr class="row12">
+		<td class="col0 leftalign"><code>-excludeOnID</code>                  </td><td class="col1 leftalign">根据id排除页面(<code>namespace:subnamespace:page</code>)  </td>
+	</tr>
+	<tr class="row13">
+		<td class="col0 leftalign"><code>-excludeOnName</code>                </td><td class="col1 leftalign">根据name排除页面，不需要命名空间参数(<code>page</code>)  </td>
+	</tr>
+	<tr class="row14">
+		<td class="col0 leftalign"><code>-excludeOnTitle</code>               </td><td class="col1 leftalign">根据页面的首级标题排除页面(<code>The Page</code>)  </td>
+	</tr>
+	<tr class="row15">
+		<td class="col0 leftalign"><code>-maxDepth:<em>depth</em></code>           </td><td class="col1 leftalign">递归深度不超过 <em>depth</em>  </td>
+	</tr>
+	<tr class="row16">
+		<th class="col0 centeralign" colspan="2">  标题行                          </th>
+	</tr>
+	<tr class="row17">
+		<td class="col0 leftalign"><code>-noHead</code>                       </td><td class="col1">不显示标题行</td>
+	</tr>
+	<tr class="row18">
+		<td class="col0 leftalign"><code>-smallHead</code>                    </td><td class="col1 leftalign">将标题行显示为简单的<code>&lt;span&gt;</code>，而不是<code>title</code>  </td>
+	</tr>
+	<tr class="row19">
+		<td class="col0 leftalign"><code>-noLinkStartHead</code>              </td><td class="col1 leftalign">不为命名空间的开始界面添加连接  </td>
+	</tr>
+	<tr class="row20">
+		<td class="col0 leftalign"><code>-h[1-5]</code>                       </td><td class="col1 leftalign">用指定的级别显示标题，默认是 <strong>[Default -h1]</strong>  </td>
+	</tr>
+	<tr class="row21">
+		<td class="col0 leftalign"><code>-titleHead:“<em>Title</em>”</code>        </td><td class="col1">用指定的<em>标题</em>替换命名空间列表开始页面的标题</td>
+	</tr>
+	<tr class="row22">
+		<th class="col0 centeralign" colspan="2">  命名空间标题                         </th>
+	</tr>
+	<tr class="row23">
+		<td class="col0 leftalign"><code>-noNSHeadTitle</code>                </td><td class="col1 leftalign">命名空间 : 不连接到命名空间的开始页面并且不使用开始页面的标题  </td>
+	</tr>
+	<tr class="row24">
+		<td class="col0 leftalign"><code>-forceLinks</code>                   </td><td class="col1 leftalign">强制连接到命名空间的开始页面，即使开始页面不存在  </td>
+	</tr>
+	<tr class="row25">
+		<th class="col0 centeralign" colspan="2">  页面添加按钮选项           </th>
+	</tr>
+	<tr class="row26">
+		<td class="col0 leftalign"><code>-noAddPageButton</code>              </td><td class="col1 leftalign">在命名空间列表中不显示<code>Add page…</code>按钮  </td>
+	</tr>
+	<tr class="row27">
+		<td class="col0 leftalign"><code>-addPageButtonEach</code>            </td><td class="col1 leftalign">在每个子命名空间中显示<code>Add page…</code>按钮(如果用户有权限添加页面)  </td>
+	</tr>
+	<tr class="row28">
+		<th class="col0 centeralign" colspan="2">  排序选项<em>(文件系统默认排序)</em>                         </th>
+	</tr>
+	<tr class="row29">
+		<td class="col0 leftalign"><code>-sortAscending</code>                </td><td class="col1 leftalign">升序排列(按照字母顺序)  </td>
+	</tr>
+	<tr class="row30">
+		<td class="col0 leftalign"><code>-sortDescending</code>               </td><td class="col1 leftalign">降序排列(按照字母顺序)  </td>
+	</tr>
+</table></div>
+<!-- EDIT2 TABLE [249-3265] -->
+</div>

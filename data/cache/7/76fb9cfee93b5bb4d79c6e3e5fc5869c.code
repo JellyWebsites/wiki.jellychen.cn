@@ -1,0 +1,3 @@
+top		<span class="co1">//当前框架的顶层窗口</span>
+self.<span class="me1">top</span>	<span class="co1">//当前框架的顶层窗口</span>
+f.<span class="me1">top</span>		<span class="co1">//框架 f 的顶层窗口</span>

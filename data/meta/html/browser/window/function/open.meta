@@ -1,0 +1,9 @@
+a:2:{s:7:"current";a:9:{s:4:"date";a:2:{s:7:"created";i:1463995716;s:8:"modified";i:1463997096;}s:7:"creator";s:9:"JellyChen";s:4:"user";s:5:"admin";s:11:"last_change";b:0;s:11:"contributor";a:1:{s:5:"admin";s:9:"JellyChen";}s:5:"title";s:4:"open";s:8:"relation";a:2:{s:10:"references";a:2:{s:33:"html:browser:window:function:open";b:1;s:31:"html:dom:document:function:open";b:1;}s:10:"firstimage";s:0:"";}s:8:"internal";a:2:{s:5:"cache";b:1;s:3:"toc";b:1;}s:11:"description";a:1:{s:8:"abstract";s:361:"open
+
+定义和用法
+
+open() 方法用于打开一个新的浏览器窗口或查找一个已命名的窗口。
+
+语法
+window.open(URL,name,features,replace)
+参数语法URL一个可选的字符串，声明了要在新窗口中显示的文档的 URL。如果省略了这个参数，或者它的值是空字符串，那么新窗口就不会显示任何文档。";}}s:10:"persistent";a:5:{s:4:"date";a:2:{s:7:"created";i:1463995716;s:8:"modified";i:1463997096;}s:7:"creator";s:9:"JellyChen";s:4:"user";s:5:"admin";s:11:"last_change";b:0;s:11:"contributor";a:1:{s:5:"admin";s:9:"JellyChen";}}}

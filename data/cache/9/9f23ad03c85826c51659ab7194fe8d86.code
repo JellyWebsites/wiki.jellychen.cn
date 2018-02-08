@@ -1,0 +1,19 @@
+<span class="co1">// 增加一个名为 trim 的函数作为</span>
+<span class="co1">// String 构造函数的原型对象的一个方法。</span>
+<span class="kw4">String</span>.<span class="kw1">prototype</span>.<span class="me1">trim</span> <span class="sy0">=</span> <span class="kw1">function</span><span class="br0">&#40;</span><span class="br0">&#41;</span>
+<span class="br0">&#123;</span>
+    <span class="co1">// 用正则表达式将前后空格</span>
+    <span class="co1">// 用空字符串替代。</span>
+    <span class="kw1">return</span> <span class="kw1">this</span>.<span class="me1">replace</span><span class="br0">&#40;</span><span class="co2">/(^\s*)|(\s*$)/g</span><span class="sy0">,</span> <span class="st0">&quot;&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&nbsp;
+<span class="co1">// 有空格的字符串</span>
+<span class="kw1">var</span> s <span class="sy0">=</span> <span class="st0">&quot;    leading and trailing spaces    &quot;</span><span class="sy0">;</span>
+&nbsp;
+<span class="co1">// 显示 &quot;    leading and trailing spaces     (35)&quot;</span>
+window.<span class="me1">alert</span><span class="br0">&#40;</span>s <span class="sy0">+</span> <span class="st0">&quot; (&quot;</span> <span class="sy0">+</span> s.<span class="me1">length</span> <span class="sy0">+</span> <span class="st0">&quot;)&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&nbsp;
+<span class="co1">// 删除前后空格</span>
+s <span class="sy0">=</span> s.<span class="me1">trim</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="co1">// 显示&quot;leading and trailing spaces (27)&quot;</span>
+window.<span class="me1">alert</span><span class="br0">&#40;</span>s <span class="sy0">+</span> <span class="st0">&quot; (&quot;</span> <span class="sy0">+</span> s.<span class="me1">length</span> <span class="sy0">+</span> <span class="st0">&quot;)&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>

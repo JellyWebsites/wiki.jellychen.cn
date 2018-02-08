@@ -1,0 +1,30 @@
+====== 扩展Drupal8 ======
+
+该指南描述了如何为你的Drupal8网站“扩展”Drupal核心模块之外的功能。
+
+你可以从各种贡献模块中选择和挑选功能到自己的站点，并且从各种贡献的主题中选择来改变网站的外观。这些插件和主题也被称为“contrib”，应为它们是由Drupal社区的成员贡献的，并在drupal.org上免费可用。
+
+
+[[.:overview|预览]] ： 用模块和主题安装额外的功能和样式，这些模块的主题由你这样的成员提供，并在durpal.org免费开放使用。
+
+[[.:finding_contributed_modules|查找贡献模块]] ： 这是介绍如何查找和评估要在自己网站上使用的模块。
+
+[[.:installing_drupal_8_modules|安装Drupal8模块]] ： 描述添加模块到网站的过程。
+
+[[.:installing_modules_composer_dependencies|安装模块的Composer依赖]] ： Composer是PHP包管理器。它提供了类似于Drupal原生依赖管理器、Drush的功能，但是Composer可用于所有项目。
+
+[[.:installing_modules_from_the_command_line|从命令行安装模块]]  ： 使用drush或drupal控制台安装模块。
+
+[[.:installing_themes|安装主题]] ： 这是在Drupal8上安装主题的说明。
+
+[[.:updateing_modules|更新模块]] ： 描述如何更新模块到最新版本
+
+[[.:module_configuration|模块配置]] ： 一些模块需要预安装模块。该部分描述大体上如何做到这一点。
+
+[[.:module_documentation_and_help|模块文档和帮助手册]] ： 描述查找正在安装模块的相应文档的过程。
+
+[[.:uninstalling_modules|卸载模块]] ： 介绍如何移除系统中不需要的模块。
+
+[[.:installing_sandbox_modules|安装沙箱模块]] ： 介绍在Drupal8中安装沙箱模块。
+
+[[.:troubleshooting|故障排除]] ： 描述安装主题模块时的常见问题及如何解决这些问题。

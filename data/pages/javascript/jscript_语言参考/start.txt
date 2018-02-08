@@ -1,0 +1,19 @@
+======JScript 语言参考======
+
+  *[[javascript:jscript_语言参考:特性信息|特性信息]]
+
+  *[[javascript:jscript_语言参考:字母顺序的关键字列表|字母顺序的关键字列表]]
+
+  *[[javascript:jscript_语言参考:错误|错误]]
+
+  *[[javascript:jscript_语言参考:函数|函数]]
+
+  *[[javascript:jscript_语言参考:方法|方法]]
+
+  *[[javascript:jscript_语言参考:对象|对象]]
+
+  *[[javascript:jscript_语言参考:运算符|运算符]]
+
+  *[[javascript:jscript_语言参考:属性|属性]]
+
+  *[[javascript:jscript_语言参考:语句|语句]]

@@ -1,0 +1,86 @@
+
+<h1 class="sectionedit1" id="microtime">microtime</h1>
+<div class="level1">
+
+<p>
+(PHP 4, PHP 5, PHP 7)
+</p>
+
+<p>
+返回当前 Unix 时间戳和微秒数
+</p>
+
+</div>
+<!-- EDIT1 SECTION "microtime" [1-87] -->
+<h2 class="sectionedit2" id="说明">说明</h2>
+<div class="level2">
+<pre class="code php">mixed <a target="_blank" href="http://www.php.net/microtime"><span class="kw3">microtime</span></a> <span class="br0">&#40;</span><span class="br0">&#91;</span> bool <span class="re0">$get_as_float</span> <span class="sy0">=</span> <span class="kw4">false</span> <span class="br0">&#93;</span> <span class="br0">&#41;</span></pre>
+
+<p>
+<strong>microtime()</strong> 返回当前 Unix 时间戳以及微秒数。本函数仅在支持 <a href="/doku.php/php:%E5%87%BD%E6%95%B0%E5%8F%82%E8%80%83:%E6%97%A5%E6%9C%9F%E4%B8%8E%E6%97%B6%E9%97%B4%E7%9B%B8%E5%85%B3%E6%89%A9%E5%B1%95:%E6%97%A5%E6%9C%9F%E6%97%B6%E9%97%B4:datetime%E5%87%BD%E6%95%B0:gettimeofday" class="wikilink2" title="php:函数参考:日期与时间相关扩展:日期时间:datetime函数:gettimeofday" rel="nofollow">gettimeofday()</a> 系统调用的操作系统下可用。
+</p>
+
+</div>
+<!-- EDIT2 SECTION "说明" [88-318] -->
+<h2 class="sectionedit3" id="参数">参数</h2>
+<div class="level2">
+
+<p>
+<code>get_as_float</code>
+</p>
+
+<p>
+如果使用该参数并设置为TRUE，该函数将返回浮点数而不是字符串。具体参见下方<a href="#返回值" title="php:函数参考:日期与时间相关扩展:日期时间:datetime函数:microtime ↵" class="wikilink1">返回值</a>描述
+</p>
+
+</div>
+<!-- EDIT3 SECTION "参数" [319-497] -->
+<h2 class="sectionedit4" id="返回值">返回值</h2>
+<div class="level2">
+
+<p>
+如果调用时不带可选参数，本函数以 “msec sec” 的格式返回一个字符串，其中 sec 是自 Unix 纪元（0:00:00 January 1, 1970 GMT）起到现在的秒数，msec 是微秒部分。字符串的两部分都是以秒为单位返回的。
+</p>
+
+<p>
+如果给出了 get<em>as</em>float 参数并且其值等价于 TRUE，microtime() 将返回一个浮点数。
+</p>
+<pre class="code">Note: get_as_float 参数是 PHP 5.0.0 新加的。</pre>
+
+</div>
+<!-- EDIT4 SECTION "返回值" [498-934] -->
+<h2 class="sectionedit5" id="参见">参见</h2>
+<div class="level2">
+
+<p>
+<a href="/doku.php/php:%E5%87%BD%E6%95%B0%E5%8F%82%E8%80%83:%E6%97%A5%E6%9C%9F%E4%B8%8E%E6%97%B6%E9%97%B4%E7%9B%B8%E5%85%B3%E6%89%A9%E5%B1%95:%E6%97%A5%E6%9C%9F%E6%97%B6%E9%97%B4:datetime%E5%87%BD%E6%95%B0:time" class="wikilink2" title="php:函数参考:日期与时间相关扩展:日期时间:datetime函数:time" rel="nofollow">time()</a>
+</p>
+
+<p>
+<a href="/doku.php/php:%E5%87%BD%E6%95%B0%E5%8F%82%E8%80%83:%E6%97%A5%E6%9C%9F%E4%B8%8E%E6%97%B6%E9%97%B4%E7%9B%B8%E5%85%B3%E6%89%A9%E5%B1%95:%E6%97%A5%E6%9C%9F%E6%97%B6%E9%97%B4:datetime%E5%87%BD%E6%95%B0:gettimeofday" class="wikilink2" title="php:函数参考:日期与时间相关扩展:日期时间:datetime函数:gettimeofday" rel="nofollow">gettimeofday()</a>
+</p>
+
+</div>
+<!-- EDIT5 SECTION "参见" [935-982] -->
+<h2 class="sectionedit6" id="范例">范例</h2>
+<div class="level2">
+
+<p>
+<strong>代码</strong>
+</p>
+<dl class="file">
+<dt><a href="/doku.php/php:%E5%87%BD%E6%95%B0%E5%8F%82%E8%80%83:%E6%97%A5%E6%9C%9F%E4%B8%8E%E6%97%B6%E9%97%B4%E7%9B%B8%E5%85%B3%E6%89%A9%E5%B1%95:%E6%97%A5%E6%9C%9F%E6%97%B6%E9%97%B4:datetime%E5%87%BD%E6%95%B0:microtime?do=export_code&amp;codeblock=1" title="下载片段" class="mediafile mf_php">index.php</a></dt>
+<dd><pre class="code file php"><span class="kw2">&lt;?php</span>
+<a target="_blank" href="http://www.php.net/var_dump"><span class="kw3">var_dump</span></a><span class="br0">&#40;</span><a target="_blank" href="http://www.php.net/microtime"><span class="kw3">microtime</span></a><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<a target="_blank" href="http://www.php.net/var_dump"><span class="kw3">var_dump</span></a><span class="br0">&#40;</span><a target="_blank" href="http://www.php.net/microtime"><span class="kw3">microtime</span></a><span class="br0">&#40;</span><span class="kw4">TRUE</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="sy1">?&gt;</span></pre>
+</dd></dl>
+
+<p>
+<strong>结果</strong>
+</p>
+<pre class="code">string &#039;0.44473500 1467703124&#039; (length=21)
+float 1467703124.4449</pre>
+
+</div>
+<!-- EDIT6 SECTION "范例" [983-] -->

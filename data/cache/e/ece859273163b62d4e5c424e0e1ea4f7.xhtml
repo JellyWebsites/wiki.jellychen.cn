@@ -1,0 +1,180 @@
+
+<h1 class="sectionedit1" id="ab性能测试工具">ab性能测试工具</h1>
+<div class="level1">
+
+</div>
+<!-- EDIT1 SECTION "ab性能测试工具" [1-36] -->
+<h2 class="sectionedit2" id="安装">安装</h2>
+<div class="level2">
+
+<p>
+此工具包含在apache中，如需独立安装自行百度
+</p>
+
+</div>
+<!-- EDIT2 SECTION "安装" [37-118] -->
+<h2 class="sectionedit3" id="简介">简介</h2>
+<div class="level2">
+
+<p>
+<code>ab（ApacheBench）</code>可以用来测试web服务器的执行效率。ab包含在<code><a href="/doku.php/apache:start" class="wikilink1" title="apache:start">apache</a></code>安装目录bin目录下。ab可以针对某一特定URL模拟出连续的联机请求，同时还可以仿真出同时间点个数相同的联机请求，因而可以利用ab帮助我们在网站开发期间仿真实际上线可能的情况，利用仿真出来的数据做为调整服务器设定或程序的依据。
+</p>
+
+</div>
+<!-- EDIT3 SECTION "简介" [119-554] -->
+<h2 class="sectionedit4" id="用法">用法</h2>
+<div class="level2">
+<pre class="code">ab [options] [http[s]://]hostname[:port]/path</pre>
+
+<p>
+例如：
+</p>
+<pre class="code">ab -n 100 -c 10 http://www.baidu.com/</pre>
+
+</div>
+<!-- EDIT4 SECTION "用法" [555-673] -->
+<h2 class="sectionedit5" id="参数详解">参数详解</h2>
+<div class="level2">
+<div class="table sectionedit6"><table class="inline">
+	<thead>
+	<tr class="row0">
+		<th class="col0"> 参数 </th><th class="col1"> 含义 </th>
+	</tr>
+	</thead>
+	<tr class="row1">
+		<td class="col0 leftalign">-n requests     </td><td class="col1 leftalign">Number of requests to perform 请求次数                                         </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0 leftalign">-c concurrency  </td><td class="col1 leftalign">Number of multiple requests to make 同一时间发出多少个请求（并行连接）         </td>
+	</tr>
+	<tr class="row3">
+		<td class="col0 leftalign">-t timelimit    </td><td class="col1">Seconds to max. wait for responses   等待响应时间</td>
+	</tr>
+	<tr class="row4">
+		<td class="col0 leftalign">-p postfile     </td><td class="col1 leftalign">File containing data to POST                                                     </td>
+	</tr>
+	<tr class="row5">
+		<td class="col0">-T content-type </td><td class="col1 leftalign">Content-type header for POSTing                                                  </td>
+	</tr>
+	<tr class="row6">
+		<td class="col0 leftalign">-v verbosity    </td><td class="col1 leftalign">How much troubleshooting info to print                                           </td>
+	</tr>
+	<tr class="row7">
+		<td class="col0 leftalign">-w              </td><td class="col1 leftalign">Print out results in <abbr title="HyperText Markup Language">HTML</abbr> tables                                                 </td>
+	</tr>
+	<tr class="row8">
+		<td class="col0 leftalign">-i              </td><td class="col1 leftalign">Use HEAD instead of GET                                                          </td>
+	</tr>
+	<tr class="row9">
+		<td class="col0 leftalign">-x attributes   </td><td class="col1 leftalign">String to insert as table attributes                                             </td>
+	</tr>
+	<tr class="row10">
+		<td class="col0 leftalign">-y attributes   </td><td class="col1 leftalign">String to insert as tr attributes                                                </td>
+	</tr>
+	<tr class="row11">
+		<td class="col0 leftalign">-z attributes   </td><td class="col1 leftalign">String to insert as td or th attributes                                          </td>
+	</tr>
+	<tr class="row12">
+		<td class="col0 leftalign">-C attribute    </td><td class="col1 leftalign">Add cookie, eg. &#039;Apache=1234. (repeatable)                                       </td>
+	</tr>
+	<tr class="row13">
+		<td class="col0 leftalign">-H attribute    </td><td class="col1 leftalign">Add Arbitrary header line, eg. &#039;Accept-Encoding: gzip&#039;                           </td>
+	</tr>
+	<tr class="row14">
+		<td class="col0 leftalign">                </td><td class="col1 leftalign">Inserted after all normal header lines. (repeatable)                             </td>
+	</tr>
+	<tr class="row15">
+		<td class="col0 leftalign">-A attribute    </td><td class="col1 leftalign">Add Basic WWW Authentication, the attributes  http验证, 分隔传递用户名及密码   </td>
+	</tr>
+	<tr class="row16">
+		<td class="col0 leftalign">                </td><td class="col1 leftalign">are a colon separated username and password.                                     </td>
+	</tr>
+	<tr class="row17">
+		<td class="col0 leftalign">-P attribute    </td><td class="col1 leftalign">Add Basic Proxy Authentication, the attributes                                   </td>
+	</tr>
+	<tr class="row18">
+		<td class="col0 leftalign">                </td><td class="col1 leftalign">are a colon separated username and password.                                     </td>
+	</tr>
+	<tr class="row19">
+		<td class="col0 leftalign">-X proxy:port   </td><td class="col1 leftalign">Proxyserver and port number to use                                               </td>
+	</tr>
+	<tr class="row20">
+		<td class="col0 leftalign">-V              </td><td class="col1 leftalign">Print version number and exit  查看ab版本                                      </td>
+	</tr>
+	<tr class="row21">
+		<td class="col0 leftalign">-k              </td><td class="col1 leftalign">Use HTTP KeepAlive feature                                                       </td>
+	</tr>
+	<tr class="row22">
+		<td class="col0 leftalign">-d              </td><td class="col1 leftalign">Do not show percentiles served table.                                            </td>
+	</tr>
+	<tr class="row23">
+		<td class="col0 leftalign">-S              </td><td class="col1 leftalign">Do not show confidence estimators and warnings.                                  </td>
+	</tr>
+	<tr class="row24">
+		<td class="col0 leftalign">-g filename     </td><td class="col1 leftalign">Output collected data to gnuplot format file.                                    </td>
+	</tr>
+	<tr class="row25">
+		<td class="col0 leftalign">-e filename     </td><td class="col1 leftalign">Output CSV file with percentages served                                          </td>
+	</tr>
+	<tr class="row26">
+		<td class="col0 leftalign">-s              </td><td class="col1 leftalign">Use httpS instead of HTTP (SSL)                                                  </td>
+	</tr>
+	<tr class="row27">
+		<td class="col0 leftalign">-h              </td><td class="col1 leftalign">Display usage information (this message)                                         </td>
+	</tr>
+</table></div>
+<!-- EDIT6 TABLE [699-3448] -->
+</div>
+<!-- EDIT5 SECTION "参数详解" [674-3449] -->
+<h2 class="sectionedit7" id="结果">结果</h2>
+<div class="level2">
+<pre class="code"># ab -n 100 -c 5 -k http://www.gaingreat.com/42.html  //必须在后方指定相应文件42.html或加上“/”
+This is ApacheBench, Version 2.0.40-dev &lt;$Revision: 1.146 $&gt; apache-2.0
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Copyright 2006 The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking www.gaingreat.com (be patient).....done
+
+
+Server Software:        nginx  //Web服务器引擎
+Server Hostname:        www.gaingreat.com  //服务器地址
+Server Port:            80  //服务器端口
+
+Document Path:          /42.html  //请求的文件路径
+Document Length:        37927 bytes  //文件大小
+
+Concurrency Level:      5  //并发次数
+Time taken for tests:   32.732276 seconds  //测试所需时间
+Complete requests:      100  //成功请求次数
+Failed requests:        73  //失败请求次数
+   (Connect: 0, Length: 73, Exceptions: 0)
+Write errors:           0  //写入错误
+Keep-Alive requests:    0
+Total transferred:      3817232 bytes  //测试过程传输字节数
+HTML transferred:       3791532 bytes  //HTML内容传输字节数
+Requests per second:    3.06 [#/sec] (mean)  //每秒请求数 ( 平均 )
+Time per request:       1636.614 [ms] (mean)  //每次并发请求时间 ( 所有并发 )
+Time per request:       327.323 [ms] (mean, across all concurrent requests)  //每一请求时间 ( 并发平均 )
+Transfer rate:          113.86 [Kbytes/sec] received  //平均传输速率
+
+Connection Times (ms)  //响应时间小、中、大值
+              min  mean[+/-sd] median   max
+Connect:       16  183 111.5    192     460
+Processing:   793 1427 548.2   1296    3839
+Waiting:      300  822 485.0    650    3190
+Total:        925 1611 512.8   1447    3891
+//以下为所有请求的平均速度，如在测试过程中进度到50%时平均响应时间为1447ms，到66%时
+平均响应时间为1567ms
+Percentage of the requests served within a certain time (ms)
+  50%   1447
+  66%   1567
+  75%   1667
+  80%   1742
+  90%   2241
+  95%   2793
+  98%   3748
+  99%   3891
+ 100%   3891 (longest request)</pre>
+
+</div>
+<!-- EDIT7 SECTION "结果" [3450-] -->

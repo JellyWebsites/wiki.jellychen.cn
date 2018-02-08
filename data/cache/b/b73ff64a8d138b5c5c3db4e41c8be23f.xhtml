@@ -1,0 +1,2139 @@
+
+<h1 class="sectionedit1" id="jscript_用户指南">Jscript 用户指南</h1>
+<div class="level1">
+
+</div>
+<!-- EDIT1 SECTION "Jscript 用户指南" [1-34] -->
+<h2 class="sectionedit2" id="jscript_基础">JScript 基础</h2>
+<div class="level2">
+
+</div>
+<!-- EDIT2 SECTION "JScript 基础" [35-60] -->
+<h3 class="sectionedit3" id="什么是_jscript">什么是 JScript？</h3>
+<div class="level3">
+
+<p>
+JScript 是 Microsoft 公司对 ECMA 262 语言规范（ECMAScript 编辑器 3）的一种实现。除了少数例外（为了保持向后兼容），JScript 完全实现了 ECMA 标准。本概述的目的就是引导您学习使用 JScript。
+</p>
+
+</div>
+
+<h4 id="使用_jscript">使用 JScript</h4>
+<div class="level4">
+
+<p>
+JScript 是一种解释型的、基于对象的脚本语言。尽管与 C++ 这样成熟的面向对象的语言相比，JScript 的功能要弱一些，但对于它的预期用途而言，JScript 的功能已经足够大了。
+</p>
+
+<p>
+JScript 不是其他语言的精简版（例如，它只是与 Java 有点模糊而间接的关系），也不是任何事物的简化。不过，它有其局限性。例如，您不能使用该语言来编写独立运行的应用程序，并且没有对读写文件的内置支持。此外，JScript 脚本只能在某个解释器或“宿主”上运行，如 Active Server Pages（ASP）、Internet 浏览器或者 Windows 脚本宿主。
+</p>
+
+<p>
+JScript 是一种宽松类型的语言。宽松类型意味着您不必显式定义变量的数据类型。事实上 JScript 更进一步。您无法在JScriot上明确地定义数据类型。此外，在大多数情况下，JScript 将根据需要自动进行转换。例如，如果将一个数值添加到由文本组成的某项（一个字符串），该数值将被转换为文本。
+</p>
+
+<p>
+本用户指南的其余部分是 JScript 特性概述。有关该语言实现的全部细节，请参考<a href="/doku.php/javascript:jscript_%E8%AF%AD%E8%A8%80%E5%8F%82%E8%80%83" class="wikilink2" title="javascript:jscript_语言参考" rel="nofollow">语言参考</a>。 
+</p>
+
+<p>
+注意   下面大多数示例的代码比实际 Web 页中的代码应该更明确，并且不是太复杂。其目的是阐明相关概念，而不是提供最优的简短编码和风格。在任何情况下，如果六个月以后您还能毫不费力地阅读和理解所编写的代码，则说明这些代码写得不错。 
+</p>
+
+</div>
+<!-- EDIT3 SECTION "什么是 JScript？" [61-1916] -->
+<h3 class="sectionedit4" id="编写_jscript_代码">编写 JScript 代码</h3>
+<div class="level3">
+
+<p>
+与其他许多编程语言一样， Microsoft JScript 是用文本方式编写的，并被组织成为语句、由相关的语句集组成的块、以及注释。在一条语句内可以使用变量、比如字符串和数字（称为“文字”）的立即数、以及表达式。 
+</p>
+
+</div>
+
+<h4 id="语句">语句</h4>
+<div class="level4">
+
+<p>
+JScript 程序是语句的集合。一条 Jscript 语句相当于英语中的一个完整句。Jscript 语句将表达式组合起来，完成一个任务。
+</p>
+
+<p>
+一条语句由一个或多个表达式、关键字或者运算符（符号）组成。典型地，一条语句写一行，尽管一条语句可以超过两行或更多行。两条或更多条语句也可以写在同一行上，语句之间用分号“;”隔开。通常，每一新行开始一条新语句。不过显式地终止语句是一个好方法。这是用分号 (;)来实现的，分号是 JScript 语句的终止字符。下面给出 Jscript 语句的两隔示例。
+</p>
+<pre class="code javascript">aBird <span class="sy0">=</span> <span class="st0">&quot;Robin&quot;</span><span class="sy0">;</span> <span class="co1">//将文本“Robin”赋值给变量 aBird</span>
+<span class="kw1">var</span> today <span class="sy0">=</span> <span class="kw1">new</span> <span class="kw4">Date</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span> <span class="co1">// 将今天的日期赋值给变量 today</span></pre>
+
+<p>
+用大括号（{}）括起来的一组 JScript 语句称为一个语句块。分组到一个语句块中的语句通常可当作单条语句处理。这就是说在 JScript 期望有一条单个语句的大多数地方可以使用语句块。应该注意以 for 和 while 打头的循环语句是例外情况。注意，语句块中的原始语句以分号结束，但语句块本身并不以分号结束。
+</p>
+
+<p>
+通常，在函数和条件语句中使用语句块。注意，Jscript 与 C++ 以及其他某些语言不同，它不认为语句块是一个新的范围；只有函数创建新范围。在下面的示例中，第一条语句开始定义一个函数，该函数包含一个五条语句组成的语句块。语句块后的三条语句没有用大括号括起来；这些语句不是一个语句块，所以就不是函数定义的一部分。
+</p>
+<pre class="code javascript"><span class="kw1">function</span> convert<span class="br0">&#40;</span>inches<span class="br0">&#41;</span>  <span class="br0">&#123;</span>
+   feet <span class="sy0">=</span> inches <span class="sy0">/</span> <span class="nu0">12</span><span class="sy0">;</span>  <span class="co1">//  这五条语句属于一个语句块。</span>
+   miles <span class="sy0">=</span> feet <span class="sy0">/</span> <span class="nu0">5280</span><span class="sy0">;</span>
+   nauticalMiles <span class="sy0">=</span> feet <span class="sy0">/</span> <span class="nu0">6080</span><span class="sy0">;</span>
+   cm <span class="sy0">=</span> inches <span class="sy0">*</span> <span class="nu0">2.54</span><span class="sy0">;</span>
+   meters <span class="sy0">=</span> inches <span class="sy0">/</span> <span class="nu0">39.37</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+km <span class="sy0">=</span> meters <span class="sy0">/</span> <span class="nu0">1000</span><span class="sy0">;</span>  <span class="co1">//  这三条语句不在语句块内。</span>
+kradius <span class="sy0">=</span> km<span class="sy0">;</span>
+mradius <span class="sy0">=</span> miles<span class="sy0">;</span></pre>
+
+</div>
+
+<h4 id="注释">注释</h4>
+<div class="level4">
+
+<p>
+
+单行的 JScript 注释以一对正斜杠(//)开始。下面给出一个单行注释的示例。
+
+</p>
+<pre class="code javascript">aGoodIdea <span class="sy0">=</span> <span class="st0">&quot;Comment your code thoroughly.&quot;</span><span class="sy0">;</span>  <span class="co1">//  这是一个单行注释。</span></pre>
+
+<p>
+多行注释以一个正斜杠加一个星号的组合(/<em>)开始,并以其逆向顺序 (</em>/)结束。
+</p>
+<pre class="code javascript"><span class="coMULTI">/*
+这是一个用来解释前面的代码语句的多行注释。
+&nbsp;
+该语句将一个值赋给 aGoodIdea 变量。
+用引号包含的这种值称为一个文字。
+文字显式并直接包含信息；
+而不是简接地引用信息。
+（引号不属于该文字的内容。）
+*/</span></pre>
+
+<p>
+<strong>注意</strong>   如果您试图将一个多行注释插入到另一个中，JScript 不能按正常的方式解释生成的多行注释。标明嵌入的多行注释结束的 */ 被认为是整个多行注释的结尾。这就意味着嵌入多行注释之后的文本不再被认为是注释；相应地，它将被解释为 JScript 代码，并会产生语法错误。
+</p>
+
+<p>
+建议将所有的注释写为单行注释的语句块。这样您以后就能够将大段的代码与多行注释区分开。
+</p>
+<pre class="code javascript"><span class="co1">//这是另一种多行注释，写成一系列单行注释。</span>
+&nbsp;
+<span class="co1">//  在执行完该语句后，可以使用 aGoodIdea 变量的名字来引用其内容，</span>
+<span class="co1">//  如下一条语句那样，即采用连接操作将字符串文字添加到</span>
+<span class="co1">//  aGoodIdea 变量，以创建一个新的变量。</span>
+&nbsp;
+<span class="kw1">var</span> extendedIdea <span class="sy0">=</span> aGoodIdea <span class="sy0">+</span> <span class="st0">&quot; You never know when you'll have to figure out what it does.&quot;</span><span class="sy0">;</span></pre>
+
+</div>
+
+<h4 id="赋值和相等">赋值和相等</h4>
+<div class="level4">
+
+<p>
+
+JScript 语句中使用等号 (=)给变量赋值：等号是赋值运算符。= 运算符左边的操作项总是一个 Lvalue。Lvalue 可以是： 
+
+</p>
+<ul>
+<li class="level1"><div class="li">变量</div>
+</li>
+<li class="level1"><div class="li">数组元素</div>
+</li>
+<li class="level1"><div class="li">对象属性</div>
+</li>
+</ul>
+
+<p>
+= 运算符右边的操作项总是一个 Rvalue。Rvalues 可以是任何类型的一个任意值，包括表达式的值。下面给出一个 JScript 赋值语句的示例。
+</p>
+<pre class="code javascript">anInteger <span class="sy0">=</span> <span class="nu0">3</span><span class="sy0">;</span></pre>
+
+<p>
+Jscript 编译器解释本语句的意义为：“将 3 赋给变量 anInteger”或“anInteger 的值为 3”。
+</p>
+
+<p>
+
+确定您理解了 = 运算符（赋值）和 == 运算符（相等）的差异。在比较两个值是否相等时，应使用两个等于号 (==)。这些内容将在 控制程序的流程 中详细介绍。 
+
+</p>
+
+<p>
+<strong>表达式</strong>
+</p>
+
+<p>
+JScript 表达式是指 JScript 解释器能够计算生成值的 JScript “短语”。这个值可以是任何有效的 JScript 类型 — 数字、字符串、对象，等等。最简单的表达式是文字。下面给出 JScript 文字表达式的一些示例。
+</p>
+<pre class="code javascript"><span class="nu0">3.9</span>                       <span class="co1">// 数字文字</span>
+<span class="st0">&quot;Hello!&quot;</span>                  <span class="co1">// 字符串文字</span>
+<span class="kw2">false</span>                     <span class="co1">// 布尔文字</span>
+<span class="kw2">null</span>                      <span class="co1">// 文字空值</span>
+<span class="br0">&#123;</span>x<span class="sy0">:</span><span class="nu0">1</span><span class="sy0">,</span> y<span class="sy0">:</span><span class="nu0">2</span><span class="br0">&#125;</span>                <span class="co1">// 对象文字</span>
+<span class="br0">&#91;</span><span class="nu0">1</span><span class="sy0">,</span><span class="nu0">2</span><span class="sy0">,</span><span class="nu0">3</span><span class="br0">&#93;</span>                   <span class="co1">// 数组文字</span>
+<span class="kw1">function</span><span class="br0">&#40;</span>x<span class="br0">&#41;</span><span class="br0">&#123;</span><span class="kw1">return</span> x<span class="sy0">*</span>x<span class="sy0">;</span><span class="br0">&#125;</span>  <span class="co1">// 函数文字</span></pre>
+
+<p>
+更多复杂的表达式中包含变量、函数、函数调用以及其他表达式。可以用运算符将表达式组合，创建复合表达式。运算符可以是：
+</p>
+<pre class="code javascript"><span class="sy0">+</span>  <span class="co1">// 加法</span>
+<span class="sy0">-</span>  <span class="co1">// 减法</span>
+<span class="sy0">*</span>  <span class="co1">// 乘法</span>
+<span class="sy0">/</span>  <span class="co1">// 除法</span></pre>
+
+<p>
+下面给出 JScript 复合表达式的一些示例。
+</p>
+<pre class="code javascript"><span class="kw1">var</span> anExpression <span class="sy0">=</span> <span class="nu0">3</span> <span class="sy0">*</span> <span class="br0">&#40;</span><span class="nu0">4</span> <span class="sy0">/</span> <span class="nu0">5</span><span class="br0">&#41;</span> <span class="sy0">+</span> <span class="nu0">6</span><span class="sy0">;</span>
+<span class="kw1">var</span> aSecondExpression <span class="sy0">=</span> <span class="kw4">Math</span>.<span class="me1">PI</span> <span class="sy0">*</span> radius <span class="sy0">*</span> radius<span class="sy0">;</span>
+<span class="kw1">var</span> aThirdExpression <span class="sy0">=</span> aSecondExpression <span class="sy0">+</span> <span class="st0">&quot;%&quot;</span> <span class="sy0">+</span> anExpression<span class="sy0">;</span>
+<span class="kw1">var</span> aFourthExpression <span class="sy0">=</span> <span class="st0">&quot;(&quot;</span> <span class="sy0">+</span> aSecondExpression <span class="sy0">+</span> <span class="st0">&quot;) % (&quot;</span> <span class="sy0">+</span> anExpression <span class="sy0">+</span> <span class="st0">&quot;)&quot;</span><span class="sy0">;</span></pre>
+
+</div>
+<!-- EDIT4 SECTION "编写 JScript 代码" [1917-7744] -->
+<h3 class="sectionedit5" id="jscript_变量">JScript 变量</h3>
+<div class="level3">
+
+<p>
+任何编程语言中，用一块数据量化一个概念。
+</p>
+
+<p>
+How old am I?
+</p>
+
+<p>
+在 Jscript 中，变量是给概念的名称；它代表了给出瞬间的值。当使用该变量时，实际是用的它所代表的数据。给出示例：
+</p>
+<pre class="code javascript">NumberOfDaysLeft <span class="sy0">=</span> EndDate – TodaysDate<span class="sy0">;</span></pre>
+
+<p>
+机械的理解是使用变量来存储、得到并操作脚本中出现的所有的不同值。创建有意义的变量名称；便于别人理解脚本。
+</p>
+
+</div>
+
+<h4 id="变量声明">变量声明</h4>
+<div class="level4">
+
+<p>
+变量在脚本中的第一次出现是在声明中。变量在第一次用到时就设置于内存中，便于后来在脚本中引用。使用变量之前先进行声明。可以使用 var 关键字来进行变量声明。
+</p>
+<pre class="code script">var count;  // 单个声明。
+var count, amount, level;  // 用单个 var 关键字声明的多个声明。
+var count = 0, amount = 100;  // 一条语句中的变量声明和初始化。</pre>
+
+<p>
+如果在 <strong>var</strong> 语句中没有初始化变量，变量自动取 JScript 值 <strong>undefined</strong>。尽管并不安全，但声明语句中忽略 <strong>var</strong> 关键字是合法的 JScript 语法。这时，JScript 解释器给予变量全局范围的可见度。当在过程级中声明一个变量时，它不能用于全局范围；这种情况下，变量声明必须用 <strong>var</strong> 关键字。
+</p>
+
+</div>
+
+<h4 id="变量命名">变量命名</h4>
+<div class="level4">
+
+<p>
+变量名称是一个标识符。Jscript 中，用标识符来： 
+</p>
+<ul>
+<li class="level1"><div class="li">命名变量</div>
+</li>
+<li class="level1"><div class="li">命名函数 </div>
+</li>
+<li class="level1"><div class="li">给出循环的标签</div>
+</li>
+</ul>
+
+<p>
+JScript 是一种区分大小写的语言。因此变量名称 myCounter 和变量名称 mYCounter 是不一样的。变量的名称可以是任意长度。创建合法的变量名称应遵循如下规则： 
+</p>
+<ul>
+<li class="level1"><div class="li">第一个字符必须是一个 <abbr title="American Standard Code for Information Interchange">ASCII</abbr> 字母（大小写均可），或一个下划线(_)。注意第一个字符不能是数字。 </div>
+</li>
+<li class="level1"><div class="li">后续的字符必须是字母、数字或下划线。 </div>
+</li>
+<li class="level1"><div class="li">变量名称一定不能是 保留字。 </div>
+</li>
+</ul>
+
+<p>
+下面给出合法变量名称的一些示例： 
+</p>
+<pre class="code javascript">_pagecount 
+Part9 
+Number_Items </pre>
+
+<p>
+下面给出无效变量名称的一些示例： 
+</p>
+<pre class="code javascript">99Balloons <span class="co1">// 不能以数字开头。</span>
+Smith<span class="sy0">&amp;</span>Wesson <span class="co1">// “与”符号（&amp;）字符用于变量名称是无效的。</span></pre>
+
+<p>
+当要声明一个变量并进行初始化，但又不想指定任何特殊值，可以赋值为 JScript 值 null。下面给出示例。
+</p>
+<pre class="code javascript"><span class="kw1">var</span> bestAge <span class="sy0">=</span> <span class="kw2">null</span><span class="sy0">;</span>
+<span class="kw1">var</span> muchTooOld <span class="sy0">=</span> <span class="nu0">3</span> <span class="sy0">*</span> bestAge<span class="sy0">;</span> <span class="co1">// muchTooOld 的值为 0。</span></pre>
+
+<p>
+如果声明了一个变量但没有对其赋值，该变量存在，其值为Jscript 值 undefined。下面给出示例。
+</p>
+<pre class="code javascript"><span class="kw1">var</span> currentCount<span class="sy0">;</span>
+<span class="kw1">var</span> finalCount <span class="sy0">=</span> <span class="nu0">1</span> <span class="sy0">*</span> currentCount<span class="sy0">;</span> <span class="co1">// finalCount 的值为 NaN，因为 currentCount 为 undefined。</span></pre>
+
+<p>
+注意在 JScript 中 <strong>null</strong> 和 <strong>undefined</strong> 的主要区别是 <strong>null</strong> 的操作象数字 0，而 <strong>undefined</strong> 的操作象特殊值<strong>NaN</strong> （不是一个数字）。对 <strong>null</strong> 值和 <strong>undefined</strong> 值作比较总是相等的。
+</p>
+
+<p>
+可以不用 <strong>var</strong> 关键字声明变量，并赋值。这就是隐式声明。
+</p>
+<pre class="code javascript">noStringAtAll <span class="sy0">=</span> <span class="st0">&quot;&quot;</span><span class="sy0">;</span> <span class="co1">// 隐式声明变量 noStringAtAll。</span></pre>
+
+<p>
+不能使用未经过声明的变量。
+</p>
+<pre class="code javascript"><span class="kw1">var</span> volume <span class="sy0">=</span> length <span class="sy0">*</span> width<span class="sy0">;</span> <span class="co1">// 错误 — length 和 width 并不存在。</span></pre>
+
+</div>
+
+<h4 id="强制转换">强制转换</h4>
+<div class="level4">
+
+<p>
+表达式中操作项的数据类型相同时 JScript 解释器才能对其求值。如果表达式不经过强制转换就试图对两个不同的数据类型（如一个为数字，另一个为字符串）执行运算，将产生错误结果。但在 Jscript 中情况就不同了。
+</p>
+
+<p>
+JScript 是一种自由类型的语言。它的变量没有预定类型（相对于强类型语言，如 C++）。相反，JScript 变量的类型相应于他们包含的值的类型。这种操作的好处是能将值作为另一类型处理。
+</p>
+
+<p>
+在 Jscript 中，可以对不同类型的值执行运算，不必担心 JScript 解释器产生异常。相反，JScript 解释器自动将数据类型之一改变（强制转换）为另一种数据类型，然后执行运算。例如：
+</p>
+<div class="table sectionedit6"><table class="inline">
+	<thead>
+	<tr class="row0">
+		<th class="col0 centeralign">   运算               </th><th class="col1 centeralign">   结果        </th>
+	</tr>
+	</thead>
+	<tr class="row1">
+		<td class="col0 leftalign"> 数值与字符串相加    </td><td class="col1 leftalign"> 将数值强制转换为字符串。  </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0 leftalign"> 布尔值与字符串相加   </td><td class="col1"> 将布尔值强制转换为字符串。</td>
+	</tr>
+	<tr class="row3">
+		<td class="col0 leftalign"> 数值与布尔值相加    </td><td class="col1 leftalign"> 将布尔值强制转换为数值。  </td>
+	</tr>
+</table></div>
+<!-- EDIT6 TABLE [11847-12111] -->
+<p>
+考虑下面的示例。
+</p>
+<pre class="code javascript"><span class="kw1">var</span> x <span class="sy0">=</span> <span class="nu0">2000</span><span class="sy0">;</span>      <span class="co1">// 一个数字。</span>
+<span class="kw1">var</span> y <span class="sy0">=</span> <span class="st0">&quot;Hello&quot;</span><span class="sy0">;</span>   <span class="co1">// 一个字符串。</span>
+x <span class="sy0">=</span> x <span class="sy0">+</span> y<span class="sy0">;</span>         <span class="co1">// 将数字强制转换为字符串。</span>
+document.<span class="me1">write</span><span class="br0">&#40;</span>x<span class="br0">&#41;</span><span class="sy0">;</span> <span class="co1">// 输出 2000Hello。</span></pre>
+
+<p>
+要想显式地将字符串转换为整数，使用 parseInt 方法。要想显式地将字符串转换为数字，使用 parseFloat 方法。请注意，比较大小时字符串自动转换为相等的数字，但加法（连接）运算时保留为字符串。
+</p>
+
+</div>
+<!-- EDIT5 SECTION "JScript 变量" [7745-12608] -->
+<h3 class="sectionedit7" id="jscript_数据类型">JScript 数据类型</h3>
+<div class="level3">
+
+<p>
+Jscript 有三种主要数据类型、两种复合数据类型和两种特殊数据类型。
+</p>
+
+<p>
+主要（基本）数据类型是： 
+</p>
+<ul>
+<li class="level1"><div class="li">字符串 </div>
+</li>
+<li class="level1"><div class="li">数值 </div>
+</li>
+<li class="level1"><div class="li">布尔 </div>
+</li>
+</ul>
+
+<p>
+复合（引用）数据类型是： 
+</p>
+<ul>
+<li class="level1"><div class="li">对象 </div>
+</li>
+<li class="level1"><div class="li">数组 </div>
+</li>
+</ul>
+
+<p>
+特殊数据类型是： 
+</p>
+<ul>
+<li class="level1"><div class="li">Null </div>
+</li>
+<li class="level1"><div class="li">Undefined </div>
+</li>
+</ul>
+
+</div>
+
+<h4 id="字符串数据类型">字符串数据类型</h4>
+<div class="level4">
+
+<p>
+一个字符串值是排在一起的一串零或零以上的 Unicode 字符（字母、数字和标点符号）。字符串数据类型用来表示 JScript 中的文本。脚本中可以包含字符串文字，这些字符串文字放在一对匹配的的单引号或双引号中。字符串中可以包含双引号，该双引号两边需加单引号，也可以包含单引号，该单引号两边需加双引号。下面是字符串的示例：
+</p>
+<pre class="code javascrpt">&quot;Happy am I; from care I’m free!&quot;
+'&quot;Avast, ye lubbers!&quot; roared the technician.' 
+&quot;42&quot;
+'c'</pre>
+
+<p>
+请注意，JScript 中没有表示单个字符的类型（如 C++ 的 <strong>char</strong>）。要表示 Jscript 中的单个字符，应创建一个只包含一个字符的字符串。包含零个字符（““）的字符串是空（零长度）字符串。
+</p>
+
+</div>
+
+<h4 id="数值数据类型">数值数据类型</h4>
+<div class="level4">
+
+<p>
+在 Jscript 中整数和浮点值没有差别；JScript 数值可以是其中任意一种（JScript 内部将所有的数值表示为浮点值）。
+</p>
+
+</div>
+
+<h4 id="整型值">整型值</h4>
+<div class="level4">
+
+<p>
+整型值可以是正整数，负整数和 0。可以用 10 进制，8 进制和 16 进制来表示。在 Jscript 中大多数字是用十进制表示的。加前缀“0”表示 8 进制的整型值，只能包含 0 到 7 的数字。前缀为“0”同时包含数字“8”或“9”的数被解释为十进制数。 
+</p>
+
+<p>
+加前缀“0x”（零和x|X）表示 16 进制整型值。可以包含数字 0 到 9，以及字母 A 到 F（大写或小写）。使用字母 A 到 F 表示十进制 10 到 15 的单个数字。就是说 0xF 与 15 相等，同时 0x10 等于 16。
+</p>
+
+<p>
+八进制和十六进制数可以为负，但不能有小数位，同时不能以科学计数法（指数）表示。
+</p>
+
+</div>
+
+<h4 id="浮点值">浮点值</h4>
+<div class="level4">
+
+<p>
+浮点值为带小数部分的数。也可以用科学计数法来表示。这就是说，大写或小写“e”用来表示 10 的次方。Jscript用数值表示的八字节 IEEE754 浮点标准。这意味着数字最大可以到±1.7976931348623157&times;10<sup>308</sup>，最小到±5&times;10<sup>-324</sup>。以“0”开始且包含小数点的数字被解释为小数浮点数。
+</p>
+
+<p>
+注意以“0x”或“00”开始并包含小数点的数将发生错误。以下是 Jscript 中数字的例子。
+</p>
+<div class="table sectionedit8"><table class="inline">
+	<thead>
+	<tr class="row0">
+		<th class="col0 centeralign">  数字   </th><th class="col1 centeralign">  描述   </th><th class="col2 centeralign">  等价十进制数   </th>
+	</tr>
+	</thead>
+	<tr class="row1">
+		<td class="col0">.0001, 0.0001, 1e<sup>-4</sup>, 1.0e<sup>-4</sup> </td><td class="col1">四个相等的浮点数 </td><td class="col2">0.0001 </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0">3.45e<sup>2</sup> </td><td class="col1">浮点数 </td><td class="col2">345 </td>
+	</tr>
+	<tr class="row3">
+		<td class="col0">42 </td><td class="col1">整数 </td><td class="col2">42 </td>
+	</tr>
+	<tr class="row4">
+		<td class="col0">0378 </td><td class="col1">整数。虽然看起来是八进制数（以0开头），但是8不是有效的八进制数字，所以为十进制数。 </td><td class="col2">378 </td>
+	</tr>
+	<tr class="row5">
+		<td class="col0">0377 </td><td class="col1">八进制整数。注意它虽然看起来比上面的数只小1，但实际数值有很大不同。 </td><td class="col2">255 </td>
+	</tr>
+	<tr class="row6">
+		<td class="col0">0.0001 </td><td class="col1">浮点数。虽然以零开头，但由于带有小数点所以不是八进制数。 </td><td class="col2">0.0001 </td>
+	</tr>
+	<tr class="row7">
+		<td class="col0">00.0001 </td><td class="col1">错误。两个零开头表示为八进制，但八进制数不能带有小数部分。 </td><td class="col2">N/A （编译错误） </td>
+	</tr>
+	<tr class="row8">
+		<td class="col0">0Xff </td><td class="col1">十六进制整数。 </td><td class="col2">255 </td>
+	</tr>
+	<tr class="row9">
+		<td class="col0">0x37CF </td><td class="col1">十六进制整数。 </td><td class="col2">14287 </td>
+	</tr>
+	<tr class="row10">
+		<td class="col0">0x3e<sup>7</sup> </td><td class="col1">十六进制整数。注意‘e’并不被认为指数。 </td><td class="col2">999 </td>
+	</tr>
+	<tr class="row11">
+		<td class="col0">0x3.45e<sup>2</sup> </td><td class="col1">错误。十六进制数不能有小数部分。 </td><td class="col2">N/A （编译错误） </td>
+	</tr>
+</table></div>
+<!-- EDIT8 TABLE [15163-16092] -->
+<p>
+另外，JScript包含特殊值数字。它们是： 
+</p>
+<ul>
+<li class="level1"><div class="li">NaN （不是数）。当对不适当的数据进行数学运算时使用，例如字符串或未定义值。 </div>
+</li>
+<li class="level1"><div class="li">正无穷大。在JScript中如果一个正数太大的话使用它来表示。 </div>
+</li>
+<li class="level1"><div class="li">负无穷大。在JScript中如果一个负数太大的话使用它来表示。 </div>
+</li>
+<li class="level1"><div class="li">正0和负0。Jscript区分正0和负0。 </div>
+</li>
+</ul>
+
+</div>
+
+<h4 id="boolean数据类型">Boolean数据类型</h4>
+<div class="level4">
+
+<p>
+尽管字符串和数字类型可以有无数不同的值，boolean 数据类型却只有两个值。它们是文字 <strong>true</strong> 和 <strong>false</strong>。Boolean值是一个真值，它表示一个状态的有效性（说明该状态为真或假）。
+</p>
+
+<p>
+脚本中的比较通常得到一个 Boolean 结果。考虑下一行 Jscript 代码。
+</p>
+<pre class="code javascript">y <span class="sy0">=</span> <span class="br0">&#40;</span>x <span class="sy0">==</span> <span class="nu0">2000</span><span class="br0">&#41;</span><span class="sy0">;</span></pre>
+
+<p>
+这里要比较变量 x 的值是否与数字 2000 相等。如果相等，比较的结果为 Boolean 值 <strong>true</strong>，并将其赋给变量 y。如果x与2000不等，则比较的结果为boolean值<strong>false</strong>。
+</p>
+
+<p>
+Boolean值在结构控制中尤其有用。可以将直接创建 boolean 值的比较与用使用该 boolean 值的语句相组合。考虑下面的JScript代码范例。
+</p>
+<pre class="code javascript"><span class="kw1">if</span> <span class="br0">&#40;</span>x <span class="sy0">==</span> <span class="nu0">2000</span><span class="br0">&#41;</span>
+    z <span class="sy0">=</span> z <span class="sy0">+</span> <span class="nu0">1</span><span class="sy0">;</span>
+<span class="kw1">else</span>
+    x <span class="sy0">=</span> x <span class="sy0">+</span> <span class="nu0">1</span><span class="sy0">;</span></pre>
+
+<p>
+当 boolean 值为 <strong>true</strong> 时，Jscript 中的 <strong>if/else</strong> 语句执行一个操作（这样，z = z + 1），而当 boolean 值为 <strong>false</strong> 时执行另一个操作（x = x + 1）。
+</p>
+
+<p>
+可以使用任意表达式作比较表达式。任何值为0、null、未定义或空字符串的表达式被解释为 <strong>false</strong>。其他任意值的表达式解释为 <strong>true</strong>。例如，可以使用如下表达式：
+</p>
+<pre class="code javascript"><span class="kw1">if</span> <span class="br0">&#40;</span>x <span class="sy0">=</span> y <span class="sy0">+</span> z<span class="br0">&#41;</span> <span class="co1">// 这可能不是想要的结果 – 如下！</span></pre>
+
+<p>
+注意上面的代码并不检查 x 是否与 y+z 相等，因为仅使用了一个等号（赋值）。相反的，上面的代码将 y+z 赋给变量 x，然后检查整个表达式的值是否为零。要检查 x 是否与 y+z 相等，使用如下代码。
+</p>
+<pre class="code javascript"><span class="kw1">if</span> <span class="br0">&#40;</span>x <span class="sy0">==</span> y <span class="sy0">+</span> z<span class="br0">&#41;</span> <span class="co1">// 这与上面的代码不同！</span></pre>
+
+<p>
+有关比较的详细信息，请参见控制程序的流程。
+</p>
+
+</div>
+
+<h4 id="null_数据类型">Null 数据类型</h4>
+<div class="level4">
+
+<p>
+在 Jscript 中数据类型 <strong>null</strong> 只有一个值：null。关键字 null 不能用作函数或变量的名称。
+</p>
+
+<p>
+包含 null 的变量包含“无值”或“无对象”。换句话说，该变量没有保存有效的数、字符串、boolean、数组或对象。可以通过给一个变量赋 null 值来清除变量的内容。
+</p>
+
+<p>
+请注意，在 Jscript 中，null 与 0 不相等（与在 C 和 C++ 中不同）。同时应该指出的是，Jscript中 <strong>typeof</strong> 运算符将报告 null 值为 <strong>Object</strong> 类型，而非类型 null。这点潜在的混淆是为了向下兼容。
+</p>
+
+</div>
+
+<h4 id="undefined_数据类型">Undefined 数据类型</h4>
+<div class="level4">
+
+<p>
+如下情况使返回 undefined 值： 
+</p>
+<ul>
+<li class="level1"><div class="li">对象属性不存在， </div>
+</li>
+<li class="level1"><div class="li">声明了变量但从未赋值。 </div>
+</li>
+</ul>
+
+<p>
+注意不能通过与 undefined 做比较来测试一个变量是否存在，虽然可以检查它的类型是否为“undefined”。在以下的代码范例中，假设程序员想测试是否已经声明变量 x ：
+</p>
+<pre class="code javascript"><span class="co1">// 这种方法不起作用</span>
+<span class="kw1">if</span> <span class="br0">&#40;</span>x <span class="sy0">==</span> <span class="kw2">undefined</span><span class="br0">&#41;</span>
+    <span class="co1">// 作某些操作</span>
+&nbsp;
+<span class="co1">// 这个方法同样不起作用- 必须检查</span>
+<span class="co1">// 字符串 &quot;undefined&quot;</span>
+<span class="kw1">if</span> <span class="br0">&#40;</span><span class="kw1">typeof</span><span class="br0">&#40;</span>x<span class="br0">&#41;</span> <span class="sy0">==</span> <span class="kw2">undefined</span><span class="br0">&#41;</span>
+    <span class="co1">// 作某些操作</span>
+&nbsp;
+<span class="co1">// 这个方法有效</span>
+<span class="kw1">if</span> <span class="br0">&#40;</span><span class="kw1">typeof</span><span class="br0">&#40;</span>x<span class="br0">&#41;</span> <span class="sy0">==</span> <span class="st0">&quot;undefined&quot;</span><span class="br0">&#41;</span>
+    <span class="co1">// 作某些操作</span></pre>
+
+<p>
+考虑将 undefined 值与null做比较。
+</p>
+<pre class="code javascript">someObject.<span class="me1">prop</span> <span class="sy0">==</span> <span class="kw2">null</span><span class="sy0">;</span></pre>
+
+<p>
+如下情况时，比较的结果为 <strong>true</strong>， 
+</p>
+<ul>
+<li class="level1"><div class="li">如果属性 someObject.prop 包含 null 值， </div>
+</li>
+<li class="level1"><div class="li">如果属性 someObject.prop 不存在。 </div>
+</li>
+<li class="level1"><div class="li">要检查一个对象属性是否存在，可以使用新的 <strong>in</strong> 运算符： </div>
+</li>
+</ul>
+<pre class="code javascript"><span class="kw1">if</span> <span class="br0">&#40;</span><span class="st0">&quot;prop&quot;</span> <span class="kw1">in</span> someObject<span class="br0">&#41;</span>
+<span class="co1">// someObject 有属性 'prop'</span></pre>
+
+</div>
+<!-- EDIT7 SECTION "JScript 数据类型" [12609-19916] -->
+<h3 class="sectionedit9" id="jscript_运算符">JScript 运算符</h3>
+<div class="level3">
+
+<p>
+JScript 具有全范围的运算符,包括算术、逻辑、位、赋值以及其他某些运算符。
+</p>
+<div class="table sectionedit10"><table class="inline">
+	<thead>
+	<tr class="row0">
+		<th class="col0 centeralign">  计算  </th><th class="col1 centeralign">  逻辑  </th><th class="col2 centeralign">  位运算  </th><th class="col3 centeralign">  赋值  </th><th class="col4 centeralign">  杂项  </th><th class="col5 leftalign">  </th><th class="col6"> </th><th class="col7"> </th><th class="col8"> </th><th class="col9"> </th>
+	</tr>
+	</thead>
+	<tr class="row1">
+		<td class="col0">描述 </td><td class="col1">符号 </td><td class="col2">描述 </td><td class="col3">符号 </td><td class="col4">描述 </td><td class="col5">符号 </td><td class="col6">描述 </td><td class="col7">符号 </td><td class="col8">描述 </td><td class="col9">符号</td>
+	</tr>
+	<tr class="row2">
+		<td class="col0">负值 </td><td class="col1">- </td><td class="col2">逻辑非 </td><td class="col3">! </td><td class="col4">按位取反 </td><td class="col5">~ </td><td class="col6">赋值 </td><td class="col7">= </td><td class="col8">删除 </td><td class="col9">delete </td>
+	</tr>
+	<tr class="row3">
+		<td class="col0">递增 </td><td class="col1 leftalign">++  </td><td class="col2">小于 </td><td class="col3">&lt; </td><td class="col4">按位左移 </td><td class="col5 leftalign">&lt;&lt;  </td><td class="col6">运算赋值 </td><td class="col7 leftalign">oP=  </td><td class="col8">typeof运算符 </td><td class="col9">typeof </td>
+	</tr>
+	<tr class="row4">
+		<td class="col0">递减 </td><td class="col1 leftalign">–  </td><td class="col2">大于 </td><td class="col3">&gt; </td><td class="col4">按位右移 </td><td class="col5 leftalign">&gt;&gt;     </td><td class="col6"> </td><td class="col7"> </td><td class="col8 leftalign">void  </td><td class="col9">void </td>
+	</tr>
+	<tr class="row5">
+		<td class="col0">乘法 </td><td class="col1">* </td><td class="col2">小于等于 </td><td class="col3">&lt;= </td><td class="col4 leftalign">无符号右移  </td><td class="col5 leftalign">&gt;&gt;&gt;  </td><td class="col6"> </td><td class="col7 leftalign">    </td><td class="col8">instanceof </td><td class="col9">instanceof </td>
+	</tr>
+	<tr class="row6">
+		<td class="col0">除法 </td><td class="col1">/ </td><td class="col2">大于等于 </td><td class="col3">&gt;= </td><td class="col4 leftalign">按位与  </td><td class="col5 leftalign">&amp;     </td><td class="col6"> </td><td class="col7"> </td><td class="col8">new </td><td class="col9">new </td>
+	</tr>
+	<tr class="row7">
+		<td class="col0">取模运算 </td><td class="col1">% </td><td class="col2">等于 </td><td class="col3">== </td><td class="col4 leftalign">按位异或  </td><td class="col5 leftalign">^   </td><td class="col6"> </td><td class="col7 leftalign">   </td><td class="col8">in </td><td class="col9">in </td>
+	</tr>
+	<tr class="row8">
+		<td class="col0">加法 </td><td class="col1">+ </td><td class="col2">不等于 </td><td class="col3">!= </td><td class="col4 leftalign">按位或  </td><td class="col5 leftalign">|          </td><td class="col6"></td><td class="col7"></td><td class="col8"></td><td class="col9"></td>
+	</tr>
+	<tr class="row9">
+		<td class="col0">减法 </td><td class="col1">- </td><td class="col2">逻辑与 </td><td class="col3 leftalign">&amp;&amp;             </td><td class="col4"></td><td class="col5"></td><td class="col6"></td><td class="col7"></td><td class="col8"></td><td class="col9"></td>
+	</tr>
+	<tr class="row10">
+		<td class="col0"> </td><td class="col1 leftalign">   </td><td class="col2">逻辑或 </td><td class="col3 leftalign">||             </td><td class="col4"></td><td class="col5"></td><td class="col6"></td><td class="col7"></td><td class="col8"></td><td class="col9"></td>
+	</tr>
+	<tr class="row11">
+		<td class="col0"> </td><td class="col1 leftalign">   </td><td class="col2">条件（三元运算符） </td><td class="col3 leftalign">?:              </td><td class="col4"></td><td class="col5"></td><td class="col6"></td><td class="col7"></td><td class="col8"></td><td class="col9"></td>
+	</tr>
+	<tr class="row12">
+		<td class="col0"> </td><td class="col1 leftalign">   </td><td class="col2">逗号 </td><td class="col3 leftalign">,             </td><td class="col4"></td><td class="col5"></td><td class="col6"></td><td class="col7"></td><td class="col8"></td><td class="col9"></td>
+	</tr>
+	<tr class="row13">
+		<td class="col0"> </td><td class="col1 leftalign">   </td><td class="col2">严格相等 </td><td class="col3 leftalign">===             </td><td class="col4"></td><td class="col5"></td><td class="col6"></td><td class="col7"></td><td class="col8"></td><td class="col9"></td>
+	</tr>
+	<tr class="row14">
+		<td class="col0"> </td><td class="col1 leftalign">   </td><td class="col2">非严格相等 </td><td class="col3 leftalign">!==              </td><td class="col4"></td><td class="col5"></td><td class="col6"></td><td class="col7"></td><td class="col8"></td><td class="col9"></td>
+	</tr>
+</table></div>
+<!-- EDIT10 TABLE [20048-21062] -->
+<p>
+== （相等）与 === （严格相等）的区别在于恒等运算符在比较前强制转换不同类型的值。例如，恒等对字符串 “1” 与数值 1 的比较结果将为 true。而严格相等不强制转换不同类型的值，因此它认为字符串 “1” 与数值 1 不相同。
+</p>
+
+<p>
+基本的字符串、数值和布尔值是按值比较的。如果它们的值相同，比较结果为相等。对象（包括<strong>Array</strong>、<strong>Function</strong>、<strong>String</strong>、<strong>Number</strong>、<strong>Boolean</strong>、<strong>Error</strong>、<strong>Date</strong>以及 <strong>RegExp</strong> 对象）按引用比较。即使这些类型的两个变量具有相同的值，只有在它们正好为同一对象时比较结果才为 true。
+</p>
+
+<p>
+例如：
+</p>
+<pre class="code javascript"><span class="co1">// 具有相同值的两个基本字符串。</span>
+<span class="kw1">var</span> string1 <span class="sy0">=</span> <span class="st0">&quot;Hello&quot;</span><span class="sy0">;</span>
+<span class="kw1">var</span> string2 <span class="sy0">=</span> <span class="st0">&quot;Hello&quot;</span><span class="sy0">;</span>
+&nbsp;
+<span class="co1">// 具有相同值的两个 String 对象。</span>
+<span class="kw1">var</span> StringObject1 <span class="sy0">=</span> <span class="kw1">new</span> <span class="kw4">String</span><span class="br0">&#40;</span>string1<span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">var</span> StringObject2 <span class="sy0">=</span> <span class="kw1">new</span> <span class="kw4">String</span><span class="br0">&#40;</span>string2<span class="br0">&#41;</span><span class="sy0">;</span>
+&nbsp;
+<span class="co1">// 比较结果为 true。</span>
+<span class="kw1">if</span> <span class="br0">&#40;</span>string1 <span class="sy0">==</span> string2<span class="br0">&#41;</span>
+     <span class="co1">// 执行某些命令（将要运行的）。</span>
+&nbsp;
+<span class="co1">// 比较结果为 false。</span>
+<span class="kw1">if</span> <span class="br0">&#40;</span>StringObject1 <span class="sy0">==</span> StringObject2<span class="br0">&#41;</span>
+    <span class="co1">//执行某些命令（不会运行）。</span>
+&nbsp;
+<span class="co1">// 要比较 String 对象的值， </span>
+<span class="co1">// 用 toString() 或者 valueOf() 方法。</span>
+<span class="kw1">if</span> <span class="br0">&#40;</span>StringObject1.<span class="me1">valueOf</span><span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="sy0">==</span> StringObject2<span class="br0">&#41;</span>
+     <span class="co1">//执行某些命令（将要运行的）。</span></pre>
+
+</div>
+<!-- EDIT9 SECTION "JScript 运算符" [19917-22388] -->
+<h3 class="sectionedit11" id="控制程序的流程">控制程序的流程</h3>
+<div class="level3">
+
+<p>
+Jscript 脚本中的语句一般是按照写的顺序来运行的。这种运行称为顺序运行，是程序流的默认方向。
+</p>
+
+<p>
+与顺序运行不同，另一种运行将程序流转换到脚本的另外的部分。也就是，不按顺序运行下一条语句，而是运行另外的语句。
+</p>
+
+<p>
+要使脚本可用，该控制的转换必须以逻辑方式执行。程序控制的转换是基于一个“决定”，这个“决定”结果是真或假（返回  Boolean 型 <strong>true</strong> 或 <strong>false</strong>）。 创建一个表达式，然后测试其是否为真。主要有两种程序结构实现本功能。
+</p>
+
+<p>
+第一种是选择结构。用来指明两种程序流方向，在程序中创建一个交叉点（像岔路）。在 Jscript 中有四种选择结构可用。 
+</p>
+<ul>
+<li class="level1"><div class="li">单一选择结构（<strong>if</strong>）， </div>
+</li>
+<li class="level1"><div class="li">二路选择结构（<strong>if/else</strong>）， </div>
+</li>
+<li class="level1"><div class="li">内联三元运算符 <strong>?</strong>: </div>
+</li>
+<li class="level1"><div class="li">多路选择结构（<strong>switch</strong>）。 </div>
+</li>
+</ul>
+
+<p>
+第二种类型的程序控制结构是循环结构。使用循环结构来指明当某些条件保持为真时要重复的动作。当控制语句的条件得到满足时（通常在某些迭代的特定数字后），控制跳过循环结构传递到下条语句。在 Jscript 中有四种循环结构可用。 
+</p>
+<ul>
+<li class="level1"><div class="li">在循环的开头测试表达式（<strong>while</strong>）， </div>
+</li>
+<li class="level1"><div class="li">在循环的末尾测试表达式（<strong>do/while</strong>）， </div>
+</li>
+<li class="level1"><div class="li">对对象的每个属性都进行操作（<strong>for/in</strong>）， </div>
+</li>
+<li class="level1"><div class="li">由计数器控制的循环（<strong>or</strong>）。 </div>
+</li>
+</ul>
+
+<p>
+通过嵌套和堆栈选择、循环控制结构，可以创建相当复杂的脚本。
+</p>
+
+<p>
+第三种形式的结构程序流由意外处理给出，本文档不作讨论。
+</p>
+
+</div>
+
+<h4 id="使用条件语句">使用条件语句</h4>
+<div class="level4">
+
+<p>
+JScript 支持 <strong>if</strong> 和 <strong>if…else</strong> 条件语句。在 <strong>if</strong> 语句中将测试一个条件，如果该条件满足测试，执行相关的 JScript 编码。在 <strong>if…else</strong> 语句中，如果条件不满足测试，则将执行不同的代码。最简单的 if 语句格式可以在一行中写完，不过更常见的是多行的 <strong>if</strong> 和 <strong>if…else</strong> 语句。
+</p>
+
+<p>
+下述示例演示了使用 <strong>if</strong> 和 <strong>if…else</strong> 语句的各种可能的语法。第一个示例演示了最简单的布尔测试。当（且仅当）括号之间的项的值为（或者可被强制转换为） <strong>true</strong> 时，<strong>if</strong> 后续的语句或语句块才会被执行。 
+</p>
+<pre class="code javascript"><span class="co1">// smash() 函数是在该代码的其他地方定义的。</span>
+<span class="co1">// 布尔测试，看 newShip 是否为 true。</span>
+<span class="kw1">if</span> <span class="br0">&#40;</span>newShip<span class="br0">&#41;</span>
+   smash<span class="br0">&#40;</span>champagneBottle<span class="sy0">,</span>bow<span class="br0">&#41;</span><span class="sy0">;</span> 
+&nbsp;
+<span class="co1">// 在本示例中，除非两个条件都为真，否则该测试将不会被满足。</span>
+<span class="kw1">if</span> <span class="br0">&#40;</span>rind.<span class="me1">color</span> <span class="sy0">==</span> <span class="st0">&quot;deep yellow &quot;</span> <span class="sy0">&amp;&amp;</span> rind.<span class="me1">texture</span> <span class="sy0">==</span> <span class="st0">&quot;large and small wrinkles&quot;</span><span class="br0">&#41;</span>
+<span class="br0">&#123;</span>
+   theResponse <span class="sy0">=</span> <span class="br0">&#40;</span><span class="st0">&quot;Is it a Crenshaw melon?&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&nbsp;
+<span class="co1">// 在本示例中，只要任何一个条件为真，则测试即会满足。</span>
+<span class="kw1">var</span> theReaction <span class="sy0">=</span> <span class="st0">&quot;&quot;</span><span class="sy0">;</span>
+<span class="kw1">if</span> <span class="br0">&#40;</span><span class="br0">&#40;</span>dayOfWeek <span class="sy0">==</span> <span class="st0">&quot;Saturday&quot;</span><span class="br0">&#41;</span> <span class="sy0">||</span> <span class="br0">&#40;</span>dayOfWeek <span class="sy0">==</span> <span class="st0">&quot;Sunday&quot;</span><span class="br0">&#41;</span><span class="br0">&#41;</span>
+<span class="br0">&#123;</span>
+   theReaction <span class="sy0">=</span> <span class="br0">&#40;</span><span class="st0">&quot;I'm off to the beach!&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+<span class="kw1">else</span>
+<span class="br0">&#123;</span>
+   theReaction <span class="sy0">=</span> <span class="br0">&#40;</span><span class="st0">&quot;Hi ho, hi ho, it's off to work I go!&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span></pre>
+
+</div>
+
+<h5 id="条件运算符">条件运算符</h5>
+<div class="level5">
+
+<p>
+JScript 也支持隐式的条件格式。该格式在要测试的条件后使用一个问号（而不是在条件前的 <strong>if</strong> ）。它也指定两个可选项，一个在满足条件时使用，另一个在条件不满足时使用。这两个选择项之间必须用一个冒号隔开。
+</p>
+<pre class="code javascript"><span class="kw1">var</span> hours <span class="sy0">=</span> <span class="st0">&quot;&quot;</span><span class="sy0">;</span>
+&nbsp;
+<span class="co1">// 下面的代码指定 hours 是包含 theHour 的内容，</span>
+<span class="co1">// 还是包含 theHour - 12 的内容。</span>
+&nbsp;
+hours <span class="sy0">+=</span> <span class="br0">&#40;</span>theHour <span class="sy0">&gt;=</span> <span class="nu0">12</span><span class="br0">&#41;</span> <span class="sy0">?</span> <span class="st0">&quot; PM&quot;</span> <span class="sy0">:</span> <span class="st0">&quot; AM&quot;</span><span class="sy0">;</span></pre>
+
+<p>
+如果要一起测试多个条件，并且知道某个条件比其他条件更可能满足或不满足测试，可以使用称为“短路计算”的特性来加速脚本的运行速度。当 JScript 计算逻辑表达式时，只计算要得到结果所需的子表达式。
+</p>
+
+<p>
+例如，如果有一个“与”表达式，如 ((x == 123) &amp;&amp; (y == 42))，Jscript 首先检查 x 是否为 123。如果不是，即使 y 等于 42，整个表达式的值也不可能为 true。因此，并不对 y 作测试，Jscript 返回 <strong>false</strong> 值。
+</p>
+
+<p>
+类似地，如果多个条件中只要有一个为真（使用 || 运算符），则当任何一个条件满足该测试时测试则停止。如果要测试的条件包括函数调用或其他复合表达式，这种处理方式就有效。出于此种想法，写 OR 表达式时，先写最有可能为 <strong>true</strong> 的条件。写 AND 表达式时，先写最有可能为 <strong>false</strong> 的条件。
+</p>
+
+<p>
+以这种方式设计脚本的好处的一个示例是：在下例中如果 <strong>runfirst()</strong> 返回 <strong>0</strong> 或 <strong>false</strong>， 则不会运行 <strong>runsecond()</strong>。 
+</p>
+<pre class="code javascript"><span class="kw1">if</span> <span class="br0">&#40;</span><span class="br0">&#40;</span>runfirst<span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="sy0">==</span> <span class="nu0">0</span><span class="br0">&#41;</span> <span class="sy0">||</span> <span class="br0">&#40;</span>runsecond<span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="sy0">==</span> <span class="nu0">0</span><span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+    <span class="co1">// 若干代码。</span>
+<span class="br0">&#125;</span></pre>
+
+</div>
+
+<h4 id="使用循环">使用循环</h4>
+<div class="level4">
+
+<p>
+有多种方式来重复执行一条语句或语句块。通常重复执行被称为<em>循环</em>或<em>重复</em>。重复只是循环的一个运行。典型情况是用一个变量测试来进行控制，每执行一次循环变量的取值都会更改。JScript 支持四种循环： <strong>for</strong> 循环、 <strong>for…in</strong> 循环、 <strong>while</strong> 循环、 <strong>do…while</strong> 循环。
+</p>
+
+</div>
+
+<h5 id="使用_for_循环">使用 for 循环</h5>
+<div class="level5">
+
+<p>
+<strong>for</strong> 语句指定了一个计数器变量，一个测试条件，以及更新该计数器的操作。在每次循环的重复之前，都将测试该条件。如果测试成功，将运行循环中的代码。如果测试不成功，不运循环中的代码，程序继续运行紧跟在循环后的第一行代码。在执行该循环后，计算机变量将在下一次循环之前被更新。
+</p>
+
+<p>
+如果循环条件永不会满足，则不执行该循环。如果测试条件始终满足，则将导致无限循环。在有些情况下，前者可能是合乎需要的，而后者几乎没有用处，因此在编写循环条件时一定要注意。
+</p>
+<pre class="code javascript"><span class="coMULTI">/*
+更新表达式 （下例中的 &quot;icount++&quot;）将在循环结束时被执行，即在构成循环主体的语句块被执行后，在测试条件之前。
+*/</span>
+&nbsp;
+<span class="kw1">var</span> howFar <span class="sy0">=</span> <span class="nu0">10</span><span class="sy0">;</span>  <span class="co1">// 将循环次数限制为 10。</span>
+&nbsp;
+<span class="kw1">var</span> sum <span class="sy0">=</span> <span class="kw1">new</span> <span class="kw4">Array</span><span class="br0">&#40;</span>howFar<span class="br0">&#41;</span><span class="sy0">;</span>  <span class="co1">// 创建一个称为 sum 并具有 10 个成员的数组，这 10 个成员从 0 到 9。</span>
+<span class="kw1">var</span> theSum <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span>
+sum<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span> <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span>
+&nbsp;
+<span class="kw1">for</span><span class="br0">&#40;</span><span class="kw1">var</span> icount <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span> icount <span class="sy0">&lt;</span> howFar<span class="sy0">;</span> icount<span class="sy0">++</span><span class="br0">&#41;</span>  <span class="br0">&#123;</span>        <span class="co1">// 在本例中将从 0 到 9 进行计数。</span>
+theSum <span class="sy0">+=</span> icount<span class="sy0">;</span>
+sum<span class="br0">&#91;</span>icount<span class="br0">&#93;</span> <span class="sy0">=</span> theSum<span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&nbsp;
+<span class="kw1">var</span> newSum <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span>
+<span class="kw1">for</span><span class="br0">&#40;</span><span class="kw1">var</span> icount <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span> icount <span class="sy0">&gt;</span> howFar<span class="sy0">;</span> icount<span class="sy0">++</span><span class="br0">&#41;</span>  <span class="br0">&#123;</span>        <span class="co1">// 该循环根本不会被执行，因为 icount 不大于 howFar。</span>
+newSum <span class="sy0">+=</span> icount<span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&nbsp;
+<span class="kw1">var</span> sum <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span>
+<span class="kw1">for</span><span class="br0">&#40;</span><span class="kw1">var</span> icount <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span> icount <span class="sy0">&gt;=</span> <span class="nu0">0</span><span class="sy0">;</span> icount<span class="sy0">++</span><span class="br0">&#41;</span>  <span class="br0">&#123;</span>        <span class="co1">// 这是一个无限循环。</span>
+sum <span class="sy0">+=</span> icount<span class="sy0">;</span>
+<span class="br0">&#125;</span></pre>
+
+</div>
+
+<h5 id="使用_forin_循环">使用 for...in 循环</h5>
+<div class="level5">
+
+<p>
+JScript 提供了一种特别的循环方式来遍历一个对象的所有用户定义的属性或者一个数组的所有元素。<strong>for…in</strong> 循环中的循环计数器是一个字符串，而不是数字。它包含当前属性的名称或者当前数组元素的下标。
+</p>
+
+<p>
+下面的代码范例应在 Internet 浏览器中运行，因为它使用 <strong>alert</strong> 方法，该方法不属于 Jscript。
+</p>
+<pre class="code javascript"><span class="co1">// 创建具有某些属性的对象</span>
+<span class="kw1">var</span> myObject <span class="sy0">=</span> <span class="kw1">new</span> <span class="kw4">Object</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+myObject.<span class="me1">name</span> <span class="sy0">=</span> <span class="st0">&quot;James&quot;</span><span class="sy0">;</span>
+myObject.<span class="me1">age</span> <span class="sy0">=</span> <span class="st0">&quot;22&quot;</span><span class="sy0">;</span>
+myObject.<span class="me1">phone</span> <span class="sy0">=</span> <span class="st0">&quot;555 1234&quot;</span><span class="sy0">;</span>
+&nbsp;
+<span class="co1">// 枚举（循环）对象的所有属性</span>
+<span class="kw1">for</span> <span class="br0">&#40;</span>prop <span class="kw1">in</span> myObject<span class="br0">&#41;</span>
+<span class="br0">&#123;</span>
+    <span class="co1">// 显示 &quot;The property 'name' is James&quot;，等等。</span>
+    window.<span class="me1">alert</span><span class="br0">&#40;</span><span class="st0">&quot;The property '&quot;</span> <span class="sy0">+</span> prop <span class="sy0">+</span> <span class="st0">&quot;' is &quot;</span> <span class="sy0">+</span> myObject<span class="br0">&#91;</span>prop<span class="br0">&#93;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span></pre>
+
+<p>
+尽管 <strong>for…in</strong> 循环看起来像 VBScript 的 <strong>For Each…Next</strong> 循环，其实并不一样。JScript 的 <strong>for…in</strong> 循环重复Jscript 对象所有的属性。VBScript 的 <strong>For Each…Next</strong> 循环重复集合中的所有项目。要循环 JScript 中的所有集合，需要用 <strong>Enumerator</strong> 对象。尽管某些对象（像 Internet 浏览器中的那些）支持 VBScript 的 <strong>For Each…Next</strong> 和 Jscript 的 <strong>for…in</strong> 循环，但多数对象并不都支持。
+</p>
+
+</div>
+
+<h5 id="使用_while_循环">使用 while 循环</h5>
+<div class="level5">
+
+<p>
+<strong>while</strong> 循环相似于 <strong>for</strong> 循环。其不同之处是 <strong>while</strong> 循环没有内置的计数器或更新表达式。如果希望控制语句或语句块的循环执行，需要不只是“运行该代码 n 次”，而是更复杂的规则，用 <strong>while</strong> 循环。下面的示例使用 Internet 浏览器对象模型和 <strong>while</strong> 循环来询问用户一个简单的问题。
+</p>
+<pre class="code javascript"><span class="kw1">var</span> x <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span>
+while <span class="br0">&#40;</span><span class="br0">&#40;</span>x <span class="sy0">!=</span> <span class="nu0">42</span><span class="br0">&#41;</span> <span class="sy0">&amp;&amp;</span> <span class="br0">&#40;</span>x <span class="sy0">!=</span> <span class="kw2">null</span><span class="br0">&#41;</span><span class="br0">&#41;</span>
+<span class="br0">&#123;</span>
+    x <span class="sy0">=</span> window.<span class="me1">prompt</span><span class="br0">&#40;</span><span class="st0">&quot;What is my favourite number?&quot;</span><span class="sy0">,</span> x<span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&nbsp;
+<span class="kw1">if</span> <span class="br0">&#40;</span>x <span class="sy0">==</span> <span class="kw2">null</span><span class="br0">&#41;</span>
+    window.<span class="me1">alert</span><span class="br0">&#40;</span><span class="st0">&quot;You gave up!&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">else</span>
+    window.<span class="me1">alert</span><span class="br0">&#40;</span><span class="st0">&quot;Yep - it's the Ultimate Answer!&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span></pre>
+
+<p>
+<strong>注意</strong>   由于 <strong>while</strong> 循环没有显式的内置计数器变量，因此比其他类型的循环更容易产生无限循环。此外，由于不易发现循环条件是在何时何地被更新的，很容易编写一个实际上从不更新条件的 <strong>while</strong> 循环。因此在编写 <strong>while</strong> 循环时应特别小心。
+</p>
+
+<p>
+同上面所提到的，在 JScript 中还有 <strong>do…while</strong> 循环与 <strong>while</strong> 循环相似，不同处在于它总是至少运行一次，因为是在循环的末尾检查条件，而不是在开头。例如，上面的循环可以被改写为：
+</p>
+<pre class="code javascript"><span class="kw1">var</span> x <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span>
+<span class="kw1">do</span>
+<span class="br0">&#123;</span>
+    x <span class="sy0">=</span> window.<span class="me1">prompt</span><span class="br0">&#40;</span><span class="st0">&quot;What is my favourite number?&quot;</span><span class="sy0">,</span> x<span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span> while <span class="br0">&#40;</span><span class="br0">&#40;</span>x <span class="sy0">!=</span> <span class="nu0">42</span><span class="br0">&#41;</span> <span class="sy0">&amp;&amp;</span> <span class="br0">&#40;</span>x <span class="sy0">!=</span> <span class="kw2">null</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&nbsp;
+<span class="kw1">if</span> <span class="br0">&#40;</span>x <span class="sy0">==</span> <span class="kw2">null</span><span class="br0">&#41;</span>
+    window.<span class="me1">alert</span><span class="br0">&#40;</span><span class="st0">&quot;You gave up!&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">else</span>
+    window.<span class="me1">alert</span><span class="br0">&#40;</span><span class="st0">&quot;Yep - it's the Ultimate Answer!&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span></pre>
+
+</div>
+
+<h4 id="使用_break_和_continue_语句">使用 break 和 continue 语句</h4>
+<div class="level4">
+
+<p>
+在 Microsoft Jscript 中当某些条件得到满足时，用 <strong>break</strong> 语句来中断一个循环的运行。（请注意，也用 <strong>break</strong> 语句退出一个 <strong>switch</strong> 块。）。如果是一个 <strong>for</strong> 或者 <strong>for…in</strong> 循环，在更新计数器变量时使用 <strong>continue</strong> 语句越过余下的代码块而直接跳到下一个循环中。
+</p>
+
+<p>
+下面的例子基于前面的示例用 <strong>break</strong> 和 <strong>continue</strong> 语句控制循环。
+</p>
+<pre class="code javascript"><span class="kw1">var</span> x <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span>
+<span class="kw1">do</span>
+<span class="br0">&#123;</span>
+    x <span class="sy0">=</span> window.<span class="me1">prompt</span><span class="br0">&#40;</span><span class="st0">&quot;What is my favourite number?&quot;</span><span class="sy0">,</span> x<span class="br0">&#41;</span><span class="sy0">;</span>
+&nbsp;
+    <span class="co1">// 判断用户是否选择取消？如果是，退出循环。</span>
+    <span class="kw1">if</span> <span class="br0">&#40;</span>x <span class="sy0">==</span> <span class="kw2">null</span><span class="br0">&#41;</span>
+        <span class="kw1">break</span><span class="sy0">;</span>
+&nbsp;
+    <span class="co1">// 是否输入一个数？</span>
+    <span class="co1">// 如果是则无需要求输入一个数。</span>
+    <span class="kw1">if</span> <span class="br0">&#40;</span><span class="kw4">Number</span><span class="br0">&#40;</span>x<span class="br0">&#41;</span> <span class="sy0">==</span> x<span class="br0">&#41;</span>
+        <span class="kw1">continue</span><span class="sy0">;</span>
+&nbsp;
+    <span class="co1">//  要求用户只输入数字。</span>
+    window.<span class="me1">alert</span><span class="br0">&#40;</span><span class="st0">&quot;Please only enter in numbers!&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&nbsp;
+<span class="br0">&#125;</span> while <span class="br0">&#40;</span>x <span class="sy0">!=</span> <span class="nu0">42</span><span class="br0">&#41;</span>
+&nbsp;
+<span class="kw1">if</span> <span class="br0">&#40;</span>x <span class="sy0">==</span> <span class="kw2">null</span><span class="br0">&#41;</span>
+    window.<span class="me1">alert</span><span class="br0">&#40;</span><span class="st0">&quot;You gave up!&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">else</span>
+    window.<span class="me1">alert</span><span class="br0">&#40;</span><span class="st0">&quot;Yep - it's the Ultimate Answer!&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span></pre>
+
+</div>
+<!-- EDIT11 SECTION "控制程序的流程" [22389-32801] -->
+<h3 class="sectionedit12" id="jscript_函数">JScript 函数</h3>
+<div class="level3">
+
+<p>
+Microsoft Jscript 函数执行操作，也可以返回值。某些时候是计算或比较的结果。函数又被称为“全局方法”。
+</p>
+
+<p>
+一个函数中包含有几个操作。这样可使得代码更合理化。可以写一组语句并给其命名，然后通过调用它并传递其需要的信息来运行整组语句。
+</p>
+
+<p>
+给函数传递信息可以把信息放在函数名称后面的圆括号中。传递给函数的信息称作参数。某些函数根本不带任何参数，而其他函数带一个或者多个参数。在某些函数中，参数的个数取决于如何使用该函数。
+</p>
+
+<p>
+Jscript 支持两种函数：一类是语言内部的函数，另一类是自己创建的。
+</p>
+
+</div>
+
+<h4 id="特殊的内部函数">特殊的内部函数</h4>
+<div class="level4">
+
+<p>
+Jscript 语言包含很多内部函数。某些函数可以操作表达式和特殊字符，而其他函数将字符串转换为数值。一个有用的内部函数是 <strong>eval()</strong>。该函数可以对以字符串形式表示的任意有效的 Jscript代码求值。<strong>eval()</strong> 函数有一个参数，该参数就是想要求值的代码。下面给出一个使用本函数的示例。
+</p>
+<pre class="code javascript"><span class="kw1">var</span> anExpression <span class="sy0">=</span> <span class="st0">&quot;6 * 9 % 7&quot;</span><span class="sy0">;</span>
+<span class="kw1">var</span> total <span class="sy0">=</span> eval<span class="br0">&#40;</span>anExpression<span class="br0">&#41;</span><span class="sy0">;</span> <span class="co1">// 将变量 total 赋值为 5。</span>
+<span class="kw1">var</span> yetAnotherExpression <span class="sy0">=</span> <span class="st0">&quot;6 * (9 % 7)&quot;</span><span class="sy0">;</span>
+total <span class="sy0">=</span> eval<span class="br0">&#40;</span>yetAnotherExpression<span class="br0">&#41;</span> <span class="co1">// 将变量 total 赋值为 12。</span>
+<span class="co1">// 将一个字符串赋给 totality （注意嵌套引用）</span>
+<span class="kw1">var</span> totality <span class="sy0">=</span> eval<span class="br0">&#40;</span><span class="st0">&quot;’...surrounded by acres of clams.’&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span></pre>
+
+<p>
+有关内部函数的详细信息请参考语言参考。
+</p>
+
+</div>
+
+<h4 id="创建自己的函数">创建自己的函数</h4>
+<div class="level4">
+
+<p>
+在必要的时候，可以创建并使用自己的函数。一个函数的定义中包含了一个函数语句和一个 Jscript 语句块。
+</p>
+
+<p>
+下面示例中的 <strong>Checktriplet</strong> 函数以三角形的边长为参数。通过查看三条边的长度是否可以组成一个毕达哥拉斯三元组（直角三角形斜边长度的平方等于其他两条边长的平方和）来计算该三角形是否为直角三角形。实际测试时 checkTriplet 函数要调用另两个函数中的一个函数。
+</p>
+
+<p>
+注意在浮点数测试版本中极小数（“epsilon”）作为测试变量的使用。由于浮点运算的不确定性和舍入误差，除非问题中的三个值均已知为整数，直接测试这三个数是否组成毕达哥拉斯三元组是不可行的。因为直接的测试更为准确，本示例中的代码确定其是否可行，如果可行则使用它。
+</p>
+<pre class="code javascript"><span class="kw1">var</span> epsilon <span class="sy0">=</span> <span class="nu0">0.00000000001</span><span class="sy0">;</span> <span class="co1">// 一些需要测试的极小数字。</span>
+&nbsp;
+<span class="co1">// 测试整数的函数。</span>
+<span class="kw1">function</span> integerCheck<span class="br0">&#40;</span>a<span class="sy0">,</span> b<span class="sy0">,</span> c<span class="br0">&#41;</span> 
+<span class="br0">&#123;</span>
+   <span class="co1">// 测试。</span>
+   <span class="kw1">if</span> <span class="br0">&#40;</span> <span class="br0">&#40;</span>a<span class="sy0">*</span>a<span class="br0">&#41;</span> <span class="sy0">==</span> <span class="br0">&#40;</span><span class="br0">&#40;</span>b<span class="sy0">*</span>b<span class="br0">&#41;</span> <span class="sy0">+</span> <span class="br0">&#40;</span>c<span class="sy0">*</span>c<span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="br0">&#41;</span>   
+      <span class="kw1">return</span> <span class="kw2">true</span><span class="sy0">;</span>
+&nbsp;
+   <span class="kw1">return</span> <span class="kw2">false</span><span class="sy0">;</span>
+<span class="br0">&#125;</span> <span class="co1">// 整数检查函数的结尾。</span>
+&nbsp;
+<span class="co1">// 测试浮点数的函数。</span>
+<span class="kw1">function</span> floatCheck<span class="br0">&#40;</span>a<span class="sy0">,</span> b<span class="sy0">,</span> c<span class="br0">&#41;</span>   
+<span class="br0">&#123;</span>
+   <span class="co1">// 得到测试数值。</span>
+   <span class="kw1">var</span> delta <span class="sy0">=</span> <span class="br0">&#40;</span><span class="br0">&#40;</span>a<span class="sy0">*</span>a<span class="br0">&#41;</span> <span class="sy0">-</span> <span class="br0">&#40;</span><span class="br0">&#40;</span>b<span class="sy0">*</span>b<span class="br0">&#41;</span> <span class="sy0">+</span> <span class="br0">&#40;</span>c<span class="sy0">*</span>c<span class="br0">&#41;</span><span class="br0">&#41;</span><span class="br0">&#41;</span>
+&nbsp;
+   <span class="co1">// 测试需要绝对值</span>
+   delta <span class="sy0">=</span> <span class="kw4">Math</span>.<span class="me1">abs</span><span class="br0">&#40;</span>delta<span class="br0">&#41;</span><span class="sy0">;</span>
+&nbsp;
+   <span class="co1">// 如果差小于 epsilon，那么它相当接近。</span>
+   <span class="kw1">if</span> <span class="br0">&#40;</span>delta <span class="sy0">&lt;</span> epsilon<span class="br0">&#41;</span>   
+      <span class="kw1">return</span> <span class="kw2">true</span><span class="sy0">;</span>
+&nbsp;
+   <span class="kw1">return</span> <span class="kw2">false</span><span class="sy0">;</span>
+<span class="br0">&#125;</span> <span class="co1">// 浮点检查函数的末尾。</span>
+&nbsp;
+&nbsp;
+<span class="co1">// 三元检查。</span>
+<span class="kw1">function</span> checkTriplet<span class="br0">&#40;</span>a<span class="sy0">,</span> b<span class="sy0">,</span> c<span class="br0">&#41;</span>
+<span class="br0">&#123;</span> 
+   <span class="co1">// 创建临时变量，用于交换值</span>
+   <span class="kw1">var</span> d <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span> 
+&nbsp;
+   <span class="co1">// 先将最长的移动到位置“a”。</span>
+&nbsp;
+   <span class="co1">// 需要的话交换 a 和 b</span>
+   <span class="kw1">if</span> <span class="br0">&#40;</span>b <span class="sy0">&gt;</span> a<span class="br0">&#41;</span>
+   <span class="br0">&#123;</span>
+      d <span class="sy0">=</span> a<span class="sy0">;</span>
+      a <span class="sy0">=</span> b<span class="sy0">;</span>
+      b <span class="sy0">=</span> d<span class="sy0">;</span>
+   <span class="br0">&#125;</span>
+&nbsp;
+   <span class="co1">// 需要的话交换 a 和 c</span>
+   <span class="kw1">if</span> <span class="br0">&#40;</span>c <span class="sy0">&gt;</span> a<span class="br0">&#41;</span>
+   <span class="br0">&#123;</span>
+      d <span class="sy0">=</span> a<span class="sy0">;</span>
+      a <span class="sy0">=</span> c<span class="sy0">;</span>
+      c <span class="sy0">=</span> d<span class="sy0">;</span>
+   <span class="br0">&#125;</span>
+&nbsp;
+   <span class="co1">// 测试全部的 3 个值，看其是否为整数？</span>
+   <span class="kw1">if</span> <span class="br0">&#40;</span><span class="br0">&#40;</span><span class="br0">&#40;</span>a <span class="sy0">%</span> <span class="nu0">1</span><span class="br0">&#41;</span> <span class="sy0">==</span> <span class="nu0">0</span><span class="br0">&#41;</span> <span class="sy0">&amp;&amp;</span> <span class="br0">&#40;</span><span class="br0">&#40;</span>b <span class="sy0">%</span> <span class="nu0">1</span><span class="br0">&#41;</span> <span class="sy0">==</span> <span class="nu0">0</span><span class="br0">&#41;</span> <span class="sy0">&amp;&amp;</span> <span class="br0">&#40;</span><span class="br0">&#40;</span>c <span class="sy0">%</span> <span class="nu0">1</span><span class="br0">&#41;</span> <span class="sy0">==</span> <span class="nu0">0</span><span class="br0">&#41;</span><span class="br0">&#41;</span>
+   <span class="br0">&#123;</span> 
+      <span class="co1">// 如果成立，使用精确检查。</span>
+      <span class="kw1">return</span> integerCheck<span class="br0">&#40;</span>a<span class="sy0">,</span> b<span class="sy0">,</span> c<span class="br0">&#41;</span><span class="sy0">;</span> 
+   <span class="br0">&#125;</span>
+   <span class="kw1">else</span>
+   <span class="br0">&#123;</span>
+      <span class="co1">// 如果不成立，取尽可能相近的。</span>
+      <span class="kw1">return</span> floatCheck<span class="br0">&#40;</span>a<span class="sy0">,</span> b<span class="sy0">,</span> c<span class="br0">&#41;</span><span class="sy0">;</span> 
+   <span class="br0">&#125;</span>
+<span class="br0">&#125;</span> <span class="co1">// 三元检查函数的末尾。</span>
+&nbsp;
+<span class="co1">// 下面的三个语句赋给范例值，用于测试。</span>
+<span class="kw1">var</span> sideA <span class="sy0">=</span> <span class="nu0">5</span><span class="sy0">;</span>
+<span class="kw1">var</span> sideB <span class="sy0">=</span> <span class="nu0">5</span><span class="sy0">;</span>
+<span class="kw1">var</span> sideC <span class="sy0">=</span> <span class="kw4">Math</span>.<span class="me1">sqrt</span><span class="br0">&#40;</span><span class="nu0">50.001</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&nbsp;
+<span class="co1">// 调用函数。调用后，'result' 中包含了结果。</span>
+<span class="kw1">var</span> result <span class="sy0">=</span> checkTriplet<span class="br0">&#40;</span>sideA<span class="sy0">,</span> sideB<span class="sy0">,</span> sideC<span class="br0">&#41;</span><span class="sy0">;</span></pre>
+
+</div>
+<!-- EDIT12 SECTION "JScript 函数" [32802-36839] -->
+<h3 class="sectionedit13" id="jscript_对象">JScript 对象</h3>
+<div class="level3">
+
+</div>
+
+<h4 id="创建自己的对象">创建自己的对象</h4>
+<div class="level4">
+
+<p>
+要创建自己的对象实例，必须首先为其定义一个构造函数。构造函数创建一个新对象，赋予对象属性，并在合适的时候赋予方法。例如，下面的示例为 pasta 对象定义了构造函数。注意 <strong>this</strong> 关键字的使用，它指向当前对象。
+</p>
+<pre class="code javascript"><span class="co1">// pasta 是有四个参数的构造器。</span>
+<span class="kw1">function</span> pasta<span class="br0">&#40;</span>grain<span class="sy0">,</span> width<span class="sy0">,</span> shape<span class="sy0">,</span> hasEgg<span class="br0">&#41;</span>
+<span class="br0">&#123;</span>
+    <span class="co1">// 是用什么粮食做的？</span>
+    <span class="kw1">this</span>.<span class="me1">grain</span> <span class="sy0">=</span> grain<span class="sy0">;</span>
+&nbsp;
+    <span class="co1">// 多宽？（数值）</span>
+    <span class="kw1">this</span>.<span class="me1">width</span> <span class="sy0">=</span> width<span class="sy0">;</span>     
+&nbsp;
+    <span class="co1">// 横截面形状？（字符串）</span>
+    <span class="kw1">this</span>.<span class="me1">shape</span> <span class="sy0">=</span> shape<span class="sy0">;</span>   
+&nbsp;
+<span class="co1">// 是否加蛋黄？（boolean）</span>
+    <span class="kw1">this</span>.<span class="me1">hasEgg</span> <span class="sy0">=</span> hasEgg<span class="sy0">;</span>  
+<span class="br0">&#125;</span></pre>
+
+<p>
+定义了对象构造器后，用 <strong>new</strong> 运算符创建对象实例。
+</p>
+<pre class="code javascript"><span class="kw1">var</span> spaghetti <span class="sy0">=</span> <span class="kw1">new</span> pasta<span class="br0">&#40;</span><span class="st0">&quot;wheat&quot;</span><span class="sy0">,</span> <span class="nu0">0.2</span><span class="sy0">,</span> <span class="st0">&quot;circle&quot;</span><span class="sy0">,</span> <span class="kw2">true</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">var</span> linguine <span class="sy0">=</span> <span class="kw1">new</span> pasta<span class="br0">&#40;</span><span class="st0">&quot;wheat&quot;</span><span class="sy0">,</span> <span class="nu0">0.3</span><span class="sy0">,</span> <span class="st0">&quot;oval&quot;</span><span class="sy0">,</span> <span class="kw2">true</span><span class="br0">&#41;</span><span class="sy0">;</span></pre>
+
+<p>
+可以给对象实例添加属性以改变该实例，但是用相同的构造器生成的其他对象定义中并不包括这些属性，而且除非你特意添加这些属性那么在其他实例中并不显示出来。如果要将对象所有实例的附加属性显示出来，必须将它们添加到构造函数或构造器原型对象（原型在高级文档中讨论）中。
+</p>
+<pre class="code javascript"><span class="co1">// spaghetti 的附加属性。</span>
+spaghetti.<span class="me1">color</span> <span class="sy0">=</span> <span class="st0">&quot;pale straw&quot;</span><span class="sy0">;</span>
+spaghetti.<span class="me1">drycook</span> <span class="sy0">=</span> <span class="nu0">7</span><span class="sy0">;</span>
+spaghetti.<span class="me1">freshcook</span> <span class="sy0">=</span> <span class="nu0">0.5</span><span class="sy0">;</span>
+&nbsp;
+<span class="kw1">var</span> chowFun <span class="sy0">=</span> <span class="kw1">new</span> pasta<span class="br0">&#40;</span><span class="st0">&quot;rice&quot;</span><span class="sy0">,</span> <span class="nu0">3</span><span class="sy0">,</span> <span class="st0">&quot;flat&quot;</span><span class="sy0">,</span> <span class="kw2">false</span><span class="br0">&#41;</span><span class="sy0">;</span> 
+<span class="co1">// chowFun 对象或其他现有的 pasta 对象</span>
+<span class="co1">// 都没有添加到 spaghetti 对象</span>
+<span class="co1">// 的三个新属性。</span>
+&nbsp;
+&nbsp;
+<span class="co1">// 将属性‘foodgroup’加到 pasta 原型对象</span>
+<span class="co1">// 中，这样 pasta 对象的所有实例都可以有该属性，</span>
+<span class="co1">// 包括那些已经生成的实例。</span>
+pasta.<span class="kw1">prototype</span>.<span class="me1">foodgroup</span> <span class="sy0">=</span> <span class="st0">&quot;carbohydrates&quot;</span>
+&nbsp;
+<span class="co1">// 现在 spaghetti.foodgroup、chowFun.foodgroup，等等</span>
+<span class="co1">// 均包含值“carbohydrates”。</span></pre>
+
+<p>
+<strong>在定义中包含方法</strong>
+</p>
+
+<p>
+可以在对象的定义中包含方法（函数）。一种方法是在引用别处定义的函数的构造函数中添加一个属性。例如，下面的示例扩充上面定义的 pasta 构造函数以包含 <strong>toString</strong> 方法，该方法将在显示对象的值时被调用。
+</p>
+<pre class="code javascript"><span class="co1">// pasta 是有四个参数的构造器。</span>
+<span class="co1">// 第一部分与上面相同。</span>
+<span class="kw1">function</span> pasta<span class="br0">&#40;</span>grain<span class="sy0">,</span> width<span class="sy0">,</span> shape<span class="sy0">,</span> hasEgg<span class="br0">&#41;</span>
+<span class="br0">&#123;</span>
+    <span class="co1">// 用什么粮食做的？</span>
+    <span class="kw1">this</span>.<span class="me1">grain</span> <span class="sy0">=</span> grain<span class="sy0">;</span>
+&nbsp;
+    <span class="co1">// 多宽？（数值）</span>
+    <span class="kw1">this</span>.<span class="me1">width</span> <span class="sy0">=</span> width<span class="sy0">;</span>     
+&nbsp;
+    <span class="co1">// 横截面形状？（字符串）</span>
+    <span class="kw1">this</span>.<span class="me1">shape</span> <span class="sy0">=</span> shape<span class="sy0">;</span>   
+&nbsp;
+    <span class="co1">// 是否加蛋黄？（boolean）</span>
+    <span class="kw1">this</span>.<span class="me1">hasEgg</span> <span class="sy0">=</span> hasEgg<span class="sy0">;</span>  
+&nbsp;
+    <span class="co1">// 这里添加 toString 方法（如下定义）。</span>
+    <span class="co1">// 注意在函数的名称后没有加圆括号；</span>
+    <span class="co1">// 这不是一个函数调用，而是</span>
+    <span class="co1">// 对函数自身的引用。</span>
+    <span class="kw1">this</span>.<span class="me1">toString</span> <span class="sy0">=</span> pastaToString<span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&nbsp;
+<span class="co1">// 实际的用来显示 past 对象内容的函数。 </span>
+<span class="kw1">function</span> pastaToString<span class="br0">&#40;</span><span class="br0">&#41;</span>
+<span class="br0">&#123;</span>
+    <span class="co1">// 返回对象的属性。</span>
+&nbsp;
+    <span class="kw1">return</span> <span class="st0">&quot;Grain: &quot;</span> <span class="sy0">+</span> <span class="kw1">this</span>.<span class="me1">grain</span> <span class="sy0">+</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span> <span class="sy0">+</span>
+        <span class="st0">&quot;Width: &quot;</span> <span class="sy0">+</span> <span class="kw1">this</span>.<span class="me1">width</span> <span class="sy0">+</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span> <span class="sy0">+</span>
+        <span class="st0">&quot;Shape: &quot;</span> <span class="sy0">+</span> <span class="kw1">this</span>.<span class="me1">shape</span> <span class="sy0">+</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span> <span class="sy0">+</span>
+        <span class="st0">&quot;Egg?: &quot;</span> <span class="sy0">+</span> <span class="kw4">Boolean</span><span class="br0">&#40;</span><span class="kw1">this</span>.<span class="me1">hasEgg</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&nbsp;
+<span class="kw1">var</span> spaghetti <span class="sy0">=</span> <span class="kw1">new</span> pasta<span class="br0">&#40;</span><span class="st0">&quot;wheat&quot;</span><span class="sy0">,</span> <span class="nu0">0.2</span><span class="sy0">,</span> <span class="st0">&quot;circle&quot;</span><span class="sy0">,</span> <span class="kw2">true</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="co1">// 将调用 toString() 并显示 spaghetti 对象</span>
+<span class="co1">// 的属性（需要Internet 浏览器）。</span>
+window.<span class="me1">alert</span><span class="br0">&#40;</span>spaghetti<span class="br0">&#41;</span><span class="sy0">;</span></pre>
+
+</div>
+
+<h4 id="内部对象">内部对象</h4>
+<div class="level4">
+
+<p>
+Microsoft Jscript 提供了 11 个内部（或“内置”）对象。它们是<strong>Array</strong>、<strong>Boolean</strong>、<strong>Date</strong>、<strong>Function</strong>、<strong>Global</strong>、<strong>Math</strong>、<strong>Number</strong>、<strong>Object</strong>、<strong>RegExp</strong>、<strong>Error</strong> 以及<strong>String</strong>对象。每一个对象有相关的方法和属性，这在语言参考中有详细的描述。本节中也描述了某些对象。
+</p>
+
+</div>
+
+<h5 id="array_对象">Array 对象</h5>
+<div class="level5">
+
+<p>
+数组下标可以被认为是对象的属性，它是通过数字索引来引用的。注意添加到数组中的已命名的属性不能通过数字来索引；它们是与数组元素分离的。
+</p>
+
+<p>
+使用 <strong>new</strong> 运算符和 <strong>Array()</strong> 构造器 生成一个新的数组，如下面的示例。
+</p>
+<pre class="code javascript"><span class="kw1">var</span> theMonths <span class="sy0">=</span> <span class="kw1">new</span> <span class="kw4">Array</span><span class="br0">&#40;</span><span class="nu0">12</span><span class="br0">&#41;</span><span class="sy0">;</span>
+theMonths<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span> <span class="sy0">=</span> <span class="st0">&quot;Jan&quot;</span><span class="sy0">;</span>
+theMonths<span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span> <span class="sy0">=</span> <span class="st0">&quot;Feb&quot;</span><span class="sy0">;</span>
+theMonths<span class="br0">&#91;</span><span class="nu0">2</span><span class="br0">&#93;</span> <span class="sy0">=</span> <span class="st0">&quot;Mar&quot;</span><span class="sy0">;</span>
+theMonths<span class="br0">&#91;</span><span class="nu0">3</span><span class="br0">&#93;</span> <span class="sy0">=</span> <span class="st0">&quot;Apr&quot;</span><span class="sy0">;</span>
+theMonths<span class="br0">&#91;</span><span class="nu0">4</span><span class="br0">&#93;</span> <span class="sy0">=</span> <span class="st0">&quot;May&quot;</span><span class="sy0">;</span>
+theMonths<span class="br0">&#91;</span><span class="nu0">5</span><span class="br0">&#93;</span> <span class="sy0">=</span> <span class="st0">&quot;Jun&quot;</span><span class="sy0">;</span>
+theMonths<span class="br0">&#91;</span><span class="nu0">6</span><span class="br0">&#93;</span> <span class="sy0">=</span> <span class="st0">&quot;Jul&quot;</span><span class="sy0">;</span>
+theMonths<span class="br0">&#91;</span><span class="nu0">7</span><span class="br0">&#93;</span> <span class="sy0">=</span> <span class="st0">&quot;Aug&quot;</span><span class="sy0">;</span>
+theMonths<span class="br0">&#91;</span><span class="nu0">8</span><span class="br0">&#93;</span> <span class="sy0">=</span> <span class="st0">&quot;Sep&quot;</span><span class="sy0">;</span>
+theMonths<span class="br0">&#91;</span><span class="nu0">9</span><span class="br0">&#93;</span> <span class="sy0">=</span> <span class="st0">&quot;Oct&quot;</span><span class="sy0">;</span>
+theMonths<span class="br0">&#91;</span><span class="nu0">10</span><span class="br0">&#93;</span> <span class="sy0">=</span> <span class="st0">&quot;Nov&quot;</span><span class="sy0">;</span>
+theMonths<span class="br0">&#91;</span><span class="nu0">11</span><span class="br0">&#93;</span> <span class="sy0">=</span> <span class="st0">&quot;Dec&quot;</span><span class="sy0">;</span></pre>
+
+<p>
+用关键字 <strong>Array</strong> 生成数组时，Jscript 包含了 <strong>length</strong> 属性，该属性记录了数组入口数。如果没有给该属性指定值，则设置长度为 0 且数组没有入口点。如果指定一个数值，则将长度设置为该数。如果指定了不止一个参数，则这些参数被用作数组的入口。另外，参数的数目被赋给 length 属性。如下面的示例与前一个示例是等价的。
+</p>
+<pre class="code javascript"><span class="kw1">var</span> theMonths <span class="sy0">=</span> <span class="kw1">new</span> <span class="kw4">Array</span><span class="br0">&#40;</span><span class="st0">&quot;Jan&quot;</span><span class="sy0">,</span> <span class="st0">&quot;Feb&quot;</span><span class="sy0">,</span> <span class="st0">&quot;Mar&quot;</span><span class="sy0">,</span> <span class="st0">&quot;Apr&quot;</span><span class="sy0">,</span> <span class="st0">&quot;May&quot;</span><span class="sy0">,</span> <span class="st0">&quot;Jun&quot;</span><span class="sy0">,</span> 
+<span class="st0">&quot;Jul&quot;</span><span class="sy0">,</span> <span class="st0">&quot;Aug&quot;</span><span class="sy0">,</span> <span class="st0">&quot;Sep&quot;</span><span class="sy0">,</span> <span class="st0">&quot;Oct&quot;</span><span class="sy0">,</span> <span class="st0">&quot;Nov&quot;</span><span class="sy0">,</span> <span class="st0">&quot;Dec&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span></pre>
+
+<p>
+当向用关键字 <strong>Array</strong> 生成的数组中添加元素时，Jscript 自动改变属性 <strong>length</strong> 的值。Jscript 中的数组索引总是以 0 开始，而不是 1，所以属性 length 通常比数组的最大索引大 1。
+</p>
+
+</div>
+
+<h5 id="string对象">String对象</h5>
+<div class="level5">
+
+<p>
+在 Jscript 中，可以将字符串（和数）当作对象来处理。string 对象 有一些内置方法，可以和自己的字符串一起使用。其中一个是substring 方法，它返回字符串的一部分。该方法以两个数字作为参数。
+</p>
+<pre class="code javascript">aString <span class="sy0">=</span> <span class="st0">&quot;0123456789&quot;</span><span class="sy0">;</span>
+<span class="kw1">var</span> aChunk <span class="sy0">=</span> aString.<span class="me1">substring</span><span class="br0">&#40;</span><span class="nu0">4</span><span class="sy0">,</span> <span class="nu0">7</span><span class="br0">&#41;</span><span class="sy0">;</span>  <span class="co1">// 将 aChunk 设为 &quot;456&quot;。</span>
+<span class="kw1">var</span> aNotherChunk <span class="sy0">=</span> aString.<span class="me1">substring</span><span class="br0">&#40;</span><span class="nu0">7</span><span class="sy0">,</span> <span class="nu0">4</span><span class="br0">&#41;</span><span class="sy0">;</span>  <span class="co1">// 将 aNotherChunk 设为 &quot;456&quot;。</span>
+<span class="co1">// 使用上面生成数组的示例：</span>
+firstLetter <span class="sy0">=</span> theMonths<span class="br0">&#91;</span><span class="nu0">5</span><span class="br0">&#93;</span>.<span class="me1">substring</span><span class="br0">&#40;</span><span class="nu0">0</span><span class="sy0">,</span><span class="nu0">1</span><span class="br0">&#41;</span><span class="sy0">;</span>  <span class="co1">// 将变量 firstLetter 设为“J”。</span></pre>
+
+<p>
+<strong>String</strong> 对象的另一个属性是 <strong>length</strong> 属性。本属性包含了字符串中的字符数（空字符串为 0）。它是一个数值，可以直接在计算中使用。
+</p>
+<pre class="code javascript"><span class="kw1">var</span> howLong <span class="sy0">=</span> <span class="st0">&quot;Hello World&quot;</span>.<span class="me1">length</span>  <span class="co1">// 设置变量 howLong 为 11。</span></pre>
+
+</div>
+
+<h5 id="math_对象">Math 对象</h5>
+<div class="level5">
+
+<p>
+<strong>Math</strong> 对象有许多预定义属性和方法。属性是特殊的数字。这些特殊的数字之一是 pi 值（近似 3.14159…）。这是 <strong>Math.PI</strong> 属性，如下例所示。
+</p>
+<pre class="code javascript"><span class="co1">// 声明一个半径变量并赋数值。</span>
+<span class="kw1">var</span> circleArea <span class="sy0">=</span> <span class="kw4">Math</span>.<span class="me1">PI</span> <span class="sy0">*</span> radius <span class="sy0">*</span> radius<span class="sy0">;</span>  <span class="co1">// 注意 Math 和 PI 大写。</span></pre>
+
+<p>
+<strong>Math</strong> 对象的一个内置方法是乘幂方法（或 <strong>pow</strong>），使用该方法求得指定数的幂次。下面的例子同时使用了 pi 和乘幂。
+</p>
+<pre class="code javascript"><span class="co1">// 本公式计算给定半径的球体的体积。</span>
+volume <span class="sy0">=</span> <span class="br0">&#40;</span><span class="nu0">4</span><span class="sy0">/</span><span class="nu0">3</span><span class="br0">&#41;</span><span class="sy0">*</span><span class="br0">&#40;</span><span class="kw4">Math</span>.<span class="me1">PI</span><span class="sy0">*</span><span class="kw4">Math</span>.<span class="me1">pow</span><span class="br0">&#40;</span>radius<span class="sy0">,</span><span class="nu0">3</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">;</span></pre>
+
+</div>
+
+<h5 id="date_对象">Date 对象</h5>
+<div class="level5">
+
+<p>
+<strong>Date</strong> 对象可以被用来表示任意的日期和时间，获取当前系统日期以及计算两个日期的间隔。它拥有一些预定义的属性和方法。通常，<strong>Date</strong> 对象给出星期；月份，天数和年份；以及以小时，分钟和秒表示的时间。该信息是基于 1970 年1 月 1 日 00:00:00.000 GMT 开始的毫秒数，其中 GMT 是格林威治标准时间（首选术语是 UTC，或者“全球标准时间”，它引用的信号是由“世界时间标准”发布的）。Jscript 可以处理 250,000 B.C. 到 255,000 A.D范围内的日期。
+</p>
+
+<p>
+使用 <strong>new</strong> 运算符创建一个新的 <strong>Date</strong> 对象。下面的示例计算当年已过去的天数和今年剩下的天数。
+</p>
+<pre class="code javascript"><span class="coMULTI">/*
+本示例使用前面定义的月份名称数组。
+第一条语句以“Day Month Date 00:00:00 Year”格式
+对 thisIsToday 变量赋值。
+*/</span>
+<span class="kw1">var</span> thisIsToday <span class="sy0">=</span> <span class="kw1">new</span> <span class="kw4">Date</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&nbsp;
+<span class="kw1">var</span> toDay <span class="sy0">=</span> <span class="kw1">new</span> <span class="kw4">Date</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>  <span class="co1">//获取今天的日期。</span>
+&nbsp;
+<span class="co1">// 提取年，月，日。</span>
+<span class="kw1">var</span> thisYear <span class="sy0">=</span> toDay.<span class="me1">getFullYear</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">var</span> thisMonth <span class="sy0">=</span> theMonths<span class="br0">&#91;</span>toDay.<span class="me1">getMonth</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="br0">&#93;</span><span class="sy0">;</span>
+<span class="kw1">var</span> thisDay <span class="sy0">=</span> thisMonth  <span class="sy0">+</span> <span class="st0">&quot; &quot;</span> <span class="sy0">+</span> toDay.<span class="me1">getDate</span><span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="sy0">+</span> <span class="st0">&quot;, &quot;</span> <span class="sy0">+</span> thisYear<span class="sy0">;</span></pre>
+
+</div>
+
+<h5 id="number_对象">Number 对象</h5>
+<div class="level5">
+
+<p>
+除了 <strong>Math</strong> 对象中可用的特殊数值属性（例如 <strong>PI</strong>）外，在 Microsoft Jscript 中， <strong>Number</strong> 对象有几个其他的数值属性。
+</p>
+<div class="table sectionedit14"><table class="inline">
+	<thead>
+	<tr class="row0">
+		<th class="col0 centeralign">  属性  </th><th class="col1 centeralign">   描述  </th>
+	</tr>
+	</thead>
+	<tr class="row1">
+		<td class="col0">MAX<em>VALUE |可能的最大数大约为 1.79E+308；可以是正数或负数。（具体数值随系统不同而有微小差别。） |
+|MIN</em>VALUE </td><td class="col1">可能的最小数大约为 2.22E-308；可以是正数或负数。（具体数值随系统不同而有微小差别。） </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0">NaN </td><td class="col1">特殊非数量值，“不是数值”。 </td>
+	</tr>
+	<tr class="row3">
+		<td class="col0">POSITIVE<em>INFINITY |比最大正数（Number.MAX</em>VALUE）还要大的任意正值自动被转换为此值，代表正无穷大。 </td><td class="col1"></td>
+	</tr>
+	<tr class="row4">
+		<td class="col0">NEGATIVE<em>INFINITY |比最小的负数（负的 Number.MAX</em>VALUE）还小的任意值被自动转换为此值，代表负无穷。 </td><td class="col1"></td>
+	</tr>
+</table></div>
+<!-- EDIT14 TABLE [44877-45489] -->
+<p>
+<strong>Number.NaN</strong> 是一个特殊的属性，被定义为“不是数值”。例如被 0 除返回 <strong>NaN</strong>。试图解析一个无法被解析为数字的字符串同样返回 <strong>Number.NaN</strong>。把 <strong>NaN</strong> 与任何数值或本身作比较的结果都是不相等。不能通过与 <strong>Number.NaN</strong> 比较来测试 <strong>NaN</strong> 结果，而应该使用 <strong>isNaN()</strong> 函数。
+</p>
+
+</div>
+<!-- EDIT13 SECTION "JScript 对象" [36840-45856] -->
+<h3 class="sectionedit15" id="jscript_保留字">JScript 保留字</h3>
+<div class="level3">
+
+<p>
+Jscript 有一些保留字不能在标识符中使用。保留字对 Jscript 语言有特殊的含义，它们是语言语法的一部分。使用保留字在加载脚本的时候将产生编译错误。
+</p>
+
+<p>
+Jscript 还有一些留作将来使用的保留字。这些字不是现在的 Jscript 语言的一部分，然而它们是为将来的使用保留的。
+</p>
+
+</div>
+
+<h4 id="保留词">保留词</h4>
+<div class="level4">
+<div class="table sectionedit16"><table class="inline">
+	<tr class="row0">
+		<td class="col0">break </td><td class="col1">delete </td><td class="col2">function </td><td class="col3">return </td><td class="col4">typeof </td>
+	</tr>
+	<tr class="row1">
+		<td class="col0">case </td><td class="col1">do </td><td class="col2">if </td><td class="col3">switch </td><td class="col4">var </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0">catch </td><td class="col1">else </td><td class="col2">in </td><td class="col3">this </td><td class="col4">void </td>
+	</tr>
+	<tr class="row3">
+		<td class="col0">continue </td><td class="col1">false </td><td class="col2">instanceof </td><td class="col3">throw </td><td class="col4">while </td>
+	</tr>
+	<tr class="row4">
+		<td class="col0">debugger </td><td class="col1">finally </td><td class="col2">new </td><td class="col3">true </td><td class="col4">with </td>
+	</tr>
+	<tr class="row5">
+		<td class="col0">default </td><td class="col1">for </td><td class="col2">null </td><td class="col3 leftalign">try   </td><td class="col4"> </td>
+	</tr>
+</table></div>
+<!-- EDIT16 TABLE [46260-46476] -->
+</div>
+
+<h4 id="为将来保留的词">为将来保留的词</h4>
+<div class="level4">
+<div class="table sectionedit17"><table class="inline">
+	<tr class="row0">
+		<td class="col0">abstract </td><td class="col1">double </td><td class="col2">goto </td><td class="col3">native </td><td class="col4">static </td>
+	</tr>
+	<tr class="row1">
+		<td class="col0">boolean </td><td class="col1">enum </td><td class="col2">implements </td><td class="col3">package </td><td class="col4">super </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0">byte </td><td class="col1">export </td><td class="col2">import </td><td class="col3">private </td><td class="col4">synchronized </td>
+	</tr>
+	<tr class="row3">
+		<td class="col0">char </td><td class="col1">extends </td><td class="col2">int </td><td class="col3">protected </td><td class="col4">throws </td>
+	</tr>
+	<tr class="row4">
+		<td class="col0">class </td><td class="col1">final </td><td class="col2">interface </td><td class="col3">public </td><td class="col4">transient </td>
+	</tr>
+	<tr class="row5">
+		<td class="col0">const </td><td class="col1">float </td><td class="col2">long </td><td class="col3">short </td><td class="col4">volatile </td>
+	</tr>
+</table></div>
+<!-- EDIT17 TABLE [46508-46767] -->
+<p>
+当选择标识符时避免使用已经在内部 Jscript 对象或函数中使用的词，如 <strong>String</strong> 或 <strong>parseInt</strong>。
+</p>
+
+</div>
+<!-- EDIT15 SECTION "JScript 保留字" [45857-46896] -->
+<h2 class="sectionedit18" id="高级_jscript">高级 JScript</h2>
+<div class="level2">
+
+</div>
+<!-- EDIT18 SECTION "高级 JScript" [46897-46922] -->
+<h3 class="sectionedit19" id="高级对象的创建">高级对象的创建</h3>
+<div class="level3">
+
+</div>
+
+<h4 id="使用构造函数来创建对象">使用构造函数来创建对象</h4>
+<div class="level4">
+
+<p>
+构造函数是一个函数，调用它来例示并初始化特殊类型的对象。可以使用 <strong>new</strong> 关键字来调用一个构造函数。下面给出了使用构造函数的新示例。
+</p>
+<pre class="code javascript"><span class="kw1">var</span> myObject <span class="sy0">=</span> <span class="kw1">new</span> <span class="kw4">Object</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>             <span class="co1">// 创建没有属性的通用对象。</span>
+<span class="kw1">var</span> myBirthday <span class="sy0">=</span> <span class="kw1">new</span> <span class="kw4">Date</span><span class="br0">&#40;</span><span class="nu0">1961</span><span class="sy0">,</span> <span class="nu0">5</span><span class="sy0">,</span> <span class="nu0">10</span><span class="br0">&#41;</span><span class="sy0">;</span>  <span class="co1">// 创建一个 Date 对象。</span>
+<span class="kw1">var</span> myCar <span class="sy0">=</span> <span class="kw1">new</span> Car<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>                   <span class="co1">// 创建一个用户定义的对象，并初始化其属性。</span></pre>
+
+<p>
+通过构造函数将一个参数作为特定的 <strong>this</strong> 关键字的值传递给新创建的空对象。然后构造函数负责为新对象执行适应的初始化（创建属性并给出其初始值）。完成后，构造函数返回它所构造的对象的一个参数。
+</p>
+
+</div>
+
+<h4 id="编写构造函数">编写构造函数</h4>
+<div class="level4">
+
+<p>
+可以使用 <strong>new</strong> 运算符结合像 <strong>Object()</strong>、<strong>Date()</strong> 和 <strong>Function()</strong> 这样的预定义的构造函数来创建对象并对其初始化。面向对象的编程其强有力的特征是定义自定义构造函数以创建脚本中使用的自定义对象的能力。创建了自定义的构造函数，这样就可以创建具有已定义属性的对象。下面是自定义函数的示例（注意 <strong>this</strong> 关键字的使用）。
+</p>
+<pre class="code javascript"><span class="kw1">function</span> Circle <span class="br0">&#40;</span>xPoint<span class="sy0">,</span> yPoint<span class="sy0">,</span> radius<span class="br0">&#41;</span> <span class="br0">&#123;</span>
+    <span class="kw1">this</span>.<span class="me1">x</span> <span class="sy0">=</span> xPoint<span class="sy0">;</span>  <span class="co1">// 圆心的 x 坐标。</span>
+    <span class="kw1">this</span>.<span class="me1">y</span> <span class="sy0">=</span> yPoint<span class="sy0">;</span>  <span class="co1">// 圆心的 y 坐标。</span>
+    <span class="kw1">this</span>.<span class="me1">r</span> <span class="sy0">=</span> radius<span class="sy0">;</span>  <span class="co1">// 圆的半径。</span>
+<span class="br0">&#125;</span></pre>
+
+<p>
+调用 Circle 构造函数时，给出圆心点的值和圆的半径（所有这些元素是完全定义一个独特的圆对象所必需的）。结束时 Circle 对象包含三个属性。下面是如何例示 Circle 对象。
+</p>
+<pre class="code javascript"><span class="kw1">var</span> aCircle <span class="sy0">=</span> <span class="kw1">new</span> Circle<span class="br0">&#40;</span><span class="nu0">5</span><span class="sy0">,</span> <span class="nu0">11</span><span class="sy0">,</span> <span class="nu0">99</span><span class="br0">&#41;</span><span class="sy0">;</span></pre>
+
+</div>
+
+<h4 id="使用原型来创建对象">使用原型来创建对象</h4>
+<div class="level4">
+
+<p>
+在编写构造函数时，可以使用原型对象（它本身是所有构造函数的一个属性）的属性来创建继承属性和共享方法。原型属性和方法将按引用复制给类中的每个对象，因此它们都具有相同的值。可以在一个对象中更改原型属性的值，新的值将覆盖默认值，但仅在该实例中有效。属于这个类的其他对象不受此更改的影响。下面给出了使用自定义构造函数的示例，Circle（注意 <strong>this</strong> 关键字的使用）。
+</p>
+<pre class="code javascript">Circle.<span class="kw1">prototype</span>.<span class="me1">pi</span> <span class="sy0">=</span> <span class="kw4">Math</span>.<span class="me1">PI</span><span class="sy0">;</span>
+<span class="kw1">function</span> ACirclesArea <span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+    <span class="kw1">return</span> <span class="kw1">this</span>.<span class="me1">pi</span> <span class="sy0">*</span> <span class="kw1">this</span>.<span class="me1">r</span> <span class="sy0">*</span> <span class="kw1">this</span>.<span class="me1">r</span><span class="sy0">;</span> <span class="co1">// 计算圆面积的公式为 ?r2。</span>
+<span class="br0">&#125;</span>
+Circle.<span class="kw1">prototype</span>.<span class="me1">area</span> <span class="sy0">=</span> ACirclesArea<span class="sy0">;</span> <span class="co1">// 计算圆面积的函数现在是 Circle Prototype 对象的一个方法。</span>
+<span class="kw1">var</span> a <span class="sy0">=</span> ACircle.<span class="me1">area</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>               <span class="co1">// 此为如何在 Circle 对象上调用面积函数。</span></pre>
+
+<p>
+使用这个原则，可以给预定义的构造函数（都具有原型对象）定义附加属性。例如，如果想要能够删除字符串的前后空格（与 VBScript 的 <strong>Trim</strong> 函数类似），就可以给 <strong>String</strong> 原型对象创建自己的方法。
+</p>
+<pre class="code javascript"><span class="co1">// 增加一个名为 trim 的函数作为</span>
+<span class="co1">// String 构造函数的原型对象的一个方法。</span>
+<span class="kw4">String</span>.<span class="kw1">prototype</span>.<span class="me1">trim</span> <span class="sy0">=</span> <span class="kw1">function</span><span class="br0">&#40;</span><span class="br0">&#41;</span>
+<span class="br0">&#123;</span>
+    <span class="co1">// 用正则表达式将前后空格</span>
+    <span class="co1">// 用空字符串替代。</span>
+    <span class="kw1">return</span> <span class="kw1">this</span>.<span class="me1">replace</span><span class="br0">&#40;</span><span class="co2">/(^\s*)|(\s*$)/g</span><span class="sy0">,</span> <span class="st0">&quot;&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&nbsp;
+<span class="co1">// 有空格的字符串</span>
+<span class="kw1">var</span> s <span class="sy0">=</span> <span class="st0">&quot;    leading and trailing spaces    &quot;</span><span class="sy0">;</span>
+&nbsp;
+<span class="co1">// 显示 &quot;    leading and trailing spaces     (35)&quot;</span>
+window.<span class="me1">alert</span><span class="br0">&#40;</span>s <span class="sy0">+</span> <span class="st0">&quot; (&quot;</span> <span class="sy0">+</span> s.<span class="me1">length</span> <span class="sy0">+</span> <span class="st0">&quot;)&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&nbsp;
+<span class="co1">// 删除前后空格</span>
+s <span class="sy0">=</span> s.<span class="me1">trim</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="co1">// 显示&quot;leading and trailing spaces (27)&quot;</span>
+window.<span class="me1">alert</span><span class="br0">&#40;</span>s <span class="sy0">+</span> <span class="st0">&quot; (&quot;</span> <span class="sy0">+</span> s.<span class="me1">length</span> <span class="sy0">+</span> <span class="st0">&quot;)&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span></pre>
+
+</div>
+<!-- EDIT19 SECTION "高级对象的创建" [46923-50498] -->
+<h3 class="sectionedit20" id="递归">递归</h3>
+<div class="level3">
+
+<p>
+递归是一种重要的编程技术。该方法用于让一个函数从其内部调用其自身。一个示例就是计算阶乘。0 的阶乘被特别地定义为 1。 更大数的阶乘是通过计算 1 * 2 * …来求得的，每次增加 1，直至达到要计算其阶乘的那个数。
+</p>
+
+<p>
+下面的段落是用文字定义的计算阶乘的一个函数。
+</p>
+
+<p>
+“如果这个数小于零，则拒绝接收。如果不是一个整数，则将其向下舍入为相邻的整数。如果这个数为 0，则其阶乘为 1。如果这个数大于 0，则将其与相邻较小的数的阶乘相乘。”
+</p>
+
+<p>
+要计算任何大于 0 的数的阶乘，至少需要计算一个其他数的阶乘。用来实现这个功能的函数就是已经位于其中的函数；该函数在执行当前的这个数之前，必须调用它本身来计算相邻的较小数的阶乘。这就是一个递归示例。
+</p>
+
+<p>
+递归和迭代（循环）是密切相关的 — 能用递归处理的算法也都可以采用迭代，反之亦然。确定的算法通常可以用几种方法实现，您只需选择最自然贴切的方法，或者您觉得用起来最轻松的一种即可。
+</p>
+
+<p>
+显然，这样有可能会出现问题。可以很容易地创建一个递归函数，但该函数不能得到一个确定的结果，并且不能达到一个终点。这样的递归将导致计算机执行一个“无限”循环。下面就是一个示例：在计算阶乘的文字描述中遗漏了第一条规则（对负数的处理） ，并试图计算任何负数的阶乘。这将导致失败，因为按顺序计算 -24 的阶乘时，首先不得不计算 -25 的阶乘；然而这样又不得不计算 -26 的阶乘；如此继续。很明显，这样永远也不会到达一个终止点。
+</p>
+
+<p>
+因此在设计递归函数时应特别仔细。如果怀疑其中存在着无限递归的可能，则可以让该函数记录它调用自身的次数。如果该函数调用自身的次数太多，即使您已决定了它应调用多少次，就自动退出。
+</p>
+
+<p>
+下面仍然是阶乘函数，这次是用 JScript 代码编写的。 
+</p>
+<pre class="code javascript"><span class="co1">// 计算阶乘的函数。如果传递了</span>
+<span class="co1">// 无效的数值（例如小于零），</span>
+<span class="co1">// 将返回 -1，表明发生了错误。若数值有效，</span>
+<span class="co1">// 把数值转换为最相近的整数，并</span>
+<span class="co1">// 返回阶乘。</span>
+<span class="kw1">function</span> factorial<span class="br0">&#40;</span>aNumber<span class="br0">&#41;</span>  <span class="br0">&#123;</span>
+aNumber <span class="sy0">=</span> <span class="kw4">Math</span>.<span class="me1">floor</span><span class="br0">&#40;</span>aNumber<span class="br0">&#41;</span><span class="sy0">;</span>  <span class="co1">// 如果这个数不是一个整数，则向下舍入。</span>
+<span class="kw1">if</span> <span class="br0">&#40;</span>aNumber <span class="sy0">&lt;</span> <span class="nu0">0</span><span class="br0">&#41;</span>  <span class="br0">&#123;</span>  <span class="co1">// 如果这个数小于 0，拒绝接收。</span>
+    <span class="kw1">return</span> <span class="sy0">-</span><span class="nu0">1</span><span class="sy0">;</span>
+    <span class="br0">&#125;</span>
+      <span class="kw1">if</span> <span class="br0">&#40;</span>aNumber <span class="sy0">==</span> <span class="nu0">0</span><span class="br0">&#41;</span>  <span class="br0">&#123;</span>  <span class="co1">// 如果为 0，则其阶乘为 1。</span>
+      <span class="kw1">return</span> <span class="nu0">1</span><span class="sy0">;</span>
+      <span class="br0">&#125;</span>
+        <span class="kw1">else</span> <span class="kw1">return</span> <span class="br0">&#40;</span>aNumber <span class="sy0">*</span> factorial<span class="br0">&#40;</span>aNumber <span class="sy0">-</span> <span class="nu0">1</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">;</span>  <span class="co1">// 否则，递归直至完成。</span>
+<span class="br0">&#125;</span></pre>
+
+</div>
+<!-- EDIT20 SECTION "递归" [50499-53242] -->
+<h3 class="sectionedit21" id="变量范围">变量范围</h3>
+<div class="level3">
+
+<p>
+JScript 有两种变量范围：全局和局部。如果在任何函数定义之外声明了一个变量，则该变量为全局变量，且该变量的值在整个持续范围内都可以访问和修改。如果在函数定义内声明了一个变量，则该变量为局部变量。每次执行该函数时都会创建和破坏该变量；且它不能被该函数外的任何事物访问。
+</p>
+
+<p>
+像 C++ 这样的语言也有“块范围”。在这里，任何一对“{}”都定义新的范围。JScript 不支持块范围。
+</p>
+
+<p>
+一个局部变量的名称可以与某个全局变量的名称相同，但这是完全不同和独立的两个变量。因此，更改一个变量的值不会影响另一个变量的值。在声明局部变量的函数内，只有该局部变量有意义。 
+</p>
+<pre class="code javascript"><span class="kw1">var</span> aCentaur <span class="sy0">=</span> <span class="st0">&quot;a horse with rider,&quot;</span><span class="sy0">;</span>  <span class="co1">// aCentaur 的全局定义。</span>
+&nbsp;
+<span class="co1">// JScript 代码，为简洁起见有省略。</span>
+<span class="kw1">function</span> antiquities<span class="br0">&#40;</span><span class="br0">&#41;</span>  <span class="co1">// 在这个函数中声明了一个局部 aCentaur 变量。</span>
+<span class="br0">&#123;</span>
+&nbsp;
+<span class="co1">// JScript 代码，为简洁起见有省略。</span>
+<span class="kw1">var</span> aCentaur <span class="sy0">=</span> <span class="st0">&quot;A centaur is probably a mounted Scythian warrior&quot;</span><span class="sy0">;</span>
+&nbsp;
+<span class="co1">// JScript 代码，为简洁起见有省略。</span>
+   aCentaur <span class="sy0">+=</span> <span class="st0">&quot;, misreported; that is, &quot;</span><span class="sy0">;</span>  <span class="co1">// 添加到局部变量。</span>
+&nbsp;
+<span class="co1">// JScript 代码，为简洁起见有省略。</span>
+<span class="br0">&#125;</span>  <span class="co1">// 函数结束。</span>
+&nbsp;
+<span class="kw1">var</span> nothinginparticular <span class="sy0">=</span> antiquities<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+aCentaur <span class="sy0">+=</span> <span class="st0">&quot; as seen from a distance by a naive innocent.&quot;</span><span class="sy0">;</span>
+&nbsp;
+<span class="coMULTI">/*
+在函数内，该变量的值为 &quot;A centaur is probably a mounted Scythian warrior,
+misreported; that is, &quot;；在函数外，该变量的值为这句话的其余部分：
+&quot;a horse with rider, as seen from a distance by a naive innocent.&quot;
+*/</span>  </pre>
+
+<p>
+很重要的一点是注意变量是否是在其所属范围的开始处声明的。有时这会导致意想不到的情况。 
+</p>
+<pre class="code javascript">tweak<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">var</span> aNumber <span class="sy0">=</span> <span class="nu0">100</span><span class="sy0">;</span>
+<span class="kw1">function</span> tweak<span class="br0">&#40;</span><span class="br0">&#41;</span>  <span class="br0">&#123;</span>
+<span class="kw1">var</span> newThing <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span>  <span class="co1">// 显式声明 newThing 变量。</span>
+&nbsp;
+    <span class="co1">// 本语句将未定义的变量赋给 newThing，因为已有名为 aNumber 的局部变量。</span>
+    newThing <span class="sy0">=</span> aNumber<span class="sy0">;</span>
+&nbsp;
+    <span class="co1">//下一条语句将值 42 赋给局部的 aNumber。aNumber = 42;</span>
+<span class="kw1">if</span> <span class="br0">&#40;</span><span class="kw2">false</span><span class="br0">&#41;</span>  <span class="br0">&#123;</span>
+    <span class="kw1">var</span> aNumber<span class="sy0">;</span>  <span class="co1">// 该语句永远不会执行。</span>
+    aNumber <span class="sy0">=</span> <span class="nu0">123</span><span class="sy0">;</span>  <span class="co1">//  该语句永远不会执行。</span>
+    <span class="br0">&#125;</span>  <span class="co1">// 条件语句结束。</span>
+&nbsp;
+<span class="br0">&#125;</span>  <span class="co1">// 该函数定义结束。</span>
+<span class="sy0">&lt;/</span>code<span class="sy0">&lt;</span>
+当 JScript 运行函数时，首先查找所有的变量声明，
+&nbsp;
+<span class="sy0">&lt;</span>code javascript<span class="sy0">&gt;</span>
+<span class="kw1">var</span> someVariable<span class="sy0">;</span></pre>
+
+<p>
+并以未定义的初始值创建变量。如果变量被声明时有值，
+</p>
+<pre class="code javascript"><span class="kw1">var</span> someVariable <span class="sy0">=</span> <span class="st0">&quot;something&quot;</span><span class="sy0">;</span></pre>
+
+<p>
+那么该变量仍以未定义的值初始化，并且只有在运行了声明行时才被声明值取代，假如曾经被声明过。
+</p>
+
+<p>
+JScript 在运行代码前处理变量声明，所以声明是位于一个条件块中还是其他某些结构中无关紧要。JScript 找到所有的变量后立即运行函数中的代码。如果变量是在函数中显式声明的 — 也就是说，如果它出现于赋值表达式的左边但没有用 var 声明 — 那么将把它创建为全局变量。
+</p>
+
+</div>
+<!-- EDIT21 SECTION "变量范围" [53243-56335] -->
+<h3 class="sectionedit22" id="复制_传递和比较数据">复制、传递和比较数据</h3>
+<div class="level3">
+
+<p>
+在 JScript 中，对数据的处理取决于该数据的类型。 
+</p>
+
+</div>
+
+<h4 id="按值和按引用的比较">按值和按引用的比较</h4>
+<div class="level4">
+
+<p>
+Numbers 和 Boolean 类型的值 (<strong>true</strong> 和 <strong>false</strong>) 是按值来复制、传递和比较的。当按值复制或传递时，将在计算机内存中分配一块空间并将原值复制到其中。然后，即使更改原来的值，也不会影响所复制的值（反过来也一样），因为这两个值是独立的实体。
+</p>
+
+<p>
+对象、数组以及函数是按引用来复制、传递和比较的。 当按地址复制或传递时，实际是创建一个指向原始项的指针，然后就像拷贝一样来使用该指针。如果随后更改原始项，则将同时更改原始项和复制项（反过来也一样）。实际上只有一个实体；“复本”并不是一个真正的复本，而只是该数据的又一个引用。
+</p>
+
+<p>
+当按引用比较时，要想比较成功，两个变量必须参照完全相同的实体。例如，两个不同的 <strong>Array</strong> 对象即使包含相同的元素也将比较为不相等。要想比较成功，其中一个变量必须为另一个的参考。要想检查两个数组是否包含了相同的元素，比较 <strong>toString()</strong> 方法的结果。
+</p>
+
+<p>
+最后，字符串是按引用复制和传递的，但是是按值来比较的。请注意，假如有两个 <strong>String</strong> 对象（用 <strong>new String(“something”)</strong> 创建的），按引用比较它们，但是，如果其中一个或者两者都是字符串值的话，按值比较它们。
+</p>
+
+<p>
+<strong>注意</strong>   鉴于 ASCII和 ANSI 字符集的构造方法，按序列顺序大写字母位于小写字母的前面。例如 “Zoo” 小于 “aardvark”。如果想执行不区分大小写的匹配，可以对两个字符串调用 <strong>toUpperCase()</strong> 或 <strong>toLowerCase()</strong>。
+</p>
+
+</div>
+
+<h4 id="传递参数给函数">传递参数给函数</h4>
+<div class="level4">
+
+<p>
+按值传递一个参数给函数就是制作该参数的一个独立复本，即一个只存在于该函数内的复本。即使按引用传递对象和数组时，如果直接在函数中用新值覆盖原先的值，在函数外并不反映新值。只有在对象的属性或者数组的元素改变时，在函数外才可以看出。
+</p>
+
+<p>
+例如（使用 <abbr title="Internet Explorer">IE</abbr> 对象模式）：
+</p>
+<pre class="code javascript"><span class="co1">// 本代码段破坏（覆盖）其参数，所以</span>
+<span class="co1">// 调用代码中反映不出变化。</span>
+<span class="kw1">function</span> Clobber<span class="br0">&#40;</span>param<span class="br0">&#41;</span> 
+<span class="br0">&#123;</span>
+    <span class="co1">// 破坏参数；在调用代码中</span>
+    <span class="co1">// 看不到。</span>
+    param <span class="sy0">=</span> <span class="kw1">new</span> <span class="kw4">Object</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+    param.<span class="me1">message</span> <span class="sy0">=</span> <span class="st0">&quot;This will not work&quot;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&nbsp;
+<span class="co1">// 本段代码改变参数的属性，</span>
+<span class="co1">// 在调用代码中可看到属性改变。</span>
+<span class="kw1">function</span> Update<span class="br0">&#40;</span>param<span class="br0">&#41;</span>
+<span class="br0">&#123;</span>
+    <span class="co1">// 改变对象的属性；</span>
+    <span class="co1">// 可从调用代码中看到改变。</span>
+    param.<span class="me1">message</span> <span class="sy0">=</span> <span class="st0">&quot;I was changed&quot;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&nbsp;
+<span class="co1">// 创建一个对象，并赋给一个属性。</span>
+<span class="kw1">var</span> obj <span class="sy0">=</span> <span class="kw1">new</span> <span class="kw4">Object</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+obj.<span class="me1">message</span> <span class="sy0">=</span> <span class="st0">&quot;This is the original&quot;</span><span class="sy0">;</span>
+&nbsp;
+<span class="co1">// 调用 Clobber，并输出 obj.message。注意，它没有发生变化。</span>
+Clobber<span class="br0">&#40;</span>obj<span class="br0">&#41;</span><span class="sy0">;</span>
+window.<span class="me1">alert</span><span class="br0">&#40;</span>obj.<span class="me1">message</span><span class="br0">&#41;</span><span class="sy0">;</span> <span class="co1">// 仍然显示 &quot;This is the original&quot;。</span>
+&nbsp;
+<span class="co1">// 调用 Update，并输出 obj.message。注意，它已经被改变了。</span>
+Update<span class="br0">&#40;</span>obj<span class="br0">&#41;</span><span class="sy0">;</span>
+window.<span class="me1">alert</span><span class="br0">&#40;</span>obj.<span class="me1">message</span><span class="br0">&#41;</span><span class="sy0">;</span> <span class="co1">// 显示 &quot;I was changed&quot;。</span></pre>
+
+</div>
+
+<h4 id="检验数据">检验数据</h4>
+<div class="level4">
+
+<p>
+当按值进行检验时，是比较两个截然不同的项以查看它们是否相等。通常，该比较是逐字节进行的。当按引用进行检验时，是看这两项是否是指向同一个原始项的指针。如果是，则比较结果是相等；如果不是，即使它们每个字节都包含完全一样的值，比较结果也为不相等。
+</p>
+
+<p>
+按引用复制和传递字符串能节约内存；但是由于在字符串被创建后不能进行更改，因此可以按值进行比较。这样可以检查两个字符串是否包含相同的内容，即使它们是完全独立产生的。
+</p>
+
+</div>
+<!-- EDIT22 SECTION "复制、传递和比较数据" [56336-60101] -->
+<h3 class="sectionedit23" id="使用数组">使用数组</h3>
+<div class="level3">
+
+</div>
+
+<h4 id="数组下标">数组下标</h4>
+<div class="level4">
+
+<p>
+JScript 中的数组是稀疏的。也就是说，如果一个数组具有三个元素，编号分别为 0、1 和 2，您就可以创建元素 50，而不必担心从 3 到 49 的参数。如果该数组有一个自动的 length 变量，（请参阅内部对象了解有关数组长度的自动监控的说明），该 length 变量被设为 51，而不是 4。当然您可以创建各元素的编号之间没有间隙的数组，不过没有必要这样做。
+</p>
+
+<p>
+在 JScript 中，对象和数组几乎相同。两个主要差别是对象没有自动长度属性，而数组没有对象的属性和方法。
+</p>
+
+</div>
+
+<h4 id="数组寻址">数组寻址</h4>
+<div class="level4">
+
+<p>
+使用方括号“[]”来寻址数组。方括号中是一个数值或一个值为整数的表达式。下面的示例假定在脚本的其他地方已定义了<em>entryNum</em> 变量，且已赋值。 
+</p>
+<pre class="code javascript">theListing <span class="sy0">=</span> addressBook<span class="br0">&#91;</span>entryNum<span class="br0">&#93;</span><span class="sy0">;</span>
+theFirstLine <span class="sy0">=</span> theListing<span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span><span class="sy0">;</span></pre>
+
+</div>
+
+<h4 id="将对象作为关联数组">将对象作为关联数组</h4>
+<div class="level4">
+
+<p>
+通常，使用点运算符“.”访问对象的属性。例如，
+</p>
+<pre class="code javascript">myObject.<span class="me1">aProperty</span></pre>
+
+<p>
+在这里，属性名称是一个标识符。也可以用索引运算符“[]”访问对象的属性。在这里，是把对象看作一个关联数组。关联数组是一种数据结构，它可以动态地将任意的数据的值与任意的字符串相关联。例如，
+</p>
+<pre class="code javascript">myObject<span class="br0">&#91;</span><span class="st0">&quot;aProperty&quot;</span><span class="br0">&#93;</span> <span class="co1">// 与上面相同。</span></pre>
+
+<p>
+尽管索引运算符更多地用于访问数组元素，当用于对象时，索引总是以字符串文字表示的属性名称。
+</p>
+
+<p>
+注意访问对象属性的两种方法的重要差异。
+</p>
+<div class="table sectionedit24"><table class="inline">
+	<thead>
+	<tr class="row0">
+		<th class="col0 centeralign">  运算符  </th><th class="col1 centeralign">  属性名称作为  </th><th class="col2 centeralign">  对属性名称的处理  </th>
+	</tr>
+	</thead>
+	<tr class="row1">
+		<td class="col0">点“.” </td><td class="col1">标识符 </td><td class="col2">不能作为数据处理 </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0">索引“[]” </td><td class="col1">字符串文字 </td><td class="col2">能被作为数据处理 </td>
+	</tr>
+</table></div>
+<!-- EDIT24 TABLE [61754-61933] -->
+<p>
+在运行之前并不知道属性名称时，这个差异会有用（比如基于用户输入构造对象时）。要想从一个关联数组提取所有的属性，必须用 <strong>for … in</strong> 循环。
+</p>
+
+</div>
+<!-- EDIT23 SECTION "使用数组" [60102-62136] -->
+<h3 class="sectionedit25" id="特殊字符">特殊字符</h3>
+<div class="level3">
+
+<p>
+JScript 提供了一些特殊字符，允许在字符串中包括一些无法直接键入的字符。每个字符都以反斜杠开始。反斜杠是一个转义字符，表示 JScript 解释器下面的字符为特殊字符。
+</p>
+<div class="table sectionedit26"><table class="inline">
+	<thead>
+	<tr class="row0">
+		<th class="col0 centeralign">  转义序列  </th><th class="col1 centeralign">  字符  </th>
+	</tr>
+	</thead>
+	<tr class="row1">
+		<td class="col0">\b </td><td class="col1">退格 </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0">\f </td><td class="col1">走纸换页 </td>
+	</tr>
+	<tr class="row3">
+		<td class="col0">\n </td><td class="col1">换行 </td>
+	</tr>
+	<tr class="row4">
+		<td class="col0">\r </td><td class="col1">回车 </td>
+	</tr>
+	<tr class="row5">
+		<td class="col0">\t </td><td class="col1">横向跳格 (Ctrl-I) </td>
+	</tr>
+	<tr class="row6">
+		<td class="col0">\&#039; </td><td class="col1">单引号 </td>
+	</tr>
+	<tr class="row7">
+		<td class="col0">\” </td><td class="col1">双引号 </td>
+	</tr>
+	<tr class="row8">
+		<td class="col0">\\ </td><td class="col1">反斜杠 </td>
+	</tr>
+</table></div>
+<!-- EDIT26 TABLE [62388-62576] -->
+<p>
+请注意，由于反斜杠本身用作转义符，因此不能直接在脚本中键入一个反斜杠。如果要产生一个反斜杠，必须一起键入两个反斜杠 (\\)。 
+</p>
+<pre class="code javascript">document.<span class="me1">write</span><span class="br0">&#40;</span><span class="st0">'The image path is C:<span class="es0">\\</span>webstuff<span class="es0">\\</span>mypage<span class="es0">\\</span>gifs<span class="es0">\\</span>garden.gif.'</span><span class="br0">&#41;</span><span class="sy0">;</span>
+document.<span class="me1">write</span><span class="br0">&#40;</span><span class="st0">'The caption reads, &quot;After the snow of <span class="es0">\'</span>97. Grandma<span class="es0">\'</span>s house is covered.&quot;'</span><span class="br0">&#41;</span><span class="sy0">;</span></pre>
+
+</div>
+<!-- EDIT25 SECTION "特殊字符" [62137-62955] -->
+<h3 class="sectionedit27" id="脚本疑难解答">脚本疑难解答</h3>
+<div class="level3">
+
+<p>
+如果不够细致，任何编程语言都有一些可能发生错误的地方，而且每种语言都有其特殊之处。例如，对于 <strong>null</strong> 值： JScript 中这个值与 C 或 C++ 语言中的 <strong>Null</strong> 值所起的作用是不一样的。 
+</p>
+
+<p>
+下面提供了一些在编写 JScript 脚本时可能遇到的问题。 
+</p>
+
+</div>
+
+<h4 id="语法错误">语法错误</h4>
+<div class="level4">
+
+<p>
+由于编程语言中的语法比自然语言的语法要严格得多，因此在编写脚本时对细节应倍加关注。例如，如果您本意是将字符串作为某个参数，但是在键入时忘了使用引号引起来，就会产生问题。
+</p>
+
+</div>
+
+<h4 id="脚本解释顺序">脚本解释顺序</h4>
+<div class="level4">
+
+<p>
+对 JScript 的解释是 Web 浏览器的 <abbr title="HyperText Markup Language">HTML</abbr> 语法分析处理的一部分。因此，如果在文档的 &lt;HEAD&gt; 标识中放置了一个脚本，则将在检查所有的 &lt;BODY&gt; 标识之前加以解释。如果在 &lt;BODY&gt; 标识中将创建对象，但由于在分析处理 &lt;HEAD&gt; 标识时这些对象尚不存在，因而不能被脚本操作。 
+</p>
+
+<p>
+<strong>注意</strong>   本情况特定于 IE。ASP 和 WSH 具有不同的运行模式（其他宿主亦是）。
+</p>
+
+</div>
+
+<h4 id="自动类型强制">自动类型强制</h4>
+<div class="level4">
+
+<p>
+JScript 是一种具有自动强制的自由类型语言。因此，尽管实际上不同类型的值是不相等的，但对下述示例中的表达式求值都将得到 <strong>true</strong>。 
+</p>
+<pre class="code javascript"><span class="st0">&quot;100&quot;</span> <span class="sy0">==</span> <span class="nu0">100</span><span class="sy0">;</span>
+<span class="kw2">false</span> <span class="sy0">==</span> <span class="nu0">0</span><span class="sy0">;</span></pre>
+
+<p>
+要核对类型与值都一致，用“严格相等”运算符（===）。下面两个表达式的值为 false：
+</p>
+<pre class="code javascript"><span class="st0">&quot;100&quot;</span> <span class="sy0">===</span> <span class="nu0">100</span><span class="sy0">;</span>
+<span class="kw2">false</span> <span class="sy0">===</span> <span class="nu0">0</span><span class="sy0">;</span></pre>
+
+</div>
+
+<h4 id="运算符优先级">运算符优先级</h4>
+<div class="level4">
+
+<p>
+在对表达式求值时某个特定运算符的执行主要是根据 运算符优先级 ，而不是表达式的位置。因此，在下面的示例中，乘法将先于减法执行，尽管在该表达式中第一个出现的运算符
+</p>
+<pre class="code javascript">theRadius <span class="sy0">=</span> aPerimeterPoint <span class="sy0">-</span> theCenterpoint <span class="sy0">*</span> theCorrectionFactor<span class="sy0">;</span></pre>
+
+<p>
+<strong>对对象使用 for…in 循环</strong>
+</p>
+
+<p>
+当使用 <strong>for…in</strong> 循环对某个对象的属性进行遍历时，不必预先确定或管理将要指定给该循环计数器变量的对象字段的顺序。此外，在该语言的不同实现方案中该顺序可能会不一样。
+</p>
+
+</div>
+
+<h4 id="with_关键字">with 关键字</h4>
+<div class="level4">
+
+<p>
+with 语句可以方便地用来引用某个特定对象中已有的属性，但是不能用来给对象添加属性。要给对象创建新的属性，必须明确地引用该对象。
+</p>
+
+</div>
+
+<h4 id="this_关键字">this 关键字</h4>
+<div class="level4">
+
+<p>
+尽管可以在对象的定义范围内使用 this 关键字来引用该对象本身，但是当函数不是该对象的定义时，就不能象普通情况那样使用 this 或类似的关键字来引用当前的执行函数。如果该函数被指定为某个对象的方法，则可以在该函数内使用 this 关键字来引用该对象。 
+</p>
+
+</div>
+
+<h4 id="编写一个脚本_该脚本在_ie_中写脚本">编写一个脚本，该脚本在 IE 中写脚本</h4>
+<div class="level4">
+
+<p>
+当解释程序遇到&lt;/SCRIPT&gt;标记时会终止当前脚本。要显示”&lt;/SCRIPT&gt;“ 本身，请将其改写为至少两个字符串，例如 ”&lt;/SCR“ 和 “IPT&gt;“，这样就可以在输出语句中将其连接在一起。 
+</p>
+
+</div>
+
+<h4 id="ie_中的隐式窗口引用">IE 中的隐式窗口引用</h4>
+<div class="level4">
+
+<p>
+由于同时可以打开多个窗口，任何隐式的窗口引用都被指向当前窗口。对于其他窗口必须使用显式引用。
+</p>
+
+</div>
+<!-- EDIT27 SECTION "脚本疑难解答" [62956-66170] -->
+<h3 class="sectionedit28" id="条件编译">条件编译</h3>
+<div class="level3">
+
+<p>
+使用条件编译可以使用 Jscript 语言的新特性并且与不支持该特性的老版本兼容。
+</p>
+
+<p>
+用 <strong>@cc_on</strong> 语句、<strong>@if</strong> 或 <strong>@set</strong> 语句来激活条件编译。条件编译的某些典型用途包括使用 Jscript 中的新特性、在脚本中嵌入调试支持以及跟踪代码的运行。
+</p>
+
+<p>
+一般将条件编译代码放在注释中，所以不能理解条件编译的宿主（如 Netscape Navigator）就忽略了条件编译。下面是一个示例。
+</p>
+<pre class="code javascript"><span class="coMULTI">/*@cc_on @*/</span>
+<span class="coMULTI">/*@if (@_jscript_version &gt;= 4)
+   alert(&quot;JScript version 4 or better&quot;);
+   @else @*/</span>
+   alert<span class="br0">&#40;</span><span class="st0">&quot;You need a more recent script engine.&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="coMULTI">/*@end @*/</span></pre>
+
+<p>
+本示例使用了特殊的注释分隔符，该分隔符只有在 <strong>@cc_on</strong> 语句激活条件编译时才使用。不支持条件编译的脚本引擎只能看到一个需要更新脚本引擎的信息。
+</p>
+
+</div>
+<!-- EDIT28 SECTION "条件编译" [66171-67069] -->
+<h3 class="sectionedit29" id="条件编译变量">条件编译变量</h3>
+<div class="level3">
+
+<p>
+下面是条件编译可用的预定义变量。如果变量不是 <strong>true</strong>，就不被定义或者作为 <strong>NaN</strong> 处理。
+</p>
+<div class="table sectionedit30"><table class="inline">
+	<thead>
+	<tr class="row0">
+		<th class="col0 centeralign">  变量  </th><th class="col1 centeralign">  描述  </th>
+	</tr>
+	</thead>
+	<tr class="row1">
+		<td class="col0">@_win32 </td><td class="col1">在 Win32 系统上运行为 true。 </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0">@_win16 </td><td class="col1">在 Win16 系统上运行为 true。 </td>
+	</tr>
+	<tr class="row3">
+		<td class="col0">@_mac </td><td class="col1">在 Apple Macintosh 系统上运行为 true。 </td>
+	</tr>
+	<tr class="row4">
+		<td class="col0">@_alpha </td><td class="col1">在 DEC Alpha 处理器上运行为 true。 </td>
+	</tr>
+	<tr class="row5">
+		<td class="col0">@_x86 </td><td class="col1">在 Intel 处理器上运行为 true。 </td>
+	</tr>
+	<tr class="row6">
+		<td class="col0">@_mc680x0 </td><td class="col1">在 Motorola 680&times;0 处理器上运行为 true。 </td>
+	</tr>
+	<tr class="row7">
+		<td class="col0">@_PowerPC </td><td class="col1">在 Motorola PowerPC 处理器上运行为 true。 </td>
+	</tr>
+	<tr class="row8">
+		<td class="col0">@_jscript </td><td class="col1">永远为 true。 </td>
+	</tr>
+	<tr class="row9">
+		<td class="col0">@_jscript_build </td><td class="col1">包含 Jscript 脚本引擎创建号。 </td>
+	</tr>
+	<tr class="row10">
+		<td class="col0">@_jscript_version </td><td class="col1">包含以 major、minor 为格式的 Jscript 版本号。 </td>
+	</tr>
+</table></div>
+<!-- EDIT30 TABLE [67223-68011] -->
+</div>
+<!-- EDIT29 SECTION "条件编译变量" [67070-68012] -->
+<h2 class="sectionedit31" id="在浏览器中显示信息">在浏览器中显示信息</h2>
+<div class="level2">
+
+<p>
+Microsoft JScript 提供了两种方式来在浏览器中直接显示数据。可以使用<strong>write( )</strong> 和 <strong>writeln( )</strong>，这两个函数是<strong>document</strong> 对象的方法。也可以在浏览器中以表格的方式显示信息，以及用 <strong>警告、提示和确认</strong> 消息框来显示信息。 
+</p>
+
+</div>
+
+<h4 id="使用documentwrite_和_documentwriteln">使用document.write( ) 和 document.writeln( )</h4>
+<div class="level4">
+
+<p>
+显示信息最常用的方式是 <strong>document</strong> 对象的 <strong>write( )</strong> 方法。该方法用一个字符串作为其参数，并在浏览器中显示。该字符串可以是普通文本或 HTML。
+</p>
+
+<p>
+字符串可以用单引号或双引号引起来。这样可以引用那些包含引号或撇号的内容。 
+</p>
+<pre class="code javascript">document.<span class="me1">write</span><span class="br0">&#40;</span><span class="st0">&quot;Pi is approximately equal to &quot;</span> <span class="sy0">+</span> <span class="kw4">Math</span>.<span class="me1">PI</span><span class="br0">&#41;</span><span class="sy0">;</span>
+document.<span class="me1">write</span><span class="br0">&#40;</span> <span class="br0">&#41;</span><span class="sy0">;</span></pre>
+
+<p>
+<strong>注意</strong>   下面的简单函数可以避免在浏览器中显示信息时不得不键入 “document.write”。该函数不能告知要显示的信息是否未定义，而是发布给命令 “w();”，该命令将显示一个空行。 
+</p>
+<pre class="code javascript"><span class="kw1">function</span> w<span class="br0">&#40;</span>m<span class="br0">&#41;</span> <span class="br0">&#123;</span> <span class="co1">// 编写函数。</span>
+m <span class="sy0">=</span> <span class="st0">&quot;&quot;</span> <span class="sy0">+</span> m <span class="sy0">+</span> <span class="st0">&quot;&quot;</span><span class="sy0">;</span> <span class="co1">//  确保变量 m 是一个字符串。</span>
+<span class="kw1">if</span> <span class="br0">&#40;</span><span class="st0">&quot;undefined&quot;</span> <span class="sy0">!=</span> m<span class="br0">&#41;</span> <span class="br0">&#123;</span> <span class="co1">// 判别是否为空或其它未定义的项。</span>
+   document.<span class="me1">write</span><span class="br0">&#40;</span>m<span class="br0">&#41;</span><span class="sy0">;</span>
+   <span class="br0">&#125;</span>
+document.<span class="me1">write</span><span class="br0">&#40;</span><span class="st0">&quot;&lt;br&gt;&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&nbsp;
+w<span class="br0">&#40;</span><span class="st0">'&lt;IMG SRC=&quot;horse.gif&quot;&gt;'</span><span class="br0">&#41;</span><span class="sy0">;</span>
+w<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+w<span class="br0">&#40;</span><span class="st0">&quot;This is an engraving of a horse.&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+w<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span></pre>
+
+<p>
+<strong>writeln( )</strong> 方法与 <strong>write( )</strong> 方法几乎一样，差别仅在于是前者将在所提供的任何字符串后添加一个换行符。在 <abbr title="HyperText Markup Language">HTML</abbr> 中，这通常只会在后面产生一个空格；不过如果使用了 &lt;PRE&gt; 和 &lt;XMP&gt; 标识，这个换行符会被解释，且在浏览器中显示。
+</p>
+
+<p>
+在调用 <strong>write( )</strong> 方法时，如果该文档不处于在调用 <strong>write( )</strong> 方法时的打开和分析的过程中，该方法将打开并清除该文档，所以它可能是有危险的。该示例显示了一个每隔一分钟就显示时间的脚本，但是在第一次显示后由于它从过程中将自己清除，因此会导致失败。 
+</p>
+<pre class="code html4strict"><span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/html.html"><span class="kw2">HTML</span></a>&gt;</span>
+<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/head.html"><span class="kw2">HEAD</span></a>&gt;</span>
+<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/script.html"><span class="kw2">SCRIPT</span></a> <span class="kw3">LANGUAGE</span><span class="sy0">=</span><span class="st0">&quot;JScript&quot;</span>&gt;</span>
+function singOut()  {
+var theMoment = new Date();
+var theHour = theMoment.getHours();
+var theMinute = theMoment.getMinutes();
+var theDisplacement = (theMoment.getTimezoneOffset() / 60);
+theHour -= theDisplacement;
+if (theHour &gt; 23)  {
+theHour -= 24
+}
+document.write(theHour + &quot; hours, &quot; + theMinute + &quot; minutes, Coordinated Universal Time.&quot;);
+window.setTimeout(&quot;singOut();&quot;, 60000);
+}
+<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/script.html"><span class="kw2">SCRIPT</span></a>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/head.html"><span class="kw2">HEAD</span></a>&gt;</span>
+<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/body.html"><span class="kw2">BODY</span></a>&gt;</span>
+<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/script.html"><span class="kw2">SCRIPT</span></a>&gt;</span>
+singOut();
+<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/script.html"><span class="kw2">SCRIPT</span></a>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/body.html"><span class="kw2">BODY</span></a>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/html.html"><span class="kw2">HTML</span></a>&gt;</span></pre>
+
+<p>
+如果使用 window 对象的 <strong>alert()</strong> 方法而不是 <strong>document.write()</strong>，则该脚本可以运行。 
+</p>
+<pre class="code javascript">window.<span class="me1">alert</span><span class="br0">&#40;</span>theHour <span class="sy0">+</span> <span class="st0">&quot; hours, &quot;</span> <span class="sy0">+</span> theMinute <span class="sy0">+</span> <span class="st0">&quot; minutes, Coordinated Universal Time.&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+window.<span class="me1">setTimeout</span><span class="br0">&#40;</span><span class="st0">&quot;singOut();&quot;</span><span class="sy0">,</span> <span class="nu0">60000</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span></pre>
+
+</div>
+
+<h4 id="清除当前文档">清除当前文档</h4>
+<div class="level4">
+
+<p>
+<strong>document</strong> 对象的 <strong>clear()</strong> 方法将清空当前文档。该方法也将清除您的脚本（随文档的其他部分一起），因此要特别注意该方法的使用方式及在什么时候使用该方法。 
+</p>
+<pre class="code javascript">document.<span class="me1">clear</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span></pre>
+
+</div>
+<!-- EDIT31 SECTION "在浏览器中显示信息" [68013-71120] -->
+<h3 class="sectionedit32" id="使用消息框">使用消息框</h3>
+<div class="level3">
+
+</div>
+
+<h4 id="使用警告_提示和确认">使用警告、提示和确认</h4>
+<div class="level4">
+
+<p>
+可以使用警告、确认和提示消息框来获得用户的输入。这些消息框是 <strong>window</strong> 对象的接口方法。由于 <strong>window</strong> 对象位于对象层次的顶层，因此实际应用中不必使用这些消息框的全名（例如 “window.alert()“），不过采用全名是一个好注意，这样有助于您记住这些消息框属于哪个对象。
+</p>
+
+</div>
+
+<h4 id="警告消息框">警告消息框</h4>
+<div class="level4">
+
+<p>
+<strong>alert</strong> 方法有一个参数，即希望对用户显示的文本字符串。该字符串不是 <abbr title="HyperText Markup Language">HTML</abbr> 格式。该消息框提供了一个“确定”按钮让用户关闭该消息框，并且该消息框是模式对话框，也就是说，用户必须先关闭该消息框然后才能继续进行操作。 
+</p>
+<pre class="code javascript">window.<span class="me1">alert</span><span class="br0">&#40;</span><span class="st0">&quot;欢迎！请按“确定”继续。&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span></pre>
+
+</div>
+
+<h4 id="确认消息框">确认消息框</h4>
+<div class="level4">
+
+<p>
+使用确认消息框可向用户问一个“是-或-否”问题，并且用户可以选择单击“确定”按钮或者单击“取消”按钮。<strong>confirm</strong> 方法的返回值为 <strong>true</strong> 或 <strong>false</strong>。该消息框也是模式对话框：用户必须在响应该对话框（单击一个按钮）将其关闭后，才能进行下一步操作。 
+</p>
+<pre class="code javascript"><span class="kw1">var</span> truthBeTold <span class="sy0">=</span> window.<span class="me1">confirm</span><span class="br0">&#40;</span><span class="st0">&quot;单击“确定”继续。单击“取消”停止。&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">if</span> <span class="br0">&#40;</span>truthBeTold<span class="br0">&#41;</span> <span class="br0">&#123;</span>
+window.<span class="me1">alert</span><span class="br0">&#40;</span><span class="st0">&quot;欢迎访问我们的 Web 页！&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>  <span class="kw1">else</span>  window.<span class="me1">alert</span><span class="br0">&#40;</span><span class="st0">&quot;再见啦！&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span></pre>
+
+</div>
+
+<h4 id="提示消息框">提示消息框</h4>
+<div class="level4">
+
+<p>
+提示消息框提供了一个文本字段，用户可以在此字段输入一个答案来响应您的提示。该消息框有一个“确定”按钮和一个“取消”按钮。如果您提供了一个辅助字符串参数，则提示消息框将在文本字段显示该辅助字符串作为默认响应。否则，默认文本为 ”&lt;undefined&gt;“。 
+</p>
+
+<p>
+与<strong>alert( )</strong> 和 <strong>confirm( )</strong> 方法类似，<strong>prompt</strong> 方法也将显示一个模式消息框。用户在继续操作之前必须先关闭该消息框 
+</p>
+<pre class="code javascript"><span class="kw1">var</span> theResponse <span class="sy0">=</span> window.<span class="me1">prompt</span><span class="br0">&#40;</span><span class="st0">&quot;欢迎？&quot;</span><span class="sy0">,</span><span class="st0">&quot;请在此输入您的姓名。&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span></pre>
+
+</div>
+<!-- EDIT32 SECTION "使用消息框" [71121-] -->

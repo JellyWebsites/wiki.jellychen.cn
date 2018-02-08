@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="FeedCreator 1.7.2-ppt DokuWiki" -->
+<?xml-stylesheet href="http://wiki.jellychen.cn/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="http://wiki.jellychen.cn/feed.php">
+        <title>Jelly Wiki apache:tools</title>
+        <description></description>
+        <link>http://wiki.jellychen.cn/</link>
+        <image rdf:resource="http://wiki.jellychen.cn/lib/tpl/bootstrap3/images/favicon.ico" />
+       <dc:date>2018-01-01T18:04:09+08:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="http://wiki.jellychen.cn/doku.php/apache:tools:ab?rev=1507538588&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="http://wiki.jellychen.cn/lib/tpl/bootstrap3/images/favicon.ico">
+        <title>Jelly Wiki</title>
+        <link>http://wiki.jellychen.cn/</link>
+        <url>http://wiki.jellychen.cn/lib/tpl/bootstrap3/images/favicon.ico</url>
+    </image>
+    <item rdf:about="http://wiki.jellychen.cn/doku.php/apache:tools:ab?rev=1507538588&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-10-09T16:43:08+08:00</dc:date>
+        <title>apache:tools:ab</title>
+        <link>http://wiki.jellychen.cn/doku.php/apache:tools:ab?rev=1507538588&amp;do=diff</link>
+        <description>ab性能测试工具
+
+安装
+
+此工具包含在apache中，如需独立安装自行百度
+
+简介
+
+ab（ApacheBench）可以用来测试web服务器的执行效率。ab包含在安装目录bin目录下。ab可以针对某一特定URL模拟出连续的联机请求，同时还可以仿真出同时间点个数相同的联机请求，因而可以利用ab帮助我们在网站开发期间仿真实际上线可能的情况，利用仿真出来的数据做为调整服务器设定或程序的依据。</description>
+    </item>
+</rdf:RDF>

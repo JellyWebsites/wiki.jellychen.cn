@@ -1,0 +1,20 @@
+<span class="co1">// 具有相同值的两个基本字符串。</span>
+<span class="kw1">var</span> string1 <span class="sy0">=</span> <span class="st0">&quot;Hello&quot;</span><span class="sy0">;</span>
+<span class="kw1">var</span> string2 <span class="sy0">=</span> <span class="st0">&quot;Hello&quot;</span><span class="sy0">;</span>
+&nbsp;
+<span class="co1">// 具有相同值的两个 String 对象。</span>
+<span class="kw1">var</span> StringObject1 <span class="sy0">=</span> <span class="kw1">new</span> <span class="kw4">String</span><span class="br0">&#40;</span>string1<span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">var</span> StringObject2 <span class="sy0">=</span> <span class="kw1">new</span> <span class="kw4">String</span><span class="br0">&#40;</span>string2<span class="br0">&#41;</span><span class="sy0">;</span>
+&nbsp;
+<span class="co1">// 比较结果为 true。</span>
+<span class="kw1">if</span> <span class="br0">&#40;</span>string1 <span class="sy0">==</span> string2<span class="br0">&#41;</span>
+     <span class="co1">// 执行某些命令（将要运行的）。</span>
+&nbsp;
+<span class="co1">// 比较结果为 false。</span>
+<span class="kw1">if</span> <span class="br0">&#40;</span>StringObject1 <span class="sy0">==</span> StringObject2<span class="br0">&#41;</span>
+    <span class="co1">//执行某些命令（不会运行）。</span>
+&nbsp;
+<span class="co1">// 要比较 String 对象的值， </span>
+<span class="co1">// 用 toString() 或者 valueOf() 方法。</span>
+<span class="kw1">if</span> <span class="br0">&#40;</span>StringObject1.<span class="me1">valueOf</span><span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="sy0">==</span> StringObject2<span class="br0">&#41;</span>
+     <span class="co1">//执行某些命令（将要运行的）。</span>

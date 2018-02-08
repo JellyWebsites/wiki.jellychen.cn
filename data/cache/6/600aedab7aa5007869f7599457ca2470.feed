@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="FeedCreator 1.7.2-ppt DokuWiki" -->
+<?xml-stylesheet href="http://wiki.jellychen.cn/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="http://wiki.jellychen.cn/feed.php">
+        <title>Jelly Wiki 西游记mud</title>
+        <description></description>
+        <link>http://wiki.jellychen.cn/</link>
+        <image rdf:resource="http://wiki.jellychen.cn/lib/tpl/bootstrap3/images/favicon.ico" />
+       <dc:date>2016-10-18T15:25:45+00:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="http://wiki.jellychen.cn/doku.php/%E8%A5%BF%E6%B8%B8%E8%AE%B0mud:start?rev=1466590562&amp;do=diff"/>
+                <rdf:li rdf:resource="http://wiki.jellychen.cn/doku.php/%E8%A5%BF%E6%B8%B8%E8%AE%B0mud:%E8%A3%85%E5%A4%87?rev=1463728826&amp;do=diff"/>
+                <rdf:li rdf:resource="http://wiki.jellychen.cn/doku.php/%E8%A5%BF%E6%B8%B8%E8%AE%B0mud:%E8%A7%92%E8%89%B2?rev=1463730448&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="http://wiki.jellychen.cn/lib/tpl/bootstrap3/images/favicon.ico">
+        <title>Jelly Wiki</title>
+        <link>http://wiki.jellychen.cn/</link>
+        <url>http://wiki.jellychen.cn/lib/tpl/bootstrap3/images/favicon.ico</url>
+    </image>
+    <item rdf:about="http://wiki.jellychen.cn/doku.php/%E8%A5%BF%E6%B8%B8%E8%AE%B0mud:start?rev=1466590562&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-06-22T10:16:02+00:00</dc:date>
+        <title>西游记mud:start</title>
+        <link>http://wiki.jellychen.cn/doku.php/%E8%A5%BF%E6%B8%B8%E8%AE%B0mud:start?rev=1466590562&amp;do=diff</link>
+        <description>西游记MUD
+
+界面
+
+角色
+
+装备
+
+背景
+
+任务
+
+门派
+
+地图</description>
+    </item>
+    <item rdf:about="http://wiki.jellychen.cn/doku.php/%E8%A5%BF%E6%B8%B8%E8%AE%B0mud:%E8%A3%85%E5%A4%87?rev=1463728826&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-05-20T07:20:26+00:00</dc:date>
+        <title>西游记mud:装备</title>
+        <link>http://wiki.jellychen.cn/doku.php/%E8%A5%BF%E6%B8%B8%E8%AE%B0mud:%E8%A3%85%E5%A4%87?rev=1463728826&amp;do=diff</link>
+        <description>装备
+
+防具
+
+角色状态
+
+饰品
+
+武器</description>
+    </item>
+    <item rdf:about="http://wiki.jellychen.cn/doku.php/%E8%A5%BF%E6%B8%B8%E8%AE%B0mud:%E8%A7%92%E8%89%B2?rev=1463730448&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-05-20T07:47:28+00:00</dc:date>
+        <title>西游记mud:角色</title>
+        <link>http://wiki.jellychen.cn/doku.php/%E8%A5%BF%E6%B8%B8%E8%AE%B0mud:%E8%A7%92%E8%89%B2?rev=1463730448&amp;do=diff</link>
+        <description>角色状态
+
+姓名
+
+就是你创建账号时的中文名和英文ID，中文名可以重名，可以在游戏内修改。英文ID是唯一且不能修改的。
+
+性别
+
+唯一要注意的就是月宫只能女性ID拜，而迷魂也只能女性ID用，会影响</description>
+    </item>
+</rdf:RDF>

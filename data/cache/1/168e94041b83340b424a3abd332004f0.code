@@ -1,0 +1,2 @@
+document.<span class="me1">write</span><span class="br0">&#40;</span><span class="st0">&quot;Pi is approximately equal to &quot;</span> <span class="sy0">+</span> <span class="kw4">Math</span>.<span class="me1">PI</span><span class="br0">&#41;</span><span class="sy0">;</span>
+document.<span class="me1">write</span><span class="br0">&#40;</span> <span class="br0">&#41;</span><span class="sy0">;</span>

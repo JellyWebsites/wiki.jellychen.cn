@@ -1,0 +1,2 @@
+<span class="kw1">var</span> currentCount<span class="sy0">;</span>
+<span class="kw1">var</span> finalCount <span class="sy0">=</span> <span class="nu0">1</span> <span class="sy0">*</span> currentCount<span class="sy0">;</span> <span class="co1">// finalCount 的值为 NaN，因为 currentCount 为 undefined。</span>

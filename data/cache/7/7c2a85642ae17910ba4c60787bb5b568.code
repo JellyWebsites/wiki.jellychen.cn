@@ -1,0 +1,12 @@
+<span class="kw1">function</span> w<span class="br0">&#40;</span>m<span class="br0">&#41;</span> <span class="br0">&#123;</span> <span class="co1">// 编写函数。</span>
+m <span class="sy0">=</span> <span class="st0">&quot;&quot;</span> <span class="sy0">+</span> m <span class="sy0">+</span> <span class="st0">&quot;&quot;</span><span class="sy0">;</span> <span class="co1">//  确保变量 m 是一个字符串。</span>
+<span class="kw1">if</span> <span class="br0">&#40;</span><span class="st0">&quot;undefined&quot;</span> <span class="sy0">!=</span> m<span class="br0">&#41;</span> <span class="br0">&#123;</span> <span class="co1">// 判别是否为空或其它未定义的项。</span>
+   document.<span class="me1">write</span><span class="br0">&#40;</span>m<span class="br0">&#41;</span><span class="sy0">;</span>
+   <span class="br0">&#125;</span>
+document.<span class="me1">write</span><span class="br0">&#40;</span><span class="st0">&quot;&lt;br&gt;&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&nbsp;
+w<span class="br0">&#40;</span><span class="st0">'&lt;IMG SRC=&quot;horse.gif&quot;&gt;'</span><span class="br0">&#41;</span><span class="sy0">;</span>
+w<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+w<span class="br0">&#40;</span><span class="st0">&quot;This is an engraving of a horse.&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+w<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="FeedCreator 1.7.2-ppt DokuWiki" -->
+<?xml-stylesheet href="http://wiki.jellychen.cn/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="http://wiki.jellychen.cn/feed.php">
+        <title>Jelly Wiki doku</title>
+        <description></description>
+        <link>http://wiki.jellychen.cn/</link>
+        <image rdf:resource="http://wiki.jellychen.cn/lib/tpl/bootstrap3/images/favicon.ico" />
+       <dc:date>2018-01-01T17:56:57+08:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="http://wiki.jellychen.cn/doku.php/doku:start?rev=1507538600&amp;do=diff"/>
+                <rdf:li rdf:resource="http://wiki.jellychen.cn/doku.php/doku:syntax?rev=1507538600&amp;do=diff"/>
+                <rdf:li rdf:resource="http://wiki.jellychen.cn/doku.php/doku:%E5%BC%BA%E5%88%B6%E5%88%B7%E6%96%B0%E7%BC%93%E5%AD%98?rev=1507538600&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="http://wiki.jellychen.cn/lib/tpl/bootstrap3/images/favicon.ico">
+        <title>Jelly Wiki</title>
+        <link>http://wiki.jellychen.cn/</link>
+        <url>http://wiki.jellychen.cn/lib/tpl/bootstrap3/images/favicon.ico</url>
+    </image>
+    <item rdf:about="http://wiki.jellychen.cn/doku.php/doku:start?rev=1507538600&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-10-09T16:43:20+08:00</dc:date>
+        <title>doku:start</title>
+        <link>http://wiki.jellychen.cn/doku.php/doku:start?rev=1507538600&amp;do=diff</link>
+        <description>Dokuwiki
+
+&lt;ul class=&quot;catlist-nslist&quot; &gt;&lt;li class=&quot;catlist-ns&quot;&gt;&lt;strong class=&quot;li catlist-nshead&quot;&gt;apache&lt;/strong&gt;&lt;ul class=&quot;catlist-nslist&quot;&gt;&lt;li class=&quot;catlist-page&quot;&gt;APACHE&lt;/li&gt;&lt;li class=&quot;catlist-ns&quot;&gt;&lt;strong class=&quot;li catlist-nshead&quot;&gt;tools&lt;/strong&gt;&lt;ul class=&quot;catlist-nslist&quot;&gt;&lt;li class=&quot;catlist-page&quot;&gt;ab性能测试工具&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li class=&quot;catlist-ns&quot;&gt;&lt;strong class=&quot;li catlist-nshead&quot;&gt;css&lt;/strong&gt;&lt;ul class=&quot;catlist-nslist&quot;&gt;&lt;li class=&quot;catlist-page&quot;&gt;CSS 3.0 参考手册&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li class=&quot;catlist-ns&quot;&gt;…</description>
+    </item>
+    <item rdf:about="http://wiki.jellychen.cn/doku.php/doku:syntax?rev=1507538600&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-10-09T16:43:20+08:00</dc:date>
+        <title>doku:syntax</title>
+        <link>http://wiki.jellychen.cn/doku.php/doku:syntax?rev=1507538600&amp;do=diff</link>
+        <description>语法
+
+代码高亮
+
+DokuWiki can highlight sourcecode, which makes it easier to read. It uses the GeSHi Generic Syntax Highlighter – so any language supported by GeSHi is supported. The syntax uses the same code and file blocks described in the previous section, but this time the name of the language syntax to be highlighted is included inside the tag, e.g.</description>
+    </item>
+    <item rdf:about="http://wiki.jellychen.cn/doku.php/doku:%E5%BC%BA%E5%88%B6%E5%88%B7%E6%96%B0%E7%BC%93%E5%AD%98?rev=1507538600&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-10-09T16:43:20+08:00</dc:date>
+        <title>doku:强制刷新缓存</title>
+        <link>http://wiki.jellychen.cn/doku.php/doku:%E5%BC%BA%E5%88%B6%E5%88%B7%E6%96%B0%E7%BC%93%E5%AD%98?rev=1507538600&amp;do=diff</link>
+        <description>强制刷新缓存
+
+在页面链接后面添加&amp;purge=1</description>
+    </item>
+</rdf:RDF>

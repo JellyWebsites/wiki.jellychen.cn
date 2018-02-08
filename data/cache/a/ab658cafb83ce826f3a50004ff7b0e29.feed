@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="FeedCreator 1.7.2-ppt DokuWiki" -->
+<?xml-stylesheet href="http://wiki.jellychen.cn/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="http://wiki.jellychen.cn/feed.php">
+        <title>Jelly Wiki javascript</title>
+        <description></description>
+        <link>http://wiki.jellychen.cn/</link>
+        <image rdf:resource="http://wiki.jellychen.cn/lib/tpl/bootstrap3/images/favicon.ico" />
+       <dc:date>2018-01-01T18:02:52+08:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="http://wiki.jellychen.cn/doku.php/javascript:jscript_%E7%94%A8%E6%88%B7%E6%8C%87%E5%8D%97?rev=1507538598&amp;do=diff"/>
+                <rdf:li rdf:resource="http://wiki.jellychen.cn/doku.php/javascript:start?rev=1507538598&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="http://wiki.jellychen.cn/lib/tpl/bootstrap3/images/favicon.ico">
+        <title>Jelly Wiki</title>
+        <link>http://wiki.jellychen.cn/</link>
+        <url>http://wiki.jellychen.cn/lib/tpl/bootstrap3/images/favicon.ico</url>
+    </image>
+    <item rdf:about="http://wiki.jellychen.cn/doku.php/javascript:jscript_%E7%94%A8%E6%88%B7%E6%8C%87%E5%8D%97?rev=1507538598&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-10-09T16:43:18+08:00</dc:date>
+        <title>javascript:jscript_用户指南</title>
+        <link>http://wiki.jellychen.cn/doku.php/javascript:jscript_%E7%94%A8%E6%88%B7%E6%8C%87%E5%8D%97?rev=1507538598&amp;do=diff</link>
+        <description>Jscript 用户指南
+
+JScript 基础
+
+什么是 JScript？
+
+JScript 是 Microsoft 公司对 ECMA 262 语言规范（ECMAScript 编辑器 3）的一种实现。除了少数例外（为了保持向后兼容），JScript 完全实现了 ECMA 标准。本概述的目的就是引导您学习使用 JScript。</description>
+    </item>
+    <item rdf:about="http://wiki.jellychen.cn/doku.php/javascript:start?rev=1507538598&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-10-09T16:43:18+08:00</dc:date>
+        <title>javascript:start</title>
+        <link>http://wiki.jellychen.cn/doku.php/javascript:start?rev=1507538598&amp;do=diff</link>
+        <description>JavaScript
+
+该部分内容几乎完全收集自《JavaScript核心参考手册.chm》。仅在排版和极少之处进行改动。
+
+Jscript 用户指南
+
+JScript 语言参考
+
+FlieSystemObject 基础
+
+Script 运行时参考
+
+正则表达式</description>
+    </item>
+</rdf:RDF>

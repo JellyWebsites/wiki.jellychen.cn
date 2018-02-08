@@ -1,0 +1,60 @@
+
+<h1 class="sectionedit1" id="cat">cat</h1>
+<div class="level1">
+
+<p>
+把档案串连接后传到基本输出
+</p>
+
+<p>
+<strong>用法</strong>
+</p>
+<pre class="code">cat [选项]... [文件]...</pre>
+
+<p>
+<strong>参数</strong>
+</p>
+<pre class="code">cat --help</pre>
+<pre class="code">用法：cat [选项]... [文件]...
+将[文件]或标准输入组合输出到标准输出。
+
+  -A, --show-all           等于-vET
+  -b, --number-nonblank    对非空输出行编号
+  -e                       等于-vE
+  -E, --show-ends          在每行结束处显示&quot;$&quot;
+  -n, --number             对输出的所有行编号
+  -s, --squeeze-blank      不输出多行空行
+  -t                       与-vT 等价
+  -T, --show-tabs          将跳格字符显示为^I
+  -u                       (被忽略)
+  -v, --show-nonprinting   使用^ 和M- 引用，除了LFD和 TAB 之外
+      --help		显示此帮助信息并退出
+      --version		显示版本信息并退出
+
+如果没有指定文件，或者文件为&quot;-&quot;，则从标准输入读取。</pre>
+
+<p>
+<strong>实例</strong>
+</p>
+
+<p>
+示例：
+</p>
+<pre class="code">cat f - g  先输出f 的内容，然后输出标准输入的内容，最后输出g 的内容。
+cat        将标准输入的内容复制到标准输出。
+cat -n textfile1 &gt; textfile2 把 textfile1 的档案内容加上行号后输入 textfile2 这个档案里
+cat -b textfile1 textfile2 &gt;&gt; textfile3 把 textfile1 和 textfile2 的档案内容加上行号（空白行不加）之后将内容附加到 textfile3 里。</pre>
+
+<p>
+<strong>参见</strong>
+</p>
+
+<p>
+<a href="/doku.php/linux:cmd:%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86:rev" class="wikilink2" title="linux:cmd:文件管理:rev" rel="nofollow">rev</a>
+</p>
+
+<p>
+<a href="/doku.php/linux:cmd:%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86:tac" class="wikilink2" title="linux:cmd:文件管理:tac" rel="nofollow">tac</a>
+</p>
+
+</div>

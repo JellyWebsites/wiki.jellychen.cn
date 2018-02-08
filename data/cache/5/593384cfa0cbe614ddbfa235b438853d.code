@@ -1,0 +1,4 @@
+<span class="kw1">var</span> truthBeTold <span class="sy0">=</span> window.<span class="me1">confirm</span><span class="br0">&#40;</span><span class="st0">&quot;单击“确定”继续。单击“取消”停止。&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">if</span> <span class="br0">&#40;</span>truthBeTold<span class="br0">&#41;</span> <span class="br0">&#123;</span>
+window.<span class="me1">alert</span><span class="br0">&#40;</span><span class="st0">&quot;欢迎访问我们的 Web 页！&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>  <span class="kw1">else</span>  window.<span class="me1">alert</span><span class="br0">&#40;</span><span class="st0">&quot;再见啦！&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>

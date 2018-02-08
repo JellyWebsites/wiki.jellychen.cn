@@ -1,0 +1,8 @@
+<span class="kw2">&lt;?php</span>
+ <span class="kw1">echo</span>  <span class="st0">&quot;Hello world&quot;</span> <span class="sy0">;</span>
+&nbsp;
+ <span class="co1">// ... more code</span>
+&nbsp;
+ <span class="kw1">echo</span>  <span class="st0">&quot;Last statement&quot;</span> <span class="sy0">;</span>
+&nbsp;
+ <span class="co1">// 脚本至此结束，并无 PHP 结束标记 </span>

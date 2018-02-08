@@ -1,0 +1,1 @@
+mixed <a target="_blank" href="http://www.php.net/microtime"><span class="kw3">microtime</span></a> <span class="br0">&#40;</span><span class="br0">&#91;</span> bool <span class="re0">$get_as_float</span> <span class="sy0">=</span> <span class="kw4">false</span> <span class="br0">&#93;</span> <span class="br0">&#41;</span>

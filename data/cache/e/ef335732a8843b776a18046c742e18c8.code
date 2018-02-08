@@ -1,0 +1,1 @@
+<span class="kw1">var</span> theResponse <span class="sy0">=</span> window.<span class="me1">prompt</span><span class="br0">&#40;</span><span class="st0">&quot;欢迎？&quot;</span><span class="sy0">,</span><span class="st0">&quot;请在此输入您的姓名。&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>

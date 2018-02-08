@@ -1,0 +1,2 @@
+99Balloons <span class="co1">// 不能以数字开头。</span>
+Smith<span class="sy0">&amp;</span>Wesson <span class="co1">// “与”符号（&amp;）字符用于变量名称是无效的。</span>

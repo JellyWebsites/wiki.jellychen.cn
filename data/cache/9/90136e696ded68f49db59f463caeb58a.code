@@ -1,0 +1,7 @@
+<span class="co1">//这是另一种多行注释，写成一系列单行注释。</span>
+&nbsp;
+<span class="co1">//  在执行完该语句后，可以使用 aGoodIdea 变量的名字来引用其内容，</span>
+<span class="co1">//  如下一条语句那样，即采用连接操作将字符串文字添加到</span>
+<span class="co1">//  aGoodIdea 变量，以创建一个新的变量。</span>
+&nbsp;
+<span class="kw1">var</span> extendedIdea <span class="sy0">=</span> aGoodIdea <span class="sy0">+</span> <span class="st0">&quot; You never know when you'll have to figure out what it does.&quot;</span><span class="sy0">;</span>

@@ -1,0 +1,13 @@
+<span class="kw2">&lt;?php</span>
+<span class="re0">$authorization</span> <span class="sy0">=</span> <span class="kw4">false</span><span class="sy0">;</span>
+<span class="kw1">if</span><span class="br0">&#40;</span><span class="re0">$_SERVER</span><span class="br0">&#91;</span><span class="st_h">'PHP_AUTH_USER'</span><span class="br0">&#93;</span> <span class="sy0">==</span> <span class="st0">&quot;admin&quot;</span> <span class="sy0">&amp;&amp;</span> <span class="re0">$_SERVER</span><span class="br0">&#91;</span><span class="st_h">'PHP_AUTH_PW'</span><span class="br0">&#93;</span> <span class="sy0">==</span> <span class="st0">&quot;admin888&quot;</span><span class="br0">&#41;</span><span class="br0">&#123;</span>
+    <span class="kw1">echo</span> <span class="re0">$_SERVER</span><span class="br0">&#91;</span><span class="st_h">'PHP_AUTH_USER'</span><span class="br0">&#93;</span><span class="sy0">;</span>
+    <span class="re0">$authorization</span> <span class="sy0">=</span> <span class="kw4">true</span><span class="sy0">;</span>
+    <a target="_blank" href="http://www.php.net/exit"><span class="kw3">exit</span></a><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+<span class="kw1">if</span><span class="br0">&#40;</span><span class="sy0">!</span><span class="re0">$authorization</span><span class="br0">&#41;</span><span class="br0">&#123;</span>
+    <a target="_blank" href="http://www.php.net/header"><span class="kw3">header</span></a><span class="br0">&#40;</span><span class="st0">&quot;WWW-Authenticate:Basic realm='Private'&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+    <a target="_blank" href="http://www.php.net/header"><span class="kw3">header</span></a><span class="br0">&#40;</span><span class="st_h">'HTTP/1.0 401 Unauthorized'</span><span class="br0">&#41;</span><span class="sy0">;</span>
+    <span class="kw1">print</span> <span class="st0">&quot;You are unauthorized to enter this area.&quot;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+<span class="sy1">?&gt;</span>

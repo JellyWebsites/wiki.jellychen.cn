@@ -1,0 +1,38 @@
+<span class="co1">// pasta 是有四个参数的构造器。</span>
+<span class="co1">// 第一部分与上面相同。</span>
+<span class="kw1">function</span> pasta<span class="br0">&#40;</span>grain<span class="sy0">,</span> width<span class="sy0">,</span> shape<span class="sy0">,</span> hasEgg<span class="br0">&#41;</span>
+<span class="br0">&#123;</span>
+    <span class="co1">// 用什么粮食做的？</span>
+    <span class="kw1">this</span>.<span class="me1">grain</span> <span class="sy0">=</span> grain<span class="sy0">;</span>
+&nbsp;
+    <span class="co1">// 多宽？（数值）</span>
+    <span class="kw1">this</span>.<span class="me1">width</span> <span class="sy0">=</span> width<span class="sy0">;</span>     
+&nbsp;
+    <span class="co1">// 横截面形状？（字符串）</span>
+    <span class="kw1">this</span>.<span class="me1">shape</span> <span class="sy0">=</span> shape<span class="sy0">;</span>   
+&nbsp;
+    <span class="co1">// 是否加蛋黄？（boolean）</span>
+    <span class="kw1">this</span>.<span class="me1">hasEgg</span> <span class="sy0">=</span> hasEgg<span class="sy0">;</span>  
+&nbsp;
+    <span class="co1">// 这里添加 toString 方法（如下定义）。</span>
+    <span class="co1">// 注意在函数的名称后没有加圆括号；</span>
+    <span class="co1">// 这不是一个函数调用，而是</span>
+    <span class="co1">// 对函数自身的引用。</span>
+    <span class="kw1">this</span>.<span class="me1">toString</span> <span class="sy0">=</span> pastaToString<span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&nbsp;
+<span class="co1">// 实际的用来显示 past 对象内容的函数。 </span>
+<span class="kw1">function</span> pastaToString<span class="br0">&#40;</span><span class="br0">&#41;</span>
+<span class="br0">&#123;</span>
+    <span class="co1">// 返回对象的属性。</span>
+&nbsp;
+    <span class="kw1">return</span> <span class="st0">&quot;Grain: &quot;</span> <span class="sy0">+</span> <span class="kw1">this</span>.<span class="me1">grain</span> <span class="sy0">+</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span> <span class="sy0">+</span>
+        <span class="st0">&quot;Width: &quot;</span> <span class="sy0">+</span> <span class="kw1">this</span>.<span class="me1">width</span> <span class="sy0">+</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span> <span class="sy0">+</span>
+        <span class="st0">&quot;Shape: &quot;</span> <span class="sy0">+</span> <span class="kw1">this</span>.<span class="me1">shape</span> <span class="sy0">+</span> <span class="st0">&quot;<span class="es0">\n</span>&quot;</span> <span class="sy0">+</span>
+        <span class="st0">&quot;Egg?: &quot;</span> <span class="sy0">+</span> <span class="kw4">Boolean</span><span class="br0">&#40;</span><span class="kw1">this</span>.<span class="me1">hasEgg</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&nbsp;
+<span class="kw1">var</span> spaghetti <span class="sy0">=</span> <span class="kw1">new</span> pasta<span class="br0">&#40;</span><span class="st0">&quot;wheat&quot;</span><span class="sy0">,</span> <span class="nu0">0.2</span><span class="sy0">,</span> <span class="st0">&quot;circle&quot;</span><span class="sy0">,</span> <span class="kw2">true</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="co1">// 将调用 toString() 并显示 spaghetti 对象</span>
+<span class="co1">// 的属性（需要Internet 浏览器）。</span>
+window.<span class="me1">alert</span><span class="br0">&#40;</span>spaghetti<span class="br0">&#41;</span><span class="sy0">;</span>

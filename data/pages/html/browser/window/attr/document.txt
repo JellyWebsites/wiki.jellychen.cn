@@ -1,0 +1,3 @@
+====== Document ======
+
+对 Document 对象的只读引用。请参阅 [[..:..:..:DOM:Document:]] 对象。

@@ -1,0 +1,2 @@
+aBird <span class="sy0">=</span> <span class="st0">&quot;Robin&quot;</span><span class="sy0">;</span> <span class="co1">//将文本“Robin”赋值给变量 aBird</span>
+<span class="kw1">var</span> today <span class="sy0">=</span> <span class="kw1">new</span> <span class="kw4">Date</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span> <span class="co1">// 将今天的日期赋值给变量 today</span>

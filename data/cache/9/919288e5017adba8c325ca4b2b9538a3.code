@@ -1,0 +1,30 @@
+<span class="co1">// 本代码段破坏（覆盖）其参数，所以</span>
+<span class="co1">// 调用代码中反映不出变化。</span>
+<span class="kw1">function</span> Clobber<span class="br0">&#40;</span>param<span class="br0">&#41;</span> 
+<span class="br0">&#123;</span>
+    <span class="co1">// 破坏参数；在调用代码中</span>
+    <span class="co1">// 看不到。</span>
+    param <span class="sy0">=</span> <span class="kw1">new</span> <span class="kw4">Object</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+    param.<span class="me1">message</span> <span class="sy0">=</span> <span class="st0">&quot;This will not work&quot;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&nbsp;
+<span class="co1">// 本段代码改变参数的属性，</span>
+<span class="co1">// 在调用代码中可看到属性改变。</span>
+<span class="kw1">function</span> Update<span class="br0">&#40;</span>param<span class="br0">&#41;</span>
+<span class="br0">&#123;</span>
+    <span class="co1">// 改变对象的属性；</span>
+    <span class="co1">// 可从调用代码中看到改变。</span>
+    param.<span class="me1">message</span> <span class="sy0">=</span> <span class="st0">&quot;I was changed&quot;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&nbsp;
+<span class="co1">// 创建一个对象，并赋给一个属性。</span>
+<span class="kw1">var</span> obj <span class="sy0">=</span> <span class="kw1">new</span> <span class="kw4">Object</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+obj.<span class="me1">message</span> <span class="sy0">=</span> <span class="st0">&quot;This is the original&quot;</span><span class="sy0">;</span>
+&nbsp;
+<span class="co1">// 调用 Clobber，并输出 obj.message。注意，它没有发生变化。</span>
+Clobber<span class="br0">&#40;</span>obj<span class="br0">&#41;</span><span class="sy0">;</span>
+window.<span class="me1">alert</span><span class="br0">&#40;</span>obj.<span class="me1">message</span><span class="br0">&#41;</span><span class="sy0">;</span> <span class="co1">// 仍然显示 &quot;This is the original&quot;。</span>
+&nbsp;
+<span class="co1">// 调用 Update，并输出 obj.message。注意，它已经被改变了。</span>
+Update<span class="br0">&#40;</span>obj<span class="br0">&#41;</span><span class="sy0">;</span>
+window.<span class="me1">alert</span><span class="br0">&#40;</span>obj.<span class="me1">message</span><span class="br0">&#41;</span><span class="sy0">;</span> <span class="co1">// 显示 &quot;I was changed&quot;。</span>
